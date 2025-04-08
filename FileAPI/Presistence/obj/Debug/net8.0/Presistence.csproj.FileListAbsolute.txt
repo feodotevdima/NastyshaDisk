@@ -1,0 +1,48 @@
+C:\Users\Дима\OneDrive\Рабочий стол\NastyshaDisk\FileAPI\Presistence\bin\Debug\net8.0\Presistence.deps.json
+C:\Users\Дима\OneDrive\Рабочий стол\NastyshaDisk\FileAPI\Presistence\bin\Debug\net8.0\Presistence.dll
+C:\Users\Дима\OneDrive\Рабочий стол\NastyshaDisk\FileAPI\Presistence\bin\Debug\net8.0\Presistence.pdb
+C:\Users\Дима\OneDrive\Рабочий стол\NastyshaDisk\FileAPI\Presistence\obj\Debug\net8.0\Presistence.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Дима\OneDrive\Рабочий стол\NastyshaDisk\FileAPI\Presistence\obj\Debug\net8.0\Presistence.AssemblyInfoInputs.cache
+C:\Users\Дима\OneDrive\Рабочий стол\NastyshaDisk\FileAPI\Presistence\obj\Debug\net8.0\Presistence.AssemblyInfo.cs
+C:\Users\Дима\OneDrive\Рабочий стол\NastyshaDisk\FileAPI\Presistence\obj\Debug\net8.0\Presistence.csproj.CoreCompileInputs.cache
+C:\Users\Дима\OneDrive\Рабочий стол\NastyshaDisk\FileAPI\Presistence\obj\Debug\net8.0\Presistence.sourcelink.json
+C:\Users\Дима\OneDrive\Рабочий стол\NastyshaDisk\FileAPI\Presistence\obj\Debug\net8.0\Presistence.dll
+C:\Users\Дима\OneDrive\Рабочий стол\NastyshaDisk\FileAPI\Presistence\obj\Debug\net8.0\refint\Presistence.dll
+C:\Users\Дима\OneDrive\Рабочий стол\NastyshaDisk\FileAPI\Presistence\obj\Debug\net8.0\Presistence.pdb
+C:\Users\Дима\OneDrive\Рабочий стол\NastyshaDisk\FileAPI\Presistence\obj\Debug\net8.0\ref\Presistence.dll
+C:\Users\Дима\OneDrive\Рабочий стол\NastyshaDisk\FileAPI\Presistence\bin\Debug\net8.0\Core.dll
+C:\Users\Дима\OneDrive\Рабочий стол\NastyshaDisk\FileAPI\Presistence\bin\Debug\net8.0\Core.pdb
+C:\Users\Дима\OneDrive\Рабочий стол\NastyshaDisk\FileAPI\Presistence\obj\Debug\net8.0\Presistence.csproj.AssemblyReference.cache
+C:\Users\Дима\OneDrive\Рабочий стол\NastyshaDisk\FileAPI\Presistence\obj\Debug\net8.0\Presiste.28707F9F.Up2Date
+D:\NastyshaDisk\FileAPI\Presistence\bin\Debug\net8.0\Presistence.deps.json
+D:\NastyshaDisk\FileAPI\Presistence\bin\Debug\net8.0\Presistence.dll
+D:\NastyshaDisk\FileAPI\Presistence\bin\Debug\net8.0\Presistence.pdb
+D:\NastyshaDisk\FileAPI\Presistence\bin\Debug\net8.0\Core.dll
+D:\NastyshaDisk\FileAPI\Presistence\bin\Debug\net8.0\Core.pdb
+D:\NastyshaDisk\FileAPI\Presistence\obj\Debug\net8.0\Presistence.csproj.AssemblyReference.cache
+D:\NastyshaDisk\FileAPI\Presistence\obj\Debug\net8.0\Presistence.GeneratedMSBuildEditorConfig.editorconfig
+D:\NastyshaDisk\FileAPI\Presistence\obj\Debug\net8.0\Presistence.AssemblyInfoInputs.cache
+D:\NastyshaDisk\FileAPI\Presistence\obj\Debug\net8.0\Presistence.AssemblyInfo.cs
+D:\NastyshaDisk\FileAPI\Presistence\obj\Debug\net8.0\Presistence.csproj.CoreCompileInputs.cache
+D:\NastyshaDisk\FileAPI\Presistence\obj\Debug\net8.0\Presistence.sourcelink.json
+D:\NastyshaDisk\FileAPI\Presistence\obj\Debug\net8.0\Presiste.28707F9F.Up2Date
+D:\NastyshaDisk\FileAPI\Presistence\obj\Debug\net8.0\Presistence.dll
+D:\NastyshaDisk\FileAPI\Presistence\obj\Debug\net8.0\refint\Presistence.dll
+D:\NastyshaDisk\FileAPI\Presistence\obj\Debug\net8.0\Presistence.pdb
+D:\NastyshaDisk\FileAPI\Presistence\obj\Debug\net8.0\ref\Presistence.dll
+C:\NastyshaDisk\FileAPI\Presistence\bin\Debug\net8.0\Presistence.deps.json
+C:\NastyshaDisk\FileAPI\Presistence\bin\Debug\net8.0\Presistence.dll
+C:\NastyshaDisk\FileAPI\Presistence\bin\Debug\net8.0\Presistence.pdb
+C:\NastyshaDisk\FileAPI\Presistence\bin\Debug\net8.0\Core.dll
+C:\NastyshaDisk\FileAPI\Presistence\bin\Debug\net8.0\Core.pdb
+C:\NastyshaDisk\FileAPI\Presistence\obj\Debug\net8.0\Presistence.csproj.AssemblyReference.cache
+C:\NastyshaDisk\FileAPI\Presistence\obj\Debug\net8.0\Presistence.GeneratedMSBuildEditorConfig.editorconfig
+C:\NastyshaDisk\FileAPI\Presistence\obj\Debug\net8.0\Presistence.AssemblyInfoInputs.cache
+C:\NastyshaDisk\FileAPI\Presistence\obj\Debug\net8.0\Presistence.AssemblyInfo.cs
+C:\NastyshaDisk\FileAPI\Presistence\obj\Debug\net8.0\Presistence.csproj.CoreCompileInputs.cache
+C:\NastyshaDisk\FileAPI\Presistence\obj\Debug\net8.0\Presistence.sourcelink.json
+C:\NastyshaDisk\FileAPI\Presistence\obj\Debug\net8.0\Presiste.28707F9F.Up2Date
+C:\NastyshaDisk\FileAPI\Presistence\obj\Debug\net8.0\Presistence.dll
+C:\NastyshaDisk\FileAPI\Presistence\obj\Debug\net8.0\refint\Presistence.dll
+C:\NastyshaDisk\FileAPI\Presistence\obj\Debug\net8.0\Presistence.pdb
+C:\NastyshaDisk\FileAPI\Presistence\obj\Debug\net8.0\ref\Presistence.dll

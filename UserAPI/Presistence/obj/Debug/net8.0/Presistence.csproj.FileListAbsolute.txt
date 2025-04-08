@@ -1,0 +1,16 @@
+C:\Users\Дима\source\repos\WebAPI\Presistence\bin\Debug\net8.0\Presistence.deps.json
+C:\Users\Дима\source\repos\WebAPI\Presistence\bin\Debug\net8.0\Presistence.dll
+C:\Users\Дима\source\repos\WebAPI\Presistence\bin\Debug\net8.0\Presistence.pdb
+C:\Users\Дима\source\repos\WebAPI\Presistence\bin\Debug\net8.0\Core.dll
+C:\Users\Дима\source\repos\WebAPI\Presistence\bin\Debug\net8.0\Core.pdb
+C:\Users\Дима\source\repos\WebAPI\Presistence\obj\Debug\net8.0\Presistence.csproj.AssemblyReference.cache
+C:\Users\Дима\source\repos\WebAPI\Presistence\obj\Debug\net8.0\Presistence.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Дима\source\repos\WebAPI\Presistence\obj\Debug\net8.0\Presistence.AssemblyInfoInputs.cache
+C:\Users\Дима\source\repos\WebAPI\Presistence\obj\Debug\net8.0\Presistence.AssemblyInfo.cs
+C:\Users\Дима\source\repos\WebAPI\Presistence\obj\Debug\net8.0\Presistence.csproj.CoreCompileInputs.cache
+C:\Users\Дима\source\repos\WebAPI\Presistence\obj\Debug\net8.0\Presiste.28707F9F.Up2Date
+C:\Users\Дима\source\repos\WebAPI\Presistence\obj\Debug\net8.0\Presistence.dll
+C:\Users\Дима\source\repos\WebAPI\Presistence\obj\Debug\net8.0\refint\Presistence.dll
+C:\Users\Дима\source\repos\WebAPI\Presistence\obj\Debug\net8.0\Presistence.pdb
+C:\Users\Дима\source\repos\WebAPI\Presistence\obj\Debug\net8.0\ref\Presistence.dll
+C:\Users\Дима\source\repos\WebAPI\Presistence\obj\Debug\net8.0\Presistence.sourcelink.json

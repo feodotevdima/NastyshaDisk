@@ -1,0 +1,67 @@
+C:\Users\Дима\OneDrive\Рабочий стол\NastyshaDisk\FileAPI\Aplication\bin\Debug\net8.0\Aplication.deps.json
+C:\Users\Дима\OneDrive\Рабочий стол\NastyshaDisk\FileAPI\Aplication\bin\Debug\net8.0\Aplication.dll
+C:\Users\Дима\OneDrive\Рабочий стол\NastyshaDisk\FileAPI\Aplication\bin\Debug\net8.0\Aplication.pdb
+C:\Users\Дима\OneDrive\Рабочий стол\NastyshaDisk\FileAPI\Aplication\obj\Debug\net8.0\Aplication.csproj.AssemblyReference.cache
+C:\Users\Дима\OneDrive\Рабочий стол\NastyshaDisk\FileAPI\Aplication\obj\Debug\net8.0\Aplication.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Дима\OneDrive\Рабочий стол\NastyshaDisk\FileAPI\Aplication\obj\Debug\net8.0\Aplication.AssemblyInfoInputs.cache
+C:\Users\Дима\OneDrive\Рабочий стол\NastyshaDisk\FileAPI\Aplication\obj\Debug\net8.0\Aplication.AssemblyInfo.cs
+C:\Users\Дима\OneDrive\Рабочий стол\NastyshaDisk\FileAPI\Aplication\obj\Debug\net8.0\Aplication.csproj.CoreCompileInputs.cache
+C:\Users\Дима\OneDrive\Рабочий стол\NastyshaDisk\FileAPI\Aplication\obj\Debug\net8.0\Aplication.sourcelink.json
+C:\Users\Дима\OneDrive\Рабочий стол\NastyshaDisk\FileAPI\Aplication\obj\Debug\net8.0\Aplication.dll
+C:\Users\Дима\OneDrive\Рабочий стол\NastyshaDisk\FileAPI\Aplication\obj\Debug\net8.0\refint\Aplication.dll
+C:\Users\Дима\OneDrive\Рабочий стол\NastyshaDisk\FileAPI\Aplication\obj\Debug\net8.0\Aplication.pdb
+C:\Users\Дима\OneDrive\Рабочий стол\NastyshaDisk\FileAPI\Aplication\obj\Debug\net8.0\ref\Aplication.dll
+C:\Users\Дима\OneDrive\Документы\NastyshaDisk\FileAPI\Aplication\bin\Debug\net8.0\Aplication.deps.json
+C:\Users\Дима\OneDrive\Документы\NastyshaDisk\FileAPI\Aplication\bin\Debug\net8.0\Aplication.dll
+C:\Users\Дима\OneDrive\Документы\NastyshaDisk\FileAPI\Aplication\bin\Debug\net8.0\Aplication.pdb
+C:\Users\Дима\OneDrive\Документы\NastyshaDisk\FileAPI\Aplication\obj\Debug\net8.0\Aplication.csproj.AssemblyReference.cache
+C:\Users\Дима\OneDrive\Документы\NastyshaDisk\FileAPI\Aplication\obj\Debug\net8.0\Aplication.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Дима\OneDrive\Документы\NastyshaDisk\FileAPI\Aplication\obj\Debug\net8.0\Aplication.AssemblyInfoInputs.cache
+C:\Users\Дима\OneDrive\Документы\NastyshaDisk\FileAPI\Aplication\obj\Debug\net8.0\Aplication.AssemblyInfo.cs
+C:\Users\Дима\OneDrive\Документы\NastyshaDisk\FileAPI\Aplication\obj\Debug\net8.0\Aplication.csproj.CoreCompileInputs.cache
+C:\Users\Дима\OneDrive\Документы\NastyshaDisk\FileAPI\Aplication\obj\Debug\net8.0\Aplication.sourcelink.json
+C:\Users\Дима\OneDrive\Документы\NastyshaDisk\FileAPI\Aplication\obj\Debug\net8.0\Aplication.dll
+C:\Users\Дима\OneDrive\Документы\NastyshaDisk\FileAPI\Aplication\obj\Debug\net8.0\refint\Aplication.dll
+C:\Users\Дима\OneDrive\Документы\NastyshaDisk\FileAPI\Aplication\obj\Debug\net8.0\Aplication.pdb
+C:\Users\Дима\OneDrive\Документы\NastyshaDisk\FileAPI\Aplication\obj\Debug\net8.0\ref\Aplication.dll
+D:\NastyshaDisk\FileAPI\Aplication\bin\Debug\net8.0\Aplication.deps.json
+D:\NastyshaDisk\FileAPI\Aplication\bin\Debug\net8.0\Aplication.dll
+D:\NastyshaDisk\FileAPI\Aplication\bin\Debug\net8.0\Aplication.pdb
+D:\NastyshaDisk\FileAPI\Aplication\obj\Debug\net8.0\Aplication.csproj.AssemblyReference.cache
+D:\NastyshaDisk\FileAPI\Aplication\obj\Debug\net8.0\Aplication.GeneratedMSBuildEditorConfig.editorconfig
+D:\NastyshaDisk\FileAPI\Aplication\obj\Debug\net8.0\Aplication.AssemblyInfoInputs.cache
+D:\NastyshaDisk\FileAPI\Aplication\obj\Debug\net8.0\Aplication.AssemblyInfo.cs
+D:\NastyshaDisk\FileAPI\Aplication\obj\Debug\net8.0\Aplication.csproj.CoreCompileInputs.cache
+D:\NastyshaDisk\FileAPI\Aplication\obj\Debug\net8.0\Aplication.sourcelink.json
+D:\NastyshaDisk\FileAPI\Aplication\obj\Debug\net8.0\Aplication.dll
+D:\NastyshaDisk\FileAPI\Aplication\obj\Debug\net8.0\refint\Aplication.dll
+D:\NastyshaDisk\FileAPI\Aplication\obj\Debug\net8.0\Aplication.pdb
+D:\NastyshaDisk\FileAPI\Aplication\obj\Debug\net8.0\ref\Aplication.dll
+C:\Users\Дима\OneDrive\Рабочий стол\NastyshaDisk\FileAPI\Aplication\bin\Debug\net8.0\Core.dll
+C:\Users\Дима\OneDrive\Рабочий стол\NastyshaDisk\FileAPI\Aplication\bin\Debug\net8.0\Presistence.dll
+C:\Users\Дима\OneDrive\Рабочий стол\NastyshaDisk\FileAPI\Aplication\bin\Debug\net8.0\Core.pdb
+C:\Users\Дима\OneDrive\Рабочий стол\NastyshaDisk\FileAPI\Aplication\bin\Debug\net8.0\Presistence.pdb
+C:\Users\Дима\OneDrive\Рабочий стол\NastyshaDisk\FileAPI\Aplication\obj\Debug\net8.0\Aplication.csproj.Up2Date
+D:\NastyshaDisk\FileAPI\Aplication\bin\Debug\net8.0\Core.dll
+D:\NastyshaDisk\FileAPI\Aplication\bin\Debug\net8.0\Presistence.dll
+D:\NastyshaDisk\FileAPI\Aplication\bin\Debug\net8.0\Core.pdb
+D:\NastyshaDisk\FileAPI\Aplication\bin\Debug\net8.0\Presistence.pdb
+D:\NastyshaDisk\FileAPI\Aplication\obj\Debug\net8.0\Aplication.csproj.Up2Date
+C:\NastyshaDisk\FileAPI\Aplication\bin\Debug\net8.0\Aplication.deps.json
+C:\NastyshaDisk\FileAPI\Aplication\bin\Debug\net8.0\Aplication.dll
+C:\NastyshaDisk\FileAPI\Aplication\bin\Debug\net8.0\Aplication.pdb
+C:\NastyshaDisk\FileAPI\Aplication\bin\Debug\net8.0\Core.dll
+C:\NastyshaDisk\FileAPI\Aplication\bin\Debug\net8.0\Presistence.dll
+C:\NastyshaDisk\FileAPI\Aplication\bin\Debug\net8.0\Core.pdb
+C:\NastyshaDisk\FileAPI\Aplication\bin\Debug\net8.0\Presistence.pdb
+C:\NastyshaDisk\FileAPI\Aplication\obj\Debug\net8.0\Aplication.csproj.AssemblyReference.cache
+C:\NastyshaDisk\FileAPI\Aplication\obj\Debug\net8.0\Aplication.GeneratedMSBuildEditorConfig.editorconfig
+C:\NastyshaDisk\FileAPI\Aplication\obj\Debug\net8.0\Aplication.AssemblyInfoInputs.cache
+C:\NastyshaDisk\FileAPI\Aplication\obj\Debug\net8.0\Aplication.AssemblyInfo.cs
+C:\NastyshaDisk\FileAPI\Aplication\obj\Debug\net8.0\Aplication.csproj.CoreCompileInputs.cache
+C:\NastyshaDisk\FileAPI\Aplication\obj\Debug\net8.0\Aplication.sourcelink.json
+C:\NastyshaDisk\FileAPI\Aplication\obj\Debug\net8.0\Aplication.csproj.Up2Date
+C:\NastyshaDisk\FileAPI\Aplication\obj\Debug\net8.0\Aplication.dll
+C:\NastyshaDisk\FileAPI\Aplication\obj\Debug\net8.0\refint\Aplication.dll
+C:\NastyshaDisk\FileAPI\Aplication\obj\Debug\net8.0\Aplication.pdb
+C:\NastyshaDisk\FileAPI\Aplication\obj\Debug\net8.0\ref\Aplication.dll

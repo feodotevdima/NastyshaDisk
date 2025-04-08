@@ -1,0 +1,96 @@
+C:\Users\Дима\source\repos\WebAPI\Presistence\bin\Debug\net7.0\Presistence.deps.json
+C:\Users\Дима\source\repos\WebAPI\Presistence\bin\Debug\net7.0\Presistence.dll
+C:\Users\Дима\source\repos\WebAPI\Presistence\bin\Debug\net7.0\Presistence.pdb
+C:\Users\Дима\source\repos\WebAPI\Presistence\bin\Debug\net7.0\Core.dll
+C:\Users\Дима\source\repos\WebAPI\Presistence\bin\Debug\net7.0\Core.pdb
+C:\Users\Дима\source\repos\WebAPI\Presistence\obj\Debug\net7.0\Presistence.csproj.AssemblyReference.cache
+C:\Users\Дима\source\repos\WebAPI\Presistence\obj\Debug\net7.0\Presistence.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Дима\source\repos\WebAPI\Presistence\obj\Debug\net7.0\Presistence.AssemblyInfoInputs.cache
+C:\Users\Дима\source\repos\WebAPI\Presistence\obj\Debug\net7.0\Presistence.AssemblyInfo.cs
+C:\Users\Дима\source\repos\WebAPI\Presistence\obj\Debug\net7.0\Presistence.csproj.CoreCompileInputs.cache
+C:\Users\Дима\source\repos\WebAPI\Presistence\obj\Debug\net7.0\Presistence.sourcelink.json
+C:\Users\Дима\source\repos\WebAPI\Presistence\obj\Debug\net7.0\Presiste.28707F9F.Up2Date
+C:\Users\Дима\source\repos\WebAPI\Presistence\obj\Debug\net7.0\Presistence.dll
+C:\Users\Дима\source\repos\WebAPI\Presistence\obj\Debug\net7.0\refint\Presistence.dll
+C:\Users\Дима\source\repos\WebAPI\Presistence\obj\Debug\net7.0\Presistence.pdb
+C:\Users\Дима\source\repos\WebAPI\Presistence\obj\Debug\net7.0\ref\Presistence.dll
+C:\Users\Дима\source\repos\DbProviderAPI\Presistence\bin\Debug\net7.0\Presistence.deps.json
+C:\Users\Дима\source\repos\DbProviderAPI\Presistence\bin\Debug\net7.0\Presistence.dll
+C:\Users\Дима\source\repos\DbProviderAPI\Presistence\bin\Debug\net7.0\Presistence.pdb
+C:\Users\Дима\source\repos\DbProviderAPI\Presistence\bin\Debug\net7.0\Core.dll
+C:\Users\Дима\source\repos\DbProviderAPI\Presistence\bin\Debug\net7.0\Core.pdb
+C:\Users\Дима\source\repos\DbProviderAPI\Presistence\obj\Debug\net7.0\Presistence.csproj.AssemblyReference.cache
+C:\Users\Дима\source\repos\DbProviderAPI\Presistence\obj\Debug\net7.0\Presistence.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Дима\source\repos\DbProviderAPI\Presistence\obj\Debug\net7.0\Presistence.AssemblyInfoInputs.cache
+C:\Users\Дима\source\repos\DbProviderAPI\Presistence\obj\Debug\net7.0\Presistence.AssemblyInfo.cs
+C:\Users\Дима\source\repos\DbProviderAPI\Presistence\obj\Debug\net7.0\Presistence.csproj.CoreCompileInputs.cache
+C:\Users\Дима\source\repos\DbProviderAPI\Presistence\obj\Debug\net7.0\Presistence.sourcelink.json
+C:\Users\Дима\source\repos\DbProviderAPI\Presistence\obj\Debug\net7.0\Presiste.28707F9F.Up2Date
+C:\Users\Дима\source\repos\DbProviderAPI\Presistence\obj\Debug\net7.0\Presistence.dll
+C:\Users\Дима\source\repos\DbProviderAPI\Presistence\obj\Debug\net7.0\refint\Presistence.dll
+C:\Users\Дима\source\repos\DbProviderAPI\Presistence\obj\Debug\net7.0\Presistence.pdb
+C:\Users\Дима\source\repos\DbProviderAPI\Presistence\obj\Debug\net7.0\ref\Presistence.dll
+C:\Users\Дима\source\repos\UserAPI\Presistence\bin\Debug\net7.0\Presistence.deps.json
+C:\Users\Дима\source\repos\UserAPI\Presistence\bin\Debug\net7.0\Presistence.dll
+C:\Users\Дима\source\repos\UserAPI\Presistence\bin\Debug\net7.0\Presistence.pdb
+C:\Users\Дима\source\repos\UserAPI\Presistence\bin\Debug\net7.0\Core.dll
+C:\Users\Дима\source\repos\UserAPI\Presistence\bin\Debug\net7.0\Core.pdb
+C:\Users\Дима\source\repos\UserAPI\Presistence\obj\Debug\net7.0\Presistence.csproj.AssemblyReference.cache
+C:\Users\Дима\source\repos\UserAPI\Presistence\obj\Debug\net7.0\Presistence.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Дима\source\repos\UserAPI\Presistence\obj\Debug\net7.0\Presistence.AssemblyInfoInputs.cache
+C:\Users\Дима\source\repos\UserAPI\Presistence\obj\Debug\net7.0\Presistence.AssemblyInfo.cs
+C:\Users\Дима\source\repos\UserAPI\Presistence\obj\Debug\net7.0\Presistence.csproj.CoreCompileInputs.cache
+C:\Users\Дима\source\repos\UserAPI\Presistence\obj\Debug\net7.0\Presistence.sourcelink.json
+C:\Users\Дима\source\repos\UserAPI\Presistence\obj\Debug\net7.0\Presiste.28707F9F.Up2Date
+C:\Users\Дима\source\repos\UserAPI\Presistence\obj\Debug\net7.0\Presistence.dll
+C:\Users\Дима\source\repos\UserAPI\Presistence\obj\Debug\net7.0\refint\Presistence.dll
+C:\Users\Дима\source\repos\UserAPI\Presistence\obj\Debug\net7.0\Presistence.pdb
+C:\Users\Дима\source\repos\UserAPI\Presistence\obj\Debug\net7.0\ref\Presistence.dll
+C:\Users\Дима\OneDrive\Рабочий стол\NastyshaDisk\UserAPI\Presistence\bin\Debug\net7.0\Presistence.deps.json
+C:\Users\Дима\OneDrive\Рабочий стол\NastyshaDisk\UserAPI\Presistence\bin\Debug\net7.0\Presistence.dll
+C:\Users\Дима\OneDrive\Рабочий стол\NastyshaDisk\UserAPI\Presistence\bin\Debug\net7.0\Presistence.pdb
+C:\Users\Дима\OneDrive\Рабочий стол\NastyshaDisk\UserAPI\Presistence\bin\Debug\net7.0\Core.dll
+C:\Users\Дима\OneDrive\Рабочий стол\NastyshaDisk\UserAPI\Presistence\bin\Debug\net7.0\Core.pdb
+C:\Users\Дима\OneDrive\Рабочий стол\NastyshaDisk\UserAPI\Presistence\obj\Debug\net7.0\Presistence.csproj.AssemblyReference.cache
+C:\Users\Дима\OneDrive\Рабочий стол\NastyshaDisk\UserAPI\Presistence\obj\Debug\net7.0\Presistence.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Дима\OneDrive\Рабочий стол\NastyshaDisk\UserAPI\Presistence\obj\Debug\net7.0\Presistence.AssemblyInfoInputs.cache
+C:\Users\Дима\OneDrive\Рабочий стол\NastyshaDisk\UserAPI\Presistence\obj\Debug\net7.0\Presistence.AssemblyInfo.cs
+C:\Users\Дима\OneDrive\Рабочий стол\NastyshaDisk\UserAPI\Presistence\obj\Debug\net7.0\Presistence.csproj.CoreCompileInputs.cache
+C:\Users\Дима\OneDrive\Рабочий стол\NastyshaDisk\UserAPI\Presistence\obj\Debug\net7.0\Presistence.sourcelink.json
+C:\Users\Дима\OneDrive\Рабочий стол\NastyshaDisk\UserAPI\Presistence\obj\Debug\net7.0\Presiste.28707F9F.Up2Date
+C:\Users\Дима\OneDrive\Рабочий стол\NastyshaDisk\UserAPI\Presistence\obj\Debug\net7.0\Presistence.dll
+C:\Users\Дима\OneDrive\Рабочий стол\NastyshaDisk\UserAPI\Presistence\obj\Debug\net7.0\refint\Presistence.dll
+C:\Users\Дима\OneDrive\Рабочий стол\NastyshaDisk\UserAPI\Presistence\obj\Debug\net7.0\Presistence.pdb
+C:\Users\Дима\OneDrive\Рабочий стол\NastyshaDisk\UserAPI\Presistence\obj\Debug\net7.0\ref\Presistence.dll
+C:\NastyshaDisk\UserAPI\Presistence\bin\Debug\net7.0\Presistence.deps.json
+C:\NastyshaDisk\UserAPI\Presistence\bin\Debug\net7.0\Presistence.dll
+C:\NastyshaDisk\UserAPI\Presistence\bin\Debug\net7.0\Presistence.pdb
+C:\NastyshaDisk\UserAPI\Presistence\bin\Debug\net7.0\Core.dll
+C:\NastyshaDisk\UserAPI\Presistence\bin\Debug\net7.0\Core.pdb
+C:\NastyshaDisk\UserAPI\Presistence\obj\Debug\net7.0\Presistence.csproj.AssemblyReference.cache
+C:\NastyshaDisk\UserAPI\Presistence\obj\Debug\net7.0\Presistence.GeneratedMSBuildEditorConfig.editorconfig
+C:\NastyshaDisk\UserAPI\Presistence\obj\Debug\net7.0\Presistence.AssemblyInfoInputs.cache
+C:\NastyshaDisk\UserAPI\Presistence\obj\Debug\net7.0\Presistence.AssemblyInfo.cs
+C:\NastyshaDisk\UserAPI\Presistence\obj\Debug\net7.0\Presistence.csproj.CoreCompileInputs.cache
+C:\NastyshaDisk\UserAPI\Presistence\obj\Debug\net7.0\Presistence.sourcelink.json
+C:\NastyshaDisk\UserAPI\Presistence\obj\Debug\net7.0\Presiste.28707F9F.Up2Date
+C:\NastyshaDisk\UserAPI\Presistence\obj\Debug\net7.0\Presistence.dll
+C:\NastyshaDisk\UserAPI\Presistence\obj\Debug\net7.0\refint\Presistence.dll
+C:\NastyshaDisk\UserAPI\Presistence\obj\Debug\net7.0\Presistence.pdb
+C:\NastyshaDisk\UserAPI\Presistence\obj\Debug\net7.0\ref\Presistence.dll
+D:\NastyshaDisk\UserAPI\Presistence\bin\Debug\net7.0\Presistence.deps.json
+D:\NastyshaDisk\UserAPI\Presistence\bin\Debug\net7.0\Presistence.dll
+D:\NastyshaDisk\UserAPI\Presistence\bin\Debug\net7.0\Presistence.pdb
+D:\NastyshaDisk\UserAPI\Presistence\bin\Debug\net7.0\Core.dll
+D:\NastyshaDisk\UserAPI\Presistence\bin\Debug\net7.0\Core.pdb
+D:\NastyshaDisk\UserAPI\Presistence\obj\Debug\net7.0\Presistence.csproj.AssemblyReference.cache
+D:\NastyshaDisk\UserAPI\Presistence\obj\Debug\net7.0\Presistence.GeneratedMSBuildEditorConfig.editorconfig
+D:\NastyshaDisk\UserAPI\Presistence\obj\Debug\net7.0\Presistence.AssemblyInfoInputs.cache
+D:\NastyshaDisk\UserAPI\Presistence\obj\Debug\net7.0\Presistence.AssemblyInfo.cs
+D:\NastyshaDisk\UserAPI\Presistence\obj\Debug\net7.0\Presistence.csproj.CoreCompileInputs.cache
+D:\NastyshaDisk\UserAPI\Presistence\obj\Debug\net7.0\Presistence.sourcelink.json
+D:\NastyshaDisk\UserAPI\Presistence\obj\Debug\net7.0\Presiste.28707F9F.Up2Date
+D:\NastyshaDisk\UserAPI\Presistence\obj\Debug\net7.0\Presistence.dll
+D:\NastyshaDisk\UserAPI\Presistence\obj\Debug\net7.0\refint\Presistence.dll
+D:\NastyshaDisk\UserAPI\Presistence\obj\Debug\net7.0\Presistence.pdb
+D:\NastyshaDisk\UserAPI\Presistence\obj\Debug\net7.0\ref\Presistence.dll

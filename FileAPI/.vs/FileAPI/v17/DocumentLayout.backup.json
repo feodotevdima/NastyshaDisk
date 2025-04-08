@@ -1,0 +1,113 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\NastyshaDisk\\FileAPI\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{39C5DAAC-88FC-4512-B687-B05055B81AAF}|FileAPI\\FileAPI.csproj|c:\\nastyshadisk\\fileapi\\fileapi\\controllers\\filescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{39C5DAAC-88FC-4512-B687-B05055B81AAF}|FileAPI\\FileAPI.csproj|solutionrelative:fileapi\\controllers\\filescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{25D9AC31-259F-480E-896B-F3E132ECC560}|Presistence\\Presistence.csproj|c:\\nastyshadisk\\fileapi\\presistence\\dtos\\createdirdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{25D9AC31-259F-480E-896B-F3E132ECC560}|Presistence\\Presistence.csproj|solutionrelative:presistence\\dtos\\createdirdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{39C5DAAC-88FC-4512-B687-B05055B81AAF}|FileAPI\\FileAPI.csproj|c:\\nastyshadisk\\fileapi\\fileapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{39C5DAAC-88FC-4512-B687-B05055B81AAF}|FileAPI\\FileAPI.csproj|solutionrelative:fileapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{25D9AC31-259F-480E-896B-F3E132ECC560}|Presistence\\Presistence.csproj|c:\\nastyshadisk\\fileapi\\presistence\\dtos\\deletefilesdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{25D9AC31-259F-480E-896B-F3E132ECC560}|Presistence\\Presistence.csproj|solutionrelative:presistence\\dtos\\deletefilesdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3AE2FDA0-992D-465E-8397-9325F228B648}|Aplication\\Aplication.csproj|c:\\nastyshadisk\\fileapi\\aplication\\repository\\filesrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3AE2FDA0-992D-465E-8397-9325F228B648}|Aplication\\Aplication.csproj|solutionrelative:aplication\\repository\\filesrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 7,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{0174dea2-fdbe-4ef1-8f99-c0beae78880f}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "CreateDirDto.cs",
+              "DocumentMoniker": "C:\\NastyshaDisk\\FileAPI\\Presistence\\Dtos\\CreateDirDto.cs",
+              "RelativeDocumentMoniker": "Presistence\\Dtos\\CreateDirDto.cs",
+              "ToolTip": "C:\\NastyshaDisk\\FileAPI\\Presistence\\Dtos\\CreateDirDto.cs",
+              "RelativeToolTip": "Presistence\\Dtos\\CreateDirDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-02T22:22:38.24Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\NastyshaDisk\\FileAPI\\FileAPI\\Program.cs",
+              "RelativeDocumentMoniker": "FileAPI\\Program.cs",
+              "ToolTip": "C:\\NastyshaDisk\\FileAPI\\FileAPI\\Program.cs",
+              "RelativeToolTip": "FileAPI\\Program.cs",
+              "ViewState": "AgIAACcAAAAAAAAAAAAAAEcAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-31T19:08:13.932Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "FilesRepository.cs",
+              "DocumentMoniker": "C:\\NastyshaDisk\\FileAPI\\Aplication\\Repository\\FilesRepository.cs",
+              "RelativeDocumentMoniker": "Aplication\\Repository\\FilesRepository.cs",
+              "ToolTip": "C:\\NastyshaDisk\\FileAPI\\Aplication\\Repository\\FilesRepository.cs",
+              "RelativeToolTip": "Aplication\\Repository\\FilesRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADgAAAA3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-29T19:58:32.495Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "DeleteFilesDto.cs",
+              "DocumentMoniker": "C:\\NastyshaDisk\\FileAPI\\Presistence\\Dtos\\DeleteFilesDto.cs",
+              "RelativeDocumentMoniker": "Presistence\\Dtos\\DeleteFilesDto.cs",
+              "ToolTip": "C:\\NastyshaDisk\\FileAPI\\Presistence\\Dtos\\DeleteFilesDto.cs",
+              "RelativeToolTip": "Presistence\\Dtos\\DeleteFilesDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-23T18:36:10.509Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "FilesController.cs",
+              "DocumentMoniker": "C:\\NastyshaDisk\\FileAPI\\FileAPI\\Controllers\\FilesController.cs",
+              "RelativeDocumentMoniker": "FileAPI\\Controllers\\FilesController.cs",
+              "ToolTip": "C:\\NastyshaDisk\\FileAPI\\FileAPI\\Controllers\\FilesController.cs",
+              "RelativeToolTip": "FileAPI\\Controllers\\FilesController.cs",
+              "ViewState": "AgIAAM0AAAAAAAAAAAAAAN8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-03T21:32:33.062Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,76 @@
+C:\Users\Дима\source\repos\WebAPI\Core\bin\Debug\net7.0\Core.deps.json
+C:\Users\Дима\source\repos\WebAPI\Core\bin\Debug\net7.0\Core.dll
+C:\Users\Дима\source\repos\WebAPI\Core\bin\Debug\net7.0\Core.pdb
+C:\Users\Дима\source\repos\WebAPI\Core\obj\Debug\net7.0\Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Дима\source\repos\WebAPI\Core\obj\Debug\net7.0\Core.AssemblyInfoInputs.cache
+C:\Users\Дима\source\repos\WebAPI\Core\obj\Debug\net7.0\Core.AssemblyInfo.cs
+C:\Users\Дима\source\repos\WebAPI\Core\obj\Debug\net7.0\Core.csproj.CoreCompileInputs.cache
+C:\Users\Дима\source\repos\WebAPI\Core\obj\Debug\net7.0\Core.sourcelink.json
+C:\Users\Дима\source\repos\WebAPI\Core\obj\Debug\net7.0\Core.dll
+C:\Users\Дима\source\repos\WebAPI\Core\obj\Debug\net7.0\refint\Core.dll
+C:\Users\Дима\source\repos\WebAPI\Core\obj\Debug\net7.0\Core.pdb
+C:\Users\Дима\source\repos\WebAPI\Core\obj\Debug\net7.0\ref\Core.dll
+C:\Users\Дима\source\repos\DbProviderAPI\Core\bin\Debug\net7.0\Core.deps.json
+C:\Users\Дима\source\repos\DbProviderAPI\Core\bin\Debug\net7.0\Core.dll
+C:\Users\Дима\source\repos\DbProviderAPI\Core\bin\Debug\net7.0\Core.pdb
+C:\Users\Дима\source\repos\DbProviderAPI\Core\obj\Debug\net7.0\Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Дима\source\repos\DbProviderAPI\Core\obj\Debug\net7.0\Core.AssemblyInfoInputs.cache
+C:\Users\Дима\source\repos\DbProviderAPI\Core\obj\Debug\net7.0\Core.AssemblyInfo.cs
+C:\Users\Дима\source\repos\DbProviderAPI\Core\obj\Debug\net7.0\Core.csproj.CoreCompileInputs.cache
+C:\Users\Дима\source\repos\DbProviderAPI\Core\obj\Debug\net7.0\Core.sourcelink.json
+C:\Users\Дима\source\repos\DbProviderAPI\Core\obj\Debug\net7.0\Core.dll
+C:\Users\Дима\source\repos\DbProviderAPI\Core\obj\Debug\net7.0\refint\Core.dll
+C:\Users\Дима\source\repos\DbProviderAPI\Core\obj\Debug\net7.0\Core.pdb
+C:\Users\Дима\source\repos\DbProviderAPI\Core\obj\Debug\net7.0\ref\Core.dll
+C:\Users\Дима\source\repos\UserAPI\Core\bin\Debug\net7.0\Core.deps.json
+C:\Users\Дима\source\repos\UserAPI\Core\bin\Debug\net7.0\Core.dll
+C:\Users\Дима\source\repos\UserAPI\Core\bin\Debug\net7.0\Core.pdb
+C:\Users\Дима\source\repos\UserAPI\Core\obj\Debug\net7.0\Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Дима\source\repos\UserAPI\Core\obj\Debug\net7.0\Core.AssemblyInfoInputs.cache
+C:\Users\Дима\source\repos\UserAPI\Core\obj\Debug\net7.0\Core.AssemblyInfo.cs
+C:\Users\Дима\source\repos\UserAPI\Core\obj\Debug\net7.0\Core.csproj.CoreCompileInputs.cache
+C:\Users\Дима\source\repos\UserAPI\Core\obj\Debug\net7.0\Core.sourcelink.json
+C:\Users\Дима\source\repos\UserAPI\Core\obj\Debug\net7.0\Core.dll
+C:\Users\Дима\source\repos\UserAPI\Core\obj\Debug\net7.0\refint\Core.dll
+C:\Users\Дима\source\repos\UserAPI\Core\obj\Debug\net7.0\Core.pdb
+C:\Users\Дима\source\repos\UserAPI\Core\obj\Debug\net7.0\ref\Core.dll
+C:\Users\Дима\source\repos\UserAPI\Core\obj\Debug\net7.0\Core.csproj.AssemblyReference.cache
+C:\Users\Дима\OneDrive\Рабочий стол\NastyshaDisk\UserAPI\Core\bin\Debug\net7.0\Core.deps.json
+C:\Users\Дима\OneDrive\Рабочий стол\NastyshaDisk\UserAPI\Core\bin\Debug\net7.0\Core.dll
+C:\Users\Дима\OneDrive\Рабочий стол\NastyshaDisk\UserAPI\Core\bin\Debug\net7.0\Core.pdb
+C:\Users\Дима\OneDrive\Рабочий стол\NastyshaDisk\UserAPI\Core\obj\Debug\net7.0\Core.csproj.AssemblyReference.cache
+C:\Users\Дима\OneDrive\Рабочий стол\NastyshaDisk\UserAPI\Core\obj\Debug\net7.0\Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Дима\OneDrive\Рабочий стол\NastyshaDisk\UserAPI\Core\obj\Debug\net7.0\Core.AssemblyInfoInputs.cache
+C:\Users\Дима\OneDrive\Рабочий стол\NastyshaDisk\UserAPI\Core\obj\Debug\net7.0\Core.AssemblyInfo.cs
+C:\Users\Дима\OneDrive\Рабочий стол\NastyshaDisk\UserAPI\Core\obj\Debug\net7.0\Core.csproj.CoreCompileInputs.cache
+C:\Users\Дима\OneDrive\Рабочий стол\NastyshaDisk\UserAPI\Core\obj\Debug\net7.0\Core.sourcelink.json
+C:\Users\Дима\OneDrive\Рабочий стол\NastyshaDisk\UserAPI\Core\obj\Debug\net7.0\Core.dll
+C:\Users\Дима\OneDrive\Рабочий стол\NastyshaDisk\UserAPI\Core\obj\Debug\net7.0\refint\Core.dll
+C:\Users\Дима\OneDrive\Рабочий стол\NastyshaDisk\UserAPI\Core\obj\Debug\net7.0\Core.pdb
+C:\Users\Дима\OneDrive\Рабочий стол\NastyshaDisk\UserAPI\Core\obj\Debug\net7.0\ref\Core.dll
+C:\NastyshaDisk\UserAPI\Core\bin\Debug\net7.0\Core.deps.json
+C:\NastyshaDisk\UserAPI\Core\bin\Debug\net7.0\Core.dll
+C:\NastyshaDisk\UserAPI\Core\bin\Debug\net7.0\Core.pdb
+C:\NastyshaDisk\UserAPI\Core\obj\Debug\net7.0\Core.csproj.AssemblyReference.cache
+C:\NastyshaDisk\UserAPI\Core\obj\Debug\net7.0\Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\NastyshaDisk\UserAPI\Core\obj\Debug\net7.0\Core.AssemblyInfoInputs.cache
+C:\NastyshaDisk\UserAPI\Core\obj\Debug\net7.0\Core.AssemblyInfo.cs
+C:\NastyshaDisk\UserAPI\Core\obj\Debug\net7.0\Core.csproj.CoreCompileInputs.cache
+C:\NastyshaDisk\UserAPI\Core\obj\Debug\net7.0\Core.sourcelink.json
+C:\NastyshaDisk\UserAPI\Core\obj\Debug\net7.0\Core.dll
+C:\NastyshaDisk\UserAPI\Core\obj\Debug\net7.0\refint\Core.dll
+C:\NastyshaDisk\UserAPI\Core\obj\Debug\net7.0\Core.pdb
+C:\NastyshaDisk\UserAPI\Core\obj\Debug\net7.0\ref\Core.dll
+D:\NastyshaDisk\UserAPI\Core\bin\Debug\net7.0\Core.deps.json
+D:\NastyshaDisk\UserAPI\Core\bin\Debug\net7.0\Core.dll
+D:\NastyshaDisk\UserAPI\Core\bin\Debug\net7.0\Core.pdb
+D:\NastyshaDisk\UserAPI\Core\obj\Debug\net7.0\Core.csproj.AssemblyReference.cache
+D:\NastyshaDisk\UserAPI\Core\obj\Debug\net7.0\Core.GeneratedMSBuildEditorConfig.editorconfig
+D:\NastyshaDisk\UserAPI\Core\obj\Debug\net7.0\Core.AssemblyInfoInputs.cache
+D:\NastyshaDisk\UserAPI\Core\obj\Debug\net7.0\Core.AssemblyInfo.cs
+D:\NastyshaDisk\UserAPI\Core\obj\Debug\net7.0\Core.csproj.CoreCompileInputs.cache
+D:\NastyshaDisk\UserAPI\Core\obj\Debug\net7.0\Core.sourcelink.json
+D:\NastyshaDisk\UserAPI\Core\obj\Debug\net7.0\Core.dll
+D:\NastyshaDisk\UserAPI\Core\obj\Debug\net7.0\refint\Core.dll
+D:\NastyshaDisk\UserAPI\Core\obj\Debug\net7.0\Core.pdb
+D:\NastyshaDisk\UserAPI\Core\obj\Debug\net7.0\ref\Core.dll

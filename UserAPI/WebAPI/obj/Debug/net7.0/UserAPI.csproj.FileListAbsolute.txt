@@ -1,0 +1,324 @@
+C:\Users\Дима\source\repos\UserAPI\WebAPI\bin\Debug\net7.0\appsettings.Development.json
+C:\Users\Дима\source\repos\UserAPI\WebAPI\bin\Debug\net7.0\appsettings.json
+C:\Users\Дима\source\repos\UserAPI\WebAPI\bin\Debug\net7.0\UserAPI.exe
+C:\Users\Дима\source\repos\UserAPI\WebAPI\bin\Debug\net7.0\UserAPI.deps.json
+C:\Users\Дима\source\repos\UserAPI\WebAPI\bin\Debug\net7.0\UserAPI.runtimeconfig.json
+C:\Users\Дима\source\repos\UserAPI\WebAPI\bin\Debug\net7.0\UserAPI.dll
+C:\Users\Дима\source\repos\UserAPI\WebAPI\bin\Debug\net7.0\UserAPI.pdb
+C:\Users\Дима\source\repos\UserAPI\WebAPI\bin\Debug\net7.0\Microsoft.Data.Sqlite.dll
+C:\Users\Дима\source\repos\UserAPI\WebAPI\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\Дима\source\repos\UserAPI\WebAPI\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\Дима\source\repos\UserAPI\WebAPI\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\Дима\source\repos\UserAPI\WebAPI\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Sqlite.dll
+C:\Users\Дима\source\repos\UserAPI\WebAPI\bin\Debug\net7.0\Microsoft.Extensions.DependencyModel.dll
+C:\Users\Дима\source\repos\UserAPI\WebAPI\bin\Debug\net7.0\Microsoft.OpenApi.dll
+C:\Users\Дима\source\repos\UserAPI\WebAPI\bin\Debug\net7.0\SQLitePCLRaw.batteries_v2.dll
+C:\Users\Дима\source\repos\UserAPI\WebAPI\bin\Debug\net7.0\SQLitePCLRaw.core.dll
+C:\Users\Дима\source\repos\UserAPI\WebAPI\bin\Debug\net7.0\SQLitePCLRaw.provider.e_sqlite3.dll
+C:\Users\Дима\source\repos\UserAPI\WebAPI\bin\Debug\net7.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\Дима\source\repos\UserAPI\WebAPI\bin\Debug\net7.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\Дима\source\repos\UserAPI\WebAPI\bin\Debug\net7.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\Дима\source\repos\UserAPI\WebAPI\bin\Debug\net7.0\runtimes\alpine-arm\native\libe_sqlite3.so
+C:\Users\Дима\source\repos\UserAPI\WebAPI\bin\Debug\net7.0\runtimes\alpine-arm64\native\libe_sqlite3.so
+C:\Users\Дима\source\repos\UserAPI\WebAPI\bin\Debug\net7.0\runtimes\alpine-x64\native\libe_sqlite3.so
+C:\Users\Дима\source\repos\UserAPI\WebAPI\bin\Debug\net7.0\runtimes\browser-wasm\nativeassets\net7.0\e_sqlite3.a
+C:\Users\Дима\source\repos\UserAPI\WebAPI\bin\Debug\net7.0\runtimes\linux-arm\native\libe_sqlite3.so
+C:\Users\Дима\source\repos\UserAPI\WebAPI\bin\Debug\net7.0\runtimes\linux-arm64\native\libe_sqlite3.so
+C:\Users\Дима\source\repos\UserAPI\WebAPI\bin\Debug\net7.0\runtimes\linux-armel\native\libe_sqlite3.so
+C:\Users\Дима\source\repos\UserAPI\WebAPI\bin\Debug\net7.0\runtimes\linux-mips64\native\libe_sqlite3.so
+C:\Users\Дима\source\repos\UserAPI\WebAPI\bin\Debug\net7.0\runtimes\linux-musl-arm\native\libe_sqlite3.so
+C:\Users\Дима\source\repos\UserAPI\WebAPI\bin\Debug\net7.0\runtimes\linux-musl-arm64\native\libe_sqlite3.so
+C:\Users\Дима\source\repos\UserAPI\WebAPI\bin\Debug\net7.0\runtimes\linux-musl-x64\native\libe_sqlite3.so
+C:\Users\Дима\source\repos\UserAPI\WebAPI\bin\Debug\net7.0\runtimes\linux-ppc64le\native\libe_sqlite3.so
+C:\Users\Дима\source\repos\UserAPI\WebAPI\bin\Debug\net7.0\runtimes\linux-s390x\native\libe_sqlite3.so
+C:\Users\Дима\source\repos\UserAPI\WebAPI\bin\Debug\net7.0\runtimes\linux-x64\native\libe_sqlite3.so
+C:\Users\Дима\source\repos\UserAPI\WebAPI\bin\Debug\net7.0\runtimes\linux-x86\native\libe_sqlite3.so
+C:\Users\Дима\source\repos\UserAPI\WebAPI\bin\Debug\net7.0\runtimes\maccatalyst-arm64\native\libe_sqlite3.dylib
+C:\Users\Дима\source\repos\UserAPI\WebAPI\bin\Debug\net7.0\runtimes\maccatalyst-x64\native\libe_sqlite3.dylib
+C:\Users\Дима\source\repos\UserAPI\WebAPI\bin\Debug\net7.0\runtimes\osx-arm64\native\libe_sqlite3.dylib
+C:\Users\Дима\source\repos\UserAPI\WebAPI\bin\Debug\net7.0\runtimes\osx-x64\native\libe_sqlite3.dylib
+C:\Users\Дима\source\repos\UserAPI\WebAPI\bin\Debug\net7.0\runtimes\win-arm\native\e_sqlite3.dll
+C:\Users\Дима\source\repos\UserAPI\WebAPI\bin\Debug\net7.0\runtimes\win-arm64\native\e_sqlite3.dll
+C:\Users\Дима\source\repos\UserAPI\WebAPI\bin\Debug\net7.0\runtimes\win-x64\native\e_sqlite3.dll
+C:\Users\Дима\source\repos\UserAPI\WebAPI\bin\Debug\net7.0\runtimes\win-x86\native\e_sqlite3.dll
+C:\Users\Дима\source\repos\UserAPI\WebAPI\bin\Debug\net7.0\Aplication.dll
+C:\Users\Дима\source\repos\UserAPI\WebAPI\bin\Debug\net7.0\Core.dll
+C:\Users\Дима\source\repos\UserAPI\WebAPI\bin\Debug\net7.0\Presistence.dll
+C:\Users\Дима\source\repos\UserAPI\WebAPI\bin\Debug\net7.0\Aplication.pdb
+C:\Users\Дима\source\repos\UserAPI\WebAPI\bin\Debug\net7.0\Core.pdb
+C:\Users\Дима\source\repos\UserAPI\WebAPI\bin\Debug\net7.0\Presistence.pdb
+C:\Users\Дима\source\repos\UserAPI\WebAPI\obj\Debug\net7.0\UserAPI.csproj.AssemblyReference.cache
+C:\Users\Дима\source\repos\UserAPI\WebAPI\obj\Debug\net7.0\UserAPI.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Дима\source\repos\UserAPI\WebAPI\obj\Debug\net7.0\UserAPI.AssemblyInfoInputs.cache
+C:\Users\Дима\source\repos\UserAPI\WebAPI\obj\Debug\net7.0\UserAPI.AssemblyInfo.cs
+C:\Users\Дима\source\repos\UserAPI\WebAPI\obj\Debug\net7.0\UserAPI.csproj.CoreCompileInputs.cache
+C:\Users\Дима\source\repos\UserAPI\WebAPI\obj\Debug\net7.0\UserAPI.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\Дима\source\repos\UserAPI\WebAPI\obj\Debug\net7.0\UserAPI.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Дима\source\repos\UserAPI\WebAPI\obj\Debug\net7.0\UserAPI.sourcelink.json
+C:\Users\Дима\source\repos\UserAPI\WebAPI\obj\Debug\net7.0\staticwebassets.build.json
+C:\Users\Дима\source\repos\UserAPI\WebAPI\obj\Debug\net7.0\staticwebassets.development.json
+C:\Users\Дима\source\repos\UserAPI\WebAPI\obj\Debug\net7.0\staticwebassets\msbuild.UserAPI.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\Дима\source\repos\UserAPI\WebAPI\obj\Debug\net7.0\staticwebassets\msbuild.build.UserAPI.props
+C:\Users\Дима\source\repos\UserAPI\WebAPI\obj\Debug\net7.0\staticwebassets\msbuild.buildMultiTargeting.UserAPI.props
+C:\Users\Дима\source\repos\UserAPI\WebAPI\obj\Debug\net7.0\staticwebassets\msbuild.buildTransitive.UserAPI.props
+C:\Users\Дима\source\repos\UserAPI\WebAPI\obj\Debug\net7.0\staticwebassets.pack.json
+C:\Users\Дима\source\repos\UserAPI\WebAPI\obj\Debug\net7.0\scopedcss\bundle\UserAPI.styles.css
+C:\Users\Дима\source\repos\UserAPI\WebAPI\obj\Debug\net7.0\UserAPI.csproj.Up2Date
+C:\Users\Дима\source\repos\UserAPI\WebAPI\obj\Debug\net7.0\UserAPI.dll
+C:\Users\Дима\source\repos\UserAPI\WebAPI\obj\Debug\net7.0\refint\UserAPI.dll
+C:\Users\Дима\source\repos\UserAPI\WebAPI\obj\Debug\net7.0\UserAPI.pdb
+C:\Users\Дима\source\repos\UserAPI\WebAPI\obj\Debug\net7.0\UserAPI.genruntimeconfig.cache
+C:\Users\Дима\source\repos\UserAPI\WebAPI\obj\Debug\net7.0\ref\UserAPI.dll
+C:\Users\Дима\source\repos\UserAPI\WebAPI\bin\Debug\net7.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\Дима\source\repos\UserAPI\WebAPI\bin\Debug\net7.0\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\Дима\source\repos\UserAPI\WebAPI\bin\Debug\net7.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\Дима\source\repos\UserAPI\WebAPI\bin\Debug\net7.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\Дима\source\repos\UserAPI\WebAPI\bin\Debug\net7.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\Дима\source\repos\UserAPI\WebAPI\bin\Debug\net7.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\Дима\source\repos\UserAPI\WebAPI\bin\Debug\net7.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\Дима\source\repos\UserAPI\WebAPI\bin\Debug\net7.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\Дима\source\repos\UserAPI\WebAPI\bin\Debug\net7.0\Newtonsoft.Json.dll
+C:\Users\Дима\source\repos\UserAPI\WebAPI\bin\Debug\net7.0\UserAPI.staticwebassets.runtime.json
+C:\Users\Дима\OneDrive\Рабочий стол\NastyshaDisk\UserAPI\WebAPI\bin\Debug\net7.0\appsettings.Development.json
+C:\Users\Дима\OneDrive\Рабочий стол\NastyshaDisk\UserAPI\WebAPI\bin\Debug\net7.0\appsettings.json
+C:\Users\Дима\OneDrive\Рабочий стол\NastyshaDisk\UserAPI\WebAPI\bin\Debug\net7.0\UserAPI.staticwebassets.runtime.json
+C:\Users\Дима\OneDrive\Рабочий стол\NastyshaDisk\UserAPI\WebAPI\bin\Debug\net7.0\UserAPI.exe
+C:\Users\Дима\OneDrive\Рабочий стол\NastyshaDisk\UserAPI\WebAPI\bin\Debug\net7.0\UserAPI.deps.json
+C:\Users\Дима\OneDrive\Рабочий стол\NastyshaDisk\UserAPI\WebAPI\bin\Debug\net7.0\UserAPI.runtimeconfig.json
+C:\Users\Дима\OneDrive\Рабочий стол\NastyshaDisk\UserAPI\WebAPI\bin\Debug\net7.0\UserAPI.dll
+C:\Users\Дима\OneDrive\Рабочий стол\NastyshaDisk\UserAPI\WebAPI\bin\Debug\net7.0\UserAPI.pdb
+C:\Users\Дима\OneDrive\Рабочий стол\NastyshaDisk\UserAPI\WebAPI\bin\Debug\net7.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\Дима\OneDrive\Рабочий стол\NastyshaDisk\UserAPI\WebAPI\bin\Debug\net7.0\Microsoft.Data.Sqlite.dll
+C:\Users\Дима\OneDrive\Рабочий стол\NastyshaDisk\UserAPI\WebAPI\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\Дима\OneDrive\Рабочий стол\NastyshaDisk\UserAPI\WebAPI\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\Дима\OneDrive\Рабочий стол\NastyshaDisk\UserAPI\WebAPI\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\Дима\OneDrive\Рабочий стол\NastyshaDisk\UserAPI\WebAPI\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Sqlite.dll
+C:\Users\Дима\OneDrive\Рабочий стол\NastyshaDisk\UserAPI\WebAPI\bin\Debug\net7.0\Microsoft.Extensions.DependencyModel.dll
+C:\Users\Дима\OneDrive\Рабочий стол\NastyshaDisk\UserAPI\WebAPI\bin\Debug\net7.0\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\Дима\OneDrive\Рабочий стол\NastyshaDisk\UserAPI\WebAPI\bin\Debug\net7.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\Дима\OneDrive\Рабочий стол\NastyshaDisk\UserAPI\WebAPI\bin\Debug\net7.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\Дима\OneDrive\Рабочий стол\NastyshaDisk\UserAPI\WebAPI\bin\Debug\net7.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\Дима\OneDrive\Рабочий стол\NastyshaDisk\UserAPI\WebAPI\bin\Debug\net7.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\Дима\OneDrive\Рабочий стол\NastyshaDisk\UserAPI\WebAPI\bin\Debug\net7.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\Дима\OneDrive\Рабочий стол\NastyshaDisk\UserAPI\WebAPI\bin\Debug\net7.0\Microsoft.OpenApi.dll
+C:\Users\Дима\OneDrive\Рабочий стол\NastyshaDisk\UserAPI\WebAPI\bin\Debug\net7.0\Newtonsoft.Json.dll
+C:\Users\Дима\OneDrive\Рабочий стол\NastyshaDisk\UserAPI\WebAPI\bin\Debug\net7.0\SQLitePCLRaw.batteries_v2.dll
+C:\Users\Дима\OneDrive\Рабочий стол\NastyshaDisk\UserAPI\WebAPI\bin\Debug\net7.0\SQLitePCLRaw.core.dll
+C:\Users\Дима\OneDrive\Рабочий стол\NastyshaDisk\UserAPI\WebAPI\bin\Debug\net7.0\SQLitePCLRaw.provider.e_sqlite3.dll
+C:\Users\Дима\OneDrive\Рабочий стол\NastyshaDisk\UserAPI\WebAPI\bin\Debug\net7.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\Дима\OneDrive\Рабочий стол\NastyshaDisk\UserAPI\WebAPI\bin\Debug\net7.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\Дима\OneDrive\Рабочий стол\NastyshaDisk\UserAPI\WebAPI\bin\Debug\net7.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\Дима\OneDrive\Рабочий стол\NastyshaDisk\UserAPI\WebAPI\bin\Debug\net7.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\Дима\OneDrive\Рабочий стол\NastyshaDisk\UserAPI\WebAPI\bin\Debug\net7.0\runtimes\alpine-arm\native\libe_sqlite3.so
+C:\Users\Дима\OneDrive\Рабочий стол\NastyshaDisk\UserAPI\WebAPI\bin\Debug\net7.0\runtimes\alpine-arm64\native\libe_sqlite3.so
+C:\Users\Дима\OneDrive\Рабочий стол\NastyshaDisk\UserAPI\WebAPI\bin\Debug\net7.0\runtimes\alpine-x64\native\libe_sqlite3.so
+C:\Users\Дима\OneDrive\Рабочий стол\NastyshaDisk\UserAPI\WebAPI\bin\Debug\net7.0\runtimes\browser-wasm\nativeassets\net7.0\e_sqlite3.a
+C:\Users\Дима\OneDrive\Рабочий стол\NastyshaDisk\UserAPI\WebAPI\bin\Debug\net7.0\runtimes\linux-arm\native\libe_sqlite3.so
+C:\Users\Дима\OneDrive\Рабочий стол\NastyshaDisk\UserAPI\WebAPI\bin\Debug\net7.0\runtimes\linux-arm64\native\libe_sqlite3.so
+C:\Users\Дима\OneDrive\Рабочий стол\NastyshaDisk\UserAPI\WebAPI\bin\Debug\net7.0\runtimes\linux-armel\native\libe_sqlite3.so
+C:\Users\Дима\OneDrive\Рабочий стол\NastyshaDisk\UserAPI\WebAPI\bin\Debug\net7.0\runtimes\linux-mips64\native\libe_sqlite3.so
+C:\Users\Дима\OneDrive\Рабочий стол\NastyshaDisk\UserAPI\WebAPI\bin\Debug\net7.0\runtimes\linux-musl-arm\native\libe_sqlite3.so
+C:\Users\Дима\OneDrive\Рабочий стол\NastyshaDisk\UserAPI\WebAPI\bin\Debug\net7.0\runtimes\linux-musl-arm64\native\libe_sqlite3.so
+C:\Users\Дима\OneDrive\Рабочий стол\NastyshaDisk\UserAPI\WebAPI\bin\Debug\net7.0\runtimes\linux-musl-x64\native\libe_sqlite3.so
+C:\Users\Дима\OneDrive\Рабочий стол\NastyshaDisk\UserAPI\WebAPI\bin\Debug\net7.0\runtimes\linux-ppc64le\native\libe_sqlite3.so
+C:\Users\Дима\OneDrive\Рабочий стол\NastyshaDisk\UserAPI\WebAPI\bin\Debug\net7.0\runtimes\linux-s390x\native\libe_sqlite3.so
+C:\Users\Дима\OneDrive\Рабочий стол\NastyshaDisk\UserAPI\WebAPI\bin\Debug\net7.0\runtimes\linux-x64\native\libe_sqlite3.so
+C:\Users\Дима\OneDrive\Рабочий стол\NastyshaDisk\UserAPI\WebAPI\bin\Debug\net7.0\runtimes\linux-x86\native\libe_sqlite3.so
+C:\Users\Дима\OneDrive\Рабочий стол\NastyshaDisk\UserAPI\WebAPI\bin\Debug\net7.0\runtimes\maccatalyst-arm64\native\libe_sqlite3.dylib
+C:\Users\Дима\OneDrive\Рабочий стол\NastyshaDisk\UserAPI\WebAPI\bin\Debug\net7.0\runtimes\maccatalyst-x64\native\libe_sqlite3.dylib
+C:\Users\Дима\OneDrive\Рабочий стол\NastyshaDisk\UserAPI\WebAPI\bin\Debug\net7.0\runtimes\osx-arm64\native\libe_sqlite3.dylib
+C:\Users\Дима\OneDrive\Рабочий стол\NastyshaDisk\UserAPI\WebAPI\bin\Debug\net7.0\runtimes\osx-x64\native\libe_sqlite3.dylib
+C:\Users\Дима\OneDrive\Рабочий стол\NastyshaDisk\UserAPI\WebAPI\bin\Debug\net7.0\runtimes\win-arm\native\e_sqlite3.dll
+C:\Users\Дима\OneDrive\Рабочий стол\NastyshaDisk\UserAPI\WebAPI\bin\Debug\net7.0\runtimes\win-arm64\native\e_sqlite3.dll
+C:\Users\Дима\OneDrive\Рабочий стол\NastyshaDisk\UserAPI\WebAPI\bin\Debug\net7.0\runtimes\win-x64\native\e_sqlite3.dll
+C:\Users\Дима\OneDrive\Рабочий стол\NastyshaDisk\UserAPI\WebAPI\bin\Debug\net7.0\runtimes\win-x86\native\e_sqlite3.dll
+C:\Users\Дима\OneDrive\Рабочий стол\NastyshaDisk\UserAPI\WebAPI\bin\Debug\net7.0\Aplication.dll
+C:\Users\Дима\OneDrive\Рабочий стол\NastyshaDisk\UserAPI\WebAPI\bin\Debug\net7.0\Core.dll
+C:\Users\Дима\OneDrive\Рабочий стол\NastyshaDisk\UserAPI\WebAPI\bin\Debug\net7.0\Presistence.dll
+C:\Users\Дима\OneDrive\Рабочий стол\NastyshaDisk\UserAPI\WebAPI\bin\Debug\net7.0\Aplication.pdb
+C:\Users\Дима\OneDrive\Рабочий стол\NastyshaDisk\UserAPI\WebAPI\bin\Debug\net7.0\Core.pdb
+C:\Users\Дима\OneDrive\Рабочий стол\NastyshaDisk\UserAPI\WebAPI\bin\Debug\net7.0\Presistence.pdb
+C:\Users\Дима\OneDrive\Рабочий стол\NastyshaDisk\UserAPI\WebAPI\obj\Debug\net7.0\UserAPI.csproj.AssemblyReference.cache
+C:\Users\Дима\OneDrive\Рабочий стол\NastyshaDisk\UserAPI\WebAPI\obj\Debug\net7.0\UserAPI.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Дима\OneDrive\Рабочий стол\NastyshaDisk\UserAPI\WebAPI\obj\Debug\net7.0\UserAPI.AssemblyInfoInputs.cache
+C:\Users\Дима\OneDrive\Рабочий стол\NastyshaDisk\UserAPI\WebAPI\obj\Debug\net7.0\UserAPI.AssemblyInfo.cs
+C:\Users\Дима\OneDrive\Рабочий стол\NastyshaDisk\UserAPI\WebAPI\obj\Debug\net7.0\UserAPI.csproj.CoreCompileInputs.cache
+C:\Users\Дима\OneDrive\Рабочий стол\NastyshaDisk\UserAPI\WebAPI\obj\Debug\net7.0\UserAPI.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\Дима\OneDrive\Рабочий стол\NastyshaDisk\UserAPI\WebAPI\obj\Debug\net7.0\UserAPI.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Дима\OneDrive\Рабочий стол\NastyshaDisk\UserAPI\WebAPI\obj\Debug\net7.0\UserAPI.sourcelink.json
+C:\Users\Дима\OneDrive\Рабочий стол\NastyshaDisk\UserAPI\WebAPI\obj\Debug\net7.0\staticwebassets.build.json
+C:\Users\Дима\OneDrive\Рабочий стол\NastyshaDisk\UserAPI\WebAPI\obj\Debug\net7.0\staticwebassets.development.json
+C:\Users\Дима\OneDrive\Рабочий стол\NastyshaDisk\UserAPI\WebAPI\obj\Debug\net7.0\staticwebassets\msbuild.UserAPI.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\Дима\OneDrive\Рабочий стол\NastyshaDisk\UserAPI\WebAPI\obj\Debug\net7.0\staticwebassets\msbuild.build.UserAPI.props
+C:\Users\Дима\OneDrive\Рабочий стол\NastyshaDisk\UserAPI\WebAPI\obj\Debug\net7.0\staticwebassets\msbuild.buildMultiTargeting.UserAPI.props
+C:\Users\Дима\OneDrive\Рабочий стол\NastyshaDisk\UserAPI\WebAPI\obj\Debug\net7.0\staticwebassets\msbuild.buildTransitive.UserAPI.props
+C:\Users\Дима\OneDrive\Рабочий стол\NastyshaDisk\UserAPI\WebAPI\obj\Debug\net7.0\staticwebassets.pack.json
+C:\Users\Дима\OneDrive\Рабочий стол\NastyshaDisk\UserAPI\WebAPI\obj\Debug\net7.0\scopedcss\bundle\UserAPI.styles.css
+C:\Users\Дима\OneDrive\Рабочий стол\NastyshaDisk\UserAPI\WebAPI\obj\Debug\net7.0\UserAPI.csproj.Up2Date
+C:\Users\Дима\OneDrive\Рабочий стол\NastyshaDisk\UserAPI\WebAPI\obj\Debug\net7.0\UserAPI.dll
+C:\Users\Дима\OneDrive\Рабочий стол\NastyshaDisk\UserAPI\WebAPI\obj\Debug\net7.0\refint\UserAPI.dll
+C:\Users\Дима\OneDrive\Рабочий стол\NastyshaDisk\UserAPI\WebAPI\obj\Debug\net7.0\UserAPI.pdb
+C:\Users\Дима\OneDrive\Рабочий стол\NastyshaDisk\UserAPI\WebAPI\obj\Debug\net7.0\UserAPI.genruntimeconfig.cache
+C:\Users\Дима\OneDrive\Рабочий стол\NastyshaDisk\UserAPI\WebAPI\obj\Debug\net7.0\ref\UserAPI.dll
+C:\NastyshaDisk\UserAPI\WebAPI\bin\Debug\net7.0\appsettings.Development.json
+C:\NastyshaDisk\UserAPI\WebAPI\bin\Debug\net7.0\appsettings.json
+C:\NastyshaDisk\UserAPI\WebAPI\bin\Debug\net7.0\UserAPI.staticwebassets.runtime.json
+C:\NastyshaDisk\UserAPI\WebAPI\bin\Debug\net7.0\UserAPI.exe
+C:\NastyshaDisk\UserAPI\WebAPI\bin\Debug\net7.0\UserAPI.deps.json
+C:\NastyshaDisk\UserAPI\WebAPI\bin\Debug\net7.0\UserAPI.runtimeconfig.json
+C:\NastyshaDisk\UserAPI\WebAPI\bin\Debug\net7.0\UserAPI.dll
+C:\NastyshaDisk\UserAPI\WebAPI\bin\Debug\net7.0\UserAPI.pdb
+C:\NastyshaDisk\UserAPI\WebAPI\bin\Debug\net7.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\NastyshaDisk\UserAPI\WebAPI\bin\Debug\net7.0\Microsoft.Data.Sqlite.dll
+C:\NastyshaDisk\UserAPI\WebAPI\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.dll
+C:\NastyshaDisk\UserAPI\WebAPI\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\NastyshaDisk\UserAPI\WebAPI\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\NastyshaDisk\UserAPI\WebAPI\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Sqlite.dll
+C:\NastyshaDisk\UserAPI\WebAPI\bin\Debug\net7.0\Microsoft.Extensions.DependencyModel.dll
+C:\NastyshaDisk\UserAPI\WebAPI\bin\Debug\net7.0\Microsoft.IdentityModel.Abstractions.dll
+C:\NastyshaDisk\UserAPI\WebAPI\bin\Debug\net7.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\NastyshaDisk\UserAPI\WebAPI\bin\Debug\net7.0\Microsoft.IdentityModel.Logging.dll
+C:\NastyshaDisk\UserAPI\WebAPI\bin\Debug\net7.0\Microsoft.IdentityModel.Protocols.dll
+C:\NastyshaDisk\UserAPI\WebAPI\bin\Debug\net7.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\NastyshaDisk\UserAPI\WebAPI\bin\Debug\net7.0\Microsoft.IdentityModel.Tokens.dll
+C:\NastyshaDisk\UserAPI\WebAPI\bin\Debug\net7.0\Microsoft.OpenApi.dll
+C:\NastyshaDisk\UserAPI\WebAPI\bin\Debug\net7.0\Newtonsoft.Json.dll
+C:\NastyshaDisk\UserAPI\WebAPI\bin\Debug\net7.0\SQLitePCLRaw.batteries_v2.dll
+C:\NastyshaDisk\UserAPI\WebAPI\bin\Debug\net7.0\SQLitePCLRaw.core.dll
+C:\NastyshaDisk\UserAPI\WebAPI\bin\Debug\net7.0\SQLitePCLRaw.provider.e_sqlite3.dll
+C:\NastyshaDisk\UserAPI\WebAPI\bin\Debug\net7.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\NastyshaDisk\UserAPI\WebAPI\bin\Debug\net7.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\NastyshaDisk\UserAPI\WebAPI\bin\Debug\net7.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\NastyshaDisk\UserAPI\WebAPI\bin\Debug\net7.0\System.IdentityModel.Tokens.Jwt.dll
+C:\NastyshaDisk\UserAPI\WebAPI\bin\Debug\net7.0\runtimes\alpine-arm\native\libe_sqlite3.so
+C:\NastyshaDisk\UserAPI\WebAPI\bin\Debug\net7.0\runtimes\alpine-arm64\native\libe_sqlite3.so
+C:\NastyshaDisk\UserAPI\WebAPI\bin\Debug\net7.0\runtimes\alpine-x64\native\libe_sqlite3.so
+C:\NastyshaDisk\UserAPI\WebAPI\bin\Debug\net7.0\runtimes\browser-wasm\nativeassets\net7.0\e_sqlite3.a
+C:\NastyshaDisk\UserAPI\WebAPI\bin\Debug\net7.0\runtimes\linux-arm\native\libe_sqlite3.so
+C:\NastyshaDisk\UserAPI\WebAPI\bin\Debug\net7.0\runtimes\linux-arm64\native\libe_sqlite3.so
+C:\NastyshaDisk\UserAPI\WebAPI\bin\Debug\net7.0\runtimes\linux-armel\native\libe_sqlite3.so
+C:\NastyshaDisk\UserAPI\WebAPI\bin\Debug\net7.0\runtimes\linux-mips64\native\libe_sqlite3.so
+C:\NastyshaDisk\UserAPI\WebAPI\bin\Debug\net7.0\runtimes\linux-musl-arm\native\libe_sqlite3.so
+C:\NastyshaDisk\UserAPI\WebAPI\bin\Debug\net7.0\runtimes\linux-musl-arm64\native\libe_sqlite3.so
+C:\NastyshaDisk\UserAPI\WebAPI\bin\Debug\net7.0\runtimes\linux-musl-x64\native\libe_sqlite3.so
+C:\NastyshaDisk\UserAPI\WebAPI\bin\Debug\net7.0\runtimes\linux-ppc64le\native\libe_sqlite3.so
+C:\NastyshaDisk\UserAPI\WebAPI\bin\Debug\net7.0\runtimes\linux-s390x\native\libe_sqlite3.so
+C:\NastyshaDisk\UserAPI\WebAPI\bin\Debug\net7.0\runtimes\linux-x64\native\libe_sqlite3.so
+C:\NastyshaDisk\UserAPI\WebAPI\bin\Debug\net7.0\runtimes\linux-x86\native\libe_sqlite3.so
+C:\NastyshaDisk\UserAPI\WebAPI\bin\Debug\net7.0\runtimes\maccatalyst-arm64\native\libe_sqlite3.dylib
+C:\NastyshaDisk\UserAPI\WebAPI\bin\Debug\net7.0\runtimes\maccatalyst-x64\native\libe_sqlite3.dylib
+C:\NastyshaDisk\UserAPI\WebAPI\bin\Debug\net7.0\runtimes\osx-arm64\native\libe_sqlite3.dylib
+C:\NastyshaDisk\UserAPI\WebAPI\bin\Debug\net7.0\runtimes\osx-x64\native\libe_sqlite3.dylib
+C:\NastyshaDisk\UserAPI\WebAPI\bin\Debug\net7.0\runtimes\win-arm\native\e_sqlite3.dll
+C:\NastyshaDisk\UserAPI\WebAPI\bin\Debug\net7.0\runtimes\win-arm64\native\e_sqlite3.dll
+C:\NastyshaDisk\UserAPI\WebAPI\bin\Debug\net7.0\runtimes\win-x64\native\e_sqlite3.dll
+C:\NastyshaDisk\UserAPI\WebAPI\bin\Debug\net7.0\runtimes\win-x86\native\e_sqlite3.dll
+C:\NastyshaDisk\UserAPI\WebAPI\bin\Debug\net7.0\Aplication.dll
+C:\NastyshaDisk\UserAPI\WebAPI\bin\Debug\net7.0\Core.dll
+C:\NastyshaDisk\UserAPI\WebAPI\bin\Debug\net7.0\Presistence.dll
+C:\NastyshaDisk\UserAPI\WebAPI\bin\Debug\net7.0\Aplication.pdb
+C:\NastyshaDisk\UserAPI\WebAPI\bin\Debug\net7.0\Core.pdb
+C:\NastyshaDisk\UserAPI\WebAPI\bin\Debug\net7.0\Presistence.pdb
+C:\NastyshaDisk\UserAPI\WebAPI\obj\Debug\net7.0\UserAPI.csproj.AssemblyReference.cache
+C:\NastyshaDisk\UserAPI\WebAPI\obj\Debug\net7.0\UserAPI.GeneratedMSBuildEditorConfig.editorconfig
+C:\NastyshaDisk\UserAPI\WebAPI\obj\Debug\net7.0\UserAPI.AssemblyInfoInputs.cache
+C:\NastyshaDisk\UserAPI\WebAPI\obj\Debug\net7.0\UserAPI.AssemblyInfo.cs
+C:\NastyshaDisk\UserAPI\WebAPI\obj\Debug\net7.0\UserAPI.csproj.CoreCompileInputs.cache
+C:\NastyshaDisk\UserAPI\WebAPI\obj\Debug\net7.0\UserAPI.MvcApplicationPartsAssemblyInfo.cs
+C:\NastyshaDisk\UserAPI\WebAPI\obj\Debug\net7.0\UserAPI.MvcApplicationPartsAssemblyInfo.cache
+C:\NastyshaDisk\UserAPI\WebAPI\obj\Debug\net7.0\UserAPI.sourcelink.json
+C:\NastyshaDisk\UserAPI\WebAPI\obj\Debug\net7.0\staticwebassets.build.json
+C:\NastyshaDisk\UserAPI\WebAPI\obj\Debug\net7.0\staticwebassets.development.json
+C:\NastyshaDisk\UserAPI\WebAPI\obj\Debug\net7.0\staticwebassets\msbuild.UserAPI.Microsoft.AspNetCore.StaticWebAssets.props
+C:\NastyshaDisk\UserAPI\WebAPI\obj\Debug\net7.0\staticwebassets\msbuild.build.UserAPI.props
+C:\NastyshaDisk\UserAPI\WebAPI\obj\Debug\net7.0\staticwebassets\msbuild.buildMultiTargeting.UserAPI.props
+C:\NastyshaDisk\UserAPI\WebAPI\obj\Debug\net7.0\staticwebassets\msbuild.buildTransitive.UserAPI.props
+C:\NastyshaDisk\UserAPI\WebAPI\obj\Debug\net7.0\staticwebassets.pack.json
+C:\NastyshaDisk\UserAPI\WebAPI\obj\Debug\net7.0\scopedcss\bundle\UserAPI.styles.css
+C:\NastyshaDisk\UserAPI\WebAPI\obj\Debug\net7.0\UserAPI.csproj.Up2Date
+C:\NastyshaDisk\UserAPI\WebAPI\obj\Debug\net7.0\UserAPI.dll
+C:\NastyshaDisk\UserAPI\WebAPI\obj\Debug\net7.0\refint\UserAPI.dll
+C:\NastyshaDisk\UserAPI\WebAPI\obj\Debug\net7.0\UserAPI.pdb
+C:\NastyshaDisk\UserAPI\WebAPI\obj\Debug\net7.0\UserAPI.genruntimeconfig.cache
+C:\NastyshaDisk\UserAPI\WebAPI\obj\Debug\net7.0\ref\UserAPI.dll
+D:\NastyshaDisk\UserAPI\WebAPI\bin\Debug\net7.0\appsettings.Development.json
+D:\NastyshaDisk\UserAPI\WebAPI\bin\Debug\net7.0\appsettings.json
+D:\NastyshaDisk\UserAPI\WebAPI\bin\Debug\net7.0\UserAPI.staticwebassets.runtime.json
+D:\NastyshaDisk\UserAPI\WebAPI\bin\Debug\net7.0\UserAPI.exe
+D:\NastyshaDisk\UserAPI\WebAPI\bin\Debug\net7.0\UserAPI.deps.json
+D:\NastyshaDisk\UserAPI\WebAPI\bin\Debug\net7.0\UserAPI.runtimeconfig.json
+D:\NastyshaDisk\UserAPI\WebAPI\bin\Debug\net7.0\UserAPI.dll
+D:\NastyshaDisk\UserAPI\WebAPI\bin\Debug\net7.0\UserAPI.pdb
+D:\NastyshaDisk\UserAPI\WebAPI\bin\Debug\net7.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+D:\NastyshaDisk\UserAPI\WebAPI\bin\Debug\net7.0\Microsoft.Data.Sqlite.dll
+D:\NastyshaDisk\UserAPI\WebAPI\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.dll
+D:\NastyshaDisk\UserAPI\WebAPI\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+D:\NastyshaDisk\UserAPI\WebAPI\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Relational.dll
+D:\NastyshaDisk\UserAPI\WebAPI\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Sqlite.dll
+D:\NastyshaDisk\UserAPI\WebAPI\bin\Debug\net7.0\Microsoft.Extensions.DependencyModel.dll
+D:\NastyshaDisk\UserAPI\WebAPI\bin\Debug\net7.0\Microsoft.IdentityModel.Abstractions.dll
+D:\NastyshaDisk\UserAPI\WebAPI\bin\Debug\net7.0\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\NastyshaDisk\UserAPI\WebAPI\bin\Debug\net7.0\Microsoft.IdentityModel.Logging.dll
+D:\NastyshaDisk\UserAPI\WebAPI\bin\Debug\net7.0\Microsoft.IdentityModel.Protocols.dll
+D:\NastyshaDisk\UserAPI\WebAPI\bin\Debug\net7.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\NastyshaDisk\UserAPI\WebAPI\bin\Debug\net7.0\Microsoft.IdentityModel.Tokens.dll
+D:\NastyshaDisk\UserAPI\WebAPI\bin\Debug\net7.0\Microsoft.OpenApi.dll
+D:\NastyshaDisk\UserAPI\WebAPI\bin\Debug\net7.0\Newtonsoft.Json.dll
+D:\NastyshaDisk\UserAPI\WebAPI\bin\Debug\net7.0\SQLitePCLRaw.batteries_v2.dll
+D:\NastyshaDisk\UserAPI\WebAPI\bin\Debug\net7.0\SQLitePCLRaw.core.dll
+D:\NastyshaDisk\UserAPI\WebAPI\bin\Debug\net7.0\SQLitePCLRaw.provider.e_sqlite3.dll
+D:\NastyshaDisk\UserAPI\WebAPI\bin\Debug\net7.0\Swashbuckle.AspNetCore.Swagger.dll
+D:\NastyshaDisk\UserAPI\WebAPI\bin\Debug\net7.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+D:\NastyshaDisk\UserAPI\WebAPI\bin\Debug\net7.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+D:\NastyshaDisk\UserAPI\WebAPI\bin\Debug\net7.0\System.IdentityModel.Tokens.Jwt.dll
+D:\NastyshaDisk\UserAPI\WebAPI\bin\Debug\net7.0\runtimes\alpine-arm\native\libe_sqlite3.so
+D:\NastyshaDisk\UserAPI\WebAPI\bin\Debug\net7.0\runtimes\alpine-arm64\native\libe_sqlite3.so
+D:\NastyshaDisk\UserAPI\WebAPI\bin\Debug\net7.0\runtimes\alpine-x64\native\libe_sqlite3.so
+D:\NastyshaDisk\UserAPI\WebAPI\bin\Debug\net7.0\runtimes\browser-wasm\nativeassets\net7.0\e_sqlite3.a
+D:\NastyshaDisk\UserAPI\WebAPI\bin\Debug\net7.0\runtimes\linux-arm\native\libe_sqlite3.so
+D:\NastyshaDisk\UserAPI\WebAPI\bin\Debug\net7.0\runtimes\linux-arm64\native\libe_sqlite3.so
+D:\NastyshaDisk\UserAPI\WebAPI\bin\Debug\net7.0\runtimes\linux-armel\native\libe_sqlite3.so
+D:\NastyshaDisk\UserAPI\WebAPI\bin\Debug\net7.0\runtimes\linux-mips64\native\libe_sqlite3.so
+D:\NastyshaDisk\UserAPI\WebAPI\bin\Debug\net7.0\runtimes\linux-musl-arm\native\libe_sqlite3.so
+D:\NastyshaDisk\UserAPI\WebAPI\bin\Debug\net7.0\runtimes\linux-musl-arm64\native\libe_sqlite3.so
+D:\NastyshaDisk\UserAPI\WebAPI\bin\Debug\net7.0\runtimes\linux-musl-x64\native\libe_sqlite3.so
+D:\NastyshaDisk\UserAPI\WebAPI\bin\Debug\net7.0\runtimes\linux-ppc64le\native\libe_sqlite3.so
+D:\NastyshaDisk\UserAPI\WebAPI\bin\Debug\net7.0\runtimes\linux-s390x\native\libe_sqlite3.so
+D:\NastyshaDisk\UserAPI\WebAPI\bin\Debug\net7.0\runtimes\linux-x64\native\libe_sqlite3.so
+D:\NastyshaDisk\UserAPI\WebAPI\bin\Debug\net7.0\runtimes\linux-x86\native\libe_sqlite3.so
+D:\NastyshaDisk\UserAPI\WebAPI\bin\Debug\net7.0\runtimes\maccatalyst-arm64\native\libe_sqlite3.dylib
+D:\NastyshaDisk\UserAPI\WebAPI\bin\Debug\net7.0\runtimes\maccatalyst-x64\native\libe_sqlite3.dylib
+D:\NastyshaDisk\UserAPI\WebAPI\bin\Debug\net7.0\runtimes\osx-arm64\native\libe_sqlite3.dylib
+D:\NastyshaDisk\UserAPI\WebAPI\bin\Debug\net7.0\runtimes\osx-x64\native\libe_sqlite3.dylib
+D:\NastyshaDisk\UserAPI\WebAPI\bin\Debug\net7.0\runtimes\win-arm\native\e_sqlite3.dll
+D:\NastyshaDisk\UserAPI\WebAPI\bin\Debug\net7.0\runtimes\win-arm64\native\e_sqlite3.dll
+D:\NastyshaDisk\UserAPI\WebAPI\bin\Debug\net7.0\runtimes\win-x64\native\e_sqlite3.dll
+D:\NastyshaDisk\UserAPI\WebAPI\bin\Debug\net7.0\runtimes\win-x86\native\e_sqlite3.dll
+D:\NastyshaDisk\UserAPI\WebAPI\bin\Debug\net7.0\Aplication.dll
+D:\NastyshaDisk\UserAPI\WebAPI\bin\Debug\net7.0\Core.dll
+D:\NastyshaDisk\UserAPI\WebAPI\bin\Debug\net7.0\Presistence.dll
+D:\NastyshaDisk\UserAPI\WebAPI\bin\Debug\net7.0\Aplication.pdb
+D:\NastyshaDisk\UserAPI\WebAPI\bin\Debug\net7.0\Core.pdb
+D:\NastyshaDisk\UserAPI\WebAPI\bin\Debug\net7.0\Presistence.pdb
+D:\NastyshaDisk\UserAPI\WebAPI\obj\Debug\net7.0\UserAPI.csproj.AssemblyReference.cache
+D:\NastyshaDisk\UserAPI\WebAPI\obj\Debug\net7.0\UserAPI.GeneratedMSBuildEditorConfig.editorconfig
+D:\NastyshaDisk\UserAPI\WebAPI\obj\Debug\net7.0\UserAPI.AssemblyInfoInputs.cache
+D:\NastyshaDisk\UserAPI\WebAPI\obj\Debug\net7.0\UserAPI.AssemblyInfo.cs
+D:\NastyshaDisk\UserAPI\WebAPI\obj\Debug\net7.0\UserAPI.csproj.CoreCompileInputs.cache
+D:\NastyshaDisk\UserAPI\WebAPI\obj\Debug\net7.0\UserAPI.MvcApplicationPartsAssemblyInfo.cs
+D:\NastyshaDisk\UserAPI\WebAPI\obj\Debug\net7.0\UserAPI.MvcApplicationPartsAssemblyInfo.cache
+D:\NastyshaDisk\UserAPI\WebAPI\obj\Debug\net7.0\UserAPI.sourcelink.json
+D:\NastyshaDisk\UserAPI\WebAPI\obj\Debug\net7.0\staticwebassets.build.json
+D:\NastyshaDisk\UserAPI\WebAPI\obj\Debug\net7.0\staticwebassets.development.json
+D:\NastyshaDisk\UserAPI\WebAPI\obj\Debug\net7.0\staticwebassets\msbuild.UserAPI.Microsoft.AspNetCore.StaticWebAssets.props
+D:\NastyshaDisk\UserAPI\WebAPI\obj\Debug\net7.0\staticwebassets\msbuild.build.UserAPI.props
+D:\NastyshaDisk\UserAPI\WebAPI\obj\Debug\net7.0\staticwebassets\msbuild.buildMultiTargeting.UserAPI.props
+D:\NastyshaDisk\UserAPI\WebAPI\obj\Debug\net7.0\staticwebassets\msbuild.buildTransitive.UserAPI.props
+D:\NastyshaDisk\UserAPI\WebAPI\obj\Debug\net7.0\staticwebassets.pack.json
+D:\NastyshaDisk\UserAPI\WebAPI\obj\Debug\net7.0\scopedcss\bundle\UserAPI.styles.css
+D:\NastyshaDisk\UserAPI\WebAPI\obj\Debug\net7.0\UserAPI.csproj.Up2Date
+D:\NastyshaDisk\UserAPI\WebAPI\obj\Debug\net7.0\UserAPI.dll
+D:\NastyshaDisk\UserAPI\WebAPI\obj\Debug\net7.0\refint\UserAPI.dll
+D:\NastyshaDisk\UserAPI\WebAPI\obj\Debug\net7.0\UserAPI.pdb
+D:\NastyshaDisk\UserAPI\WebAPI\obj\Debug\net7.0\UserAPI.genruntimeconfig.cache
+D:\NastyshaDisk\UserAPI\WebAPI\obj\Debug\net7.0\ref\UserAPI.dll
