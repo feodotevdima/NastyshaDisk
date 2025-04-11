@@ -193,22 +193,15 @@ const MainPage = () => {
           opacity: addMenuAnim,
         }
       ]}>
-        <TouchableOpacity 
-          style={styles.addMenuItem}
-          onPress={handleDownload}
-        >
+        <TouchableOpacity style={styles.addMenuItem} onPress={handleDownload}>
           <Text style={styles.addMenuText}>Загрузить файл</Text>
         </TouchableOpacity>
         
-        <TouchableOpacity 
-          style={styles.addMenuItem}
-          onPress={() => {toggleAddMenu(); setModalVisible(true)}}
-        >
+        <TouchableOpacity style={styles.addMenuItem} onPress={() => {toggleAddMenu(); setModalVisible(true)}}>
           <Text style={styles.addMenuText}>Создать папку</Text>
         </TouchableOpacity>
       </Animated.View>
 
-      {/* Затемнение фона */}
       {showAddMenu && (
         <TouchableOpacity 
           style={styles.overlay}

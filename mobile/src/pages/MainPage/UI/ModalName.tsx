@@ -36,7 +36,7 @@ const ModalName: React.FC<GetModalNameProps> = ({
           />
 
           <TouchableOpacity onPress={handleSubmit} style={styles.button}>
-                  <Text>Создать</Text>
+                  <Text>Продолжить</Text>
           </TouchableOpacity>
         </View>
       </View>

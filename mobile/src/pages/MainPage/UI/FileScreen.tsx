@@ -1,16 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import {
-  View,
-  Text,
-  TouchableOpacity,
-  StyleSheet,
-  FlatList,
-  Image,
-  Dimensions,
-  ScrollView,
-  Vibration,
-  ActivityIndicator
-} from 'react-native';
+import {View, Text, TouchableOpacity, StyleSheet, FlatList, Image, Dimensions, ScrollView, Vibration, ActivityIndicator} from 'react-native';
 import getExtension from '../../../shared/FileProvider';
 import File from '../../../Entities/FileEntity';
 import DropdownMenu from '../../../widgetes/DropdownMenu';
@@ -20,6 +9,8 @@ import { fileEventEmitter, FileEvents } from '../../../shared/UpdateFiles';
 import DelFiles from '../API/DelFiles';
 import GetPathString from '../../../shared/GetPathString';
 import DownloadFile from '../API/DownloadFile';
+import ChangeFilaeName from "../API/ChangeFilaeName";
+import ModalName from "./ModalName";
 
 interface FileScreenProps {
   longPress: string[] | null;
@@ -39,7 +30,9 @@ const FileScreen: React.FC<FileScreenProps> = ({ longPress, setLongPress, SetPat
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const [hasMore, setHasMore] = useState<boolean>(true);
   const [totalCount, setTotalCount] = useState<number | null>(null);
-
+  const [modalVisible, setModalVisible] = useState<boolean>(false);
+  const [inputValue, setInputValue] = useState<string | null>(null);
+  const [oldPath, setOldPath] = useState<string | null>(null);
 
   useEffect(() => {
     setPage(1);
@@ -107,21 +100,6 @@ const FileScreen: React.FC<FileScreenProps> = ({ longPress, setLongPress, SetPat
     }
   };
 
-  const GetPath = () => {
-    return (
-        <View style={pathStyles.container}>
-          {Path.map((value, index) => (
-              <View key={index} style={pathStyles.itemContainer}>
-                <TouchableOpacity onPress={() => pressPath(index)}>
-                  <Text style={pathStyles.text}>{value}</Text>
-                </TouchableOpacity>
-                {index !== Path.length - 1 && <Text style={pathStyles.separator}> \ </Text>}
-              </View>
-          ))}
-        </View>
-    );
-  };
-
   const pressPath = (index: number) => {
     setPath(Path.slice(0, index + 1));
   };
@@ -179,7 +157,36 @@ const FileScreen: React.FC<FileScreenProps> = ({ longPress, setLongPress, SetPat
       const path = [GetPathString(Path) + Name];
       DelFiles(path, false)
     }
+    if(item=='Переименовать')
+    {
+      const path = GetPathString(Path) + Name;
+      setOldPath(path);
+      setInputValue(Name);
+      setModalVisible(true);
+    }
   };
+
+  const renameFile = () =>{
+    setModalVisible(false);
+    const path = GetPathString(Path) + inputValue;
+    ChangeFilaeName(oldPath, path, false);
+  }
+
+  const GetPath = () => {
+    return (
+        <View style={pathStyles.container}>
+          {Path.map((value, index) => (
+              <View key={index} style={pathStyles.itemContainer}>
+                <TouchableOpacity onPress={() => pressPath(index)}>
+                  <Text style={pathStyles.text}>{value}</Text>
+                </TouchableOpacity>
+                {index !== Path.length - 1 && <Text style={pathStyles.separator}> \ </Text>}
+              </View>
+          ))}
+        </View>
+    );
+  };
+
 
   const ListItem = ({ name, owner, conectedUsers }: File) => {
     if(name==null)
@@ -248,6 +255,7 @@ const FileScreen: React.FC<FileScreenProps> = ({ longPress, setLongPress, SetPat
 
   return (
       <View style={styles.Container}>
+        <ModalName modalVisible={modalVisible} setModalVisible={setModalVisible} inputValue={inputValue} setInputValue={setInputValue} handleSubmit={renameFile} />
         {longPress ? null : (
             <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
               <GetPath />

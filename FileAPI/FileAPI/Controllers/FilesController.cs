@@ -213,6 +213,7 @@ namespace FileAPI.Controllers
 
         [Route("make_dir")]
         [HttpPost]
+        [Authorize]
         public IResult MakePublicDir([FromBody] CreateDirDto dto)
         {
             var token = Request.Headers["Authorization"].ToString();
@@ -234,18 +235,23 @@ namespace FileAPI.Controllers
 
         [Route("change_name")]
         [HttpPut]
-        public IResult ChangeFileName(bool isPublic, string userId, string oldPath, string newPath)
+        [Authorize]
+        public async Task<IResult> ChangeFileNameAsync([FromBody] ChangeFileNameDto dto)
         {
-
-            if (isPublic)
+            var token = Request.Headers["Authorization"].ToString();
+            token = token.Substring(7);
+            var userId = _filesService.GetUserIdFromToken(token);
+            
+            if (dto.IsPublic)
                 userId = "public\\" + userId;
 
-            var fileNames = _filesRepository.ChangeName(userId, oldPath, newPath);
+            var fileNames = await _filesRepository.ChangeName(userId, dto.OldPath, dto.NewPath);
             if (fileNames == null)
             {
+                Console.WriteLine(22222);
                 return Results.BadRequest();
             }
-
+            Console.WriteLine(fileNames);
             return Results.Ok();
         }
 
@@ -256,8 +262,7 @@ namespace FileAPI.Controllers
             var token = Request.Headers["Authorization"].ToString();
             token = token.Substring(7);
             var userId = _filesService.GetUserIdFromToken(token);
-
-            Console.WriteLine(dto.Pathes);
+            
             if (dto.IsPublic)
                 userId = "public\\" + userId;
 
