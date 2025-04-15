@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { Alert } from 'react-native';
 import * as DocumentPicker from 'expo-document-picker';
-import { Ip, getToken } from "../../../shared/TokenProvider";
+import { Ip, getToken } from "../../../sheared/TokenProvider";
 import axios from 'axios';
-import { fileEventEmitter, FileEvents } from '../../../shared/UpdateFiles';
+import { fileEventEmitter, FileEvents } from '../../../sheared/UpdateFiles';
 
 interface FileResult {
   name: string;

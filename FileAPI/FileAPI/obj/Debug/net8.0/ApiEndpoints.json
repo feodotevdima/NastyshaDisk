@@ -43,31 +43,16 @@
   },
   {
     "ContainingType": "FileAPI.Controllers.FilesController",
-    "Method": "ChangeFileName",
+    "Method": "ChangeFileNameAsync",
     "RelativePath": "Files/change_name",
     "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "isPublic",
-        "Type": "System.Boolean",
-        "IsRequired": false
-      },
-      {
-        "Name": "userId",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "oldPath",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "newPath",
-        "Type": "System.String",
-        "IsRequired": false
+        "Name": "dto",
+        "Type": "Presistence.Dtos.ChangeFileNameDto",
+        "IsRequired": true
       }
     ],
     "ReturnTypes": []
@@ -121,6 +106,22 @@
   },
   {
     "ContainingType": "FileAPI.Controllers.FilesController",
+    "Method": "GetConnectedUsersAsync",
+    "RelativePath": "Files/get_connected_users",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "path",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FileAPI.Controllers.FilesController",
     "Method": "GetFilesNameAsync",
     "RelativePath": "Files/get_files_name",
     "HttpMethod": "GET",
@@ -152,6 +153,22 @@
   },
   {
     "ContainingType": "FileAPI.Controllers.FilesController",
+    "Method": "GetOwnerAsync",
+    "RelativePath": "Files/get_owner",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "path",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FileAPI.Controllers.FilesController",
     "Method": "MakePublicDir",
     "RelativePath": "Files/make_dir",
     "HttpMethod": "POST",
@@ -169,7 +186,7 @@
   {
     "ContainingType": "FileAPI.Controllers.FilesController",
     "Method": "OpenImage",
-    "RelativePath": "Files/open_image",
+    "RelativePath": "Files/open_image/{userId}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -180,14 +197,14 @@
         "IsRequired": false
       },
       {
-        "Name": "userId",
+        "Name": "path",
         "Type": "System.String",
         "IsRequired": false
       },
       {
-        "Name": "path",
+        "Name": "userId",
         "Type": "System.String",
-        "IsRequired": false
+        "IsRequired": true
       }
     ],
     "ReturnTypes": []

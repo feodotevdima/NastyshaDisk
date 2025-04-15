@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "D:\\NastyshaDisk\\UserAPI\\WebAPI\\UserAPI.csproj": {}
+    "C:\\NastyshaDisk\\UserAPI\\WebAPI\\UserAPI.csproj": {}
   },
   "projects": {
-    "D:\\NastyshaDisk\\UserAPI\\Aplication\\Aplication.csproj": {
+    "C:\\NastyshaDisk\\UserAPI\\Aplication\\Aplication.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\NastyshaDisk\\UserAPI\\Aplication\\Aplication.csproj",
+        "projectUniqueName": "C:\\NastyshaDisk\\UserAPI\\Aplication\\Aplication.csproj",
         "projectName": "Aplication",
-        "projectPath": "D:\\NastyshaDisk\\UserAPI\\Aplication\\Aplication.csproj",
-        "packagesPath": "C:\\Users\\Дима\\.nuget\\packages\\",
-        "outputPath": "D:\\NastyshaDisk\\UserAPI\\Aplication\\obj\\",
+        "projectPath": "C:\\NastyshaDisk\\UserAPI\\Aplication\\Aplication.csproj",
+        "packagesPath": "C:\\Users\\Анастасия Феодотьева\\.nuget\\packages\\",
+        "outputPath": "C:\\NastyshaDisk\\UserAPI\\Aplication\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Дима\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Анастасия Феодотьева\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -33,11 +33,11 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "D:\\NastyshaDisk\\UserAPI\\Core\\Core.csproj": {
-                "projectPath": "D:\\NastyshaDisk\\UserAPI\\Core\\Core.csproj"
+              "C:\\NastyshaDisk\\UserAPI\\Core\\Core.csproj": {
+                "projectPath": "C:\\NastyshaDisk\\UserAPI\\Core\\Core.csproj"
               },
-              "D:\\NastyshaDisk\\UserAPI\\Presistence\\Presistence.csproj": {
-                "projectPath": "D:\\NastyshaDisk\\UserAPI\\Presistence\\Presistence.csproj"
+              "C:\\NastyshaDisk\\UserAPI\\Presistence\\Presistence.csproj": {
+                "projectPath": "C:\\NastyshaDisk\\UserAPI\\Presistence\\Presistence.csproj"
               }
             }
           }
@@ -51,7 +51,8 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        }
+        },
+        "SdkAnalysisLevel": "9.0.200"
       },
       "frameworks": {
         "net7.0": {
@@ -86,24 +87,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.203\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\NastyshaDisk\\UserAPI\\Core\\Core.csproj": {
+    "C:\\NastyshaDisk\\UserAPI\\Core\\Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\NastyshaDisk\\UserAPI\\Core\\Core.csproj",
+        "projectUniqueName": "C:\\NastyshaDisk\\UserAPI\\Core\\Core.csproj",
         "projectName": "Core",
-        "projectPath": "D:\\NastyshaDisk\\UserAPI\\Core\\Core.csproj",
-        "packagesPath": "C:\\Users\\Дима\\.nuget\\packages\\",
-        "outputPath": "D:\\NastyshaDisk\\UserAPI\\Core\\obj\\",
+        "projectPath": "C:\\NastyshaDisk\\UserAPI\\Core\\Core.csproj",
+        "packagesPath": "C:\\Users\\Анастасия Феодотьева\\.nuget\\packages\\",
+        "outputPath": "C:\\NastyshaDisk\\UserAPI\\Core\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Дима\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Анастасия Феодотьева\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -130,7 +131,8 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        }
+        },
+        "SdkAnalysisLevel": "9.0.200"
       },
       "frameworks": {
         "net7.0": {
@@ -161,24 +163,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.203\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\NastyshaDisk\\UserAPI\\Presistence\\Presistence.csproj": {
+    "C:\\NastyshaDisk\\UserAPI\\Presistence\\Presistence.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\NastyshaDisk\\UserAPI\\Presistence\\Presistence.csproj",
+        "projectUniqueName": "C:\\NastyshaDisk\\UserAPI\\Presistence\\Presistence.csproj",
         "projectName": "Presistence",
-        "projectPath": "D:\\NastyshaDisk\\UserAPI\\Presistence\\Presistence.csproj",
-        "packagesPath": "C:\\Users\\Дима\\.nuget\\packages\\",
-        "outputPath": "D:\\NastyshaDisk\\UserAPI\\Presistence\\obj\\",
+        "projectPath": "C:\\NastyshaDisk\\UserAPI\\Presistence\\Presistence.csproj",
+        "packagesPath": "C:\\Users\\Анастасия Феодотьева\\.nuget\\packages\\",
+        "outputPath": "C:\\NastyshaDisk\\UserAPI\\Presistence\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Дима\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Анастасия Феодотьева\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -194,8 +196,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "D:\\NastyshaDisk\\UserAPI\\Core\\Core.csproj": {
-                "projectPath": "D:\\NastyshaDisk\\UserAPI\\Core\\Core.csproj"
+              "C:\\NastyshaDisk\\UserAPI\\Core\\Core.csproj": {
+                "projectPath": "C:\\NastyshaDisk\\UserAPI\\Core\\Core.csproj"
               }
             }
           }
@@ -209,7 +211,8 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        }
+        },
+        "SdkAnalysisLevel": "9.0.200"
       },
       "frameworks": {
         "net7.0": {
@@ -244,24 +247,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.203\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\NastyshaDisk\\UserAPI\\WebAPI\\UserAPI.csproj": {
+    "C:\\NastyshaDisk\\UserAPI\\WebAPI\\UserAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\NastyshaDisk\\UserAPI\\WebAPI\\UserAPI.csproj",
+        "projectUniqueName": "C:\\NastyshaDisk\\UserAPI\\WebAPI\\UserAPI.csproj",
         "projectName": "UserAPI",
-        "projectPath": "D:\\NastyshaDisk\\UserAPI\\WebAPI\\UserAPI.csproj",
-        "packagesPath": "C:\\Users\\Дима\\.nuget\\packages\\",
-        "outputPath": "D:\\NastyshaDisk\\UserAPI\\WebAPI\\obj\\",
+        "projectPath": "C:\\NastyshaDisk\\UserAPI\\WebAPI\\UserAPI.csproj",
+        "packagesPath": "C:\\Users\\Анастасия Феодотьева\\.nuget\\packages\\",
+        "outputPath": "C:\\NastyshaDisk\\UserAPI\\WebAPI\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Дима\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Анастасия Феодотьева\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -277,14 +280,14 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "D:\\NastyshaDisk\\UserAPI\\Aplication\\Aplication.csproj": {
-                "projectPath": "D:\\NastyshaDisk\\UserAPI\\Aplication\\Aplication.csproj"
+              "C:\\NastyshaDisk\\UserAPI\\Aplication\\Aplication.csproj": {
+                "projectPath": "C:\\NastyshaDisk\\UserAPI\\Aplication\\Aplication.csproj"
               },
-              "D:\\NastyshaDisk\\UserAPI\\Core\\Core.csproj": {
-                "projectPath": "D:\\NastyshaDisk\\UserAPI\\Core\\Core.csproj"
+              "C:\\NastyshaDisk\\UserAPI\\Core\\Core.csproj": {
+                "projectPath": "C:\\NastyshaDisk\\UserAPI\\Core\\Core.csproj"
               },
-              "D:\\NastyshaDisk\\UserAPI\\Presistence\\Presistence.csproj": {
-                "projectPath": "D:\\NastyshaDisk\\UserAPI\\Presistence\\Presistence.csproj"
+              "C:\\NastyshaDisk\\UserAPI\\Presistence\\Presistence.csproj": {
+                "projectPath": "C:\\NastyshaDisk\\UserAPI\\Presistence\\Presistence.csproj"
               }
             }
           }
@@ -298,7 +301,8 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        }
+        },
+        "SdkAnalysisLevel": "9.0.200"
       },
       "frameworks": {
         "net7.0": {
@@ -336,7 +340,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.203\\RuntimeIdentifierGraph.json"
         }
       }
     }

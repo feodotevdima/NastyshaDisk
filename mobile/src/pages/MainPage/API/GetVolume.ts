@@ -1,5 +1,5 @@
 import axios from "axios";
-import { Ip, getToken } from "../../../shared/TokenProvider";
+import { Ip, getToken } from "../../../sheared/TokenProvider";
 
 const GetVolume= async () =>{
     const token= await getToken();

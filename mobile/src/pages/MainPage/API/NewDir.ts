@@ -1,7 +1,7 @@
 import React from "react";
 import axios from "axios";
-import { Ip, getToken } from "../../../shared/TokenProvider";
-import { fileEventEmitter, FileEvents } from '../../../shared/UpdateFiles';
+import { Ip, getToken } from "../../../sheared/TokenProvider";
+import { fileEventEmitter, FileEvents } from '../../../sheared/UpdateFiles';
 
 const NewDir= async (path: string | null, isPublic: boolean) =>{
     const token= await getToken();

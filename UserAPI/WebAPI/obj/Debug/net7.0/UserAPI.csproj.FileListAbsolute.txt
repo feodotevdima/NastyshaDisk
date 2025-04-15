@@ -322,3 +322,7 @@ D:\NastyshaDisk\UserAPI\WebAPI\obj\Debug\net7.0\refint\UserAPI.dll
 D:\NastyshaDisk\UserAPI\WebAPI\obj\Debug\net7.0\UserAPI.pdb
 D:\NastyshaDisk\UserAPI\WebAPI\obj\Debug\net7.0\UserAPI.genruntimeconfig.cache
 D:\NastyshaDisk\UserAPI\WebAPI\obj\Debug\net7.0\ref\UserAPI.dll
+C:\NastyshaDisk\UserAPI\WebAPI\bin\Debug\net7.0\UserAPI.staticwebassets.endpoints.json
+C:\NastyshaDisk\UserAPI\WebAPI\obj\Debug\net7.0\staticwebassets.build.endpoints.json
+C:\NastyshaDisk\UserAPI\WebAPI\obj\Debug\net7.0\staticwebassets\msbuild.UserAPI.Microsoft.AspNetCore.StaticWebAssetEndpoints.props
+C:\NastyshaDisk\UserAPI\WebAPI\obj\Debug\net7.0\staticwebassets.upToDateCheck.txt

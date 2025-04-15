@@ -16,6 +16,7 @@ const ModalName: React.FC<GetModalNameProps> = ({
   setInputValue,
   handleSubmit,
 }) => {
+  
   return (
     <Modal
       animationType="slide"

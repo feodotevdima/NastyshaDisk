@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { View, Text, TextInput, TouchableOpacity, StyleSheet, Alert } from 'react-native';
-import { getToken, Login } from '../../shared/TokenProvider';
+import { getToken, Login } from '../../sheared/TokenProvider';
 
 
 interface LoginPageProps {

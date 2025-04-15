@@ -1,6 +1,6 @@
 import React from 'react';
 import {Image, StyleSheet} from 'react-native';
-import getExtension from '../../../shared/FileProvider';
+import getExtension from '../../../sheared/FileProvider';
 
 
 interface GetIconProps {

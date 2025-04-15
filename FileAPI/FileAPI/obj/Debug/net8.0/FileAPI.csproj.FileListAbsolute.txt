@@ -318,3 +318,7 @@ C:\NastyshaDisk\FileAPI\FileAPI\obj\Debug\net8.0\refint\FileAPI.dll
 C:\NastyshaDisk\FileAPI\FileAPI\obj\Debug\net8.0\FileAPI.pdb
 C:\NastyshaDisk\FileAPI\FileAPI\obj\Debug\net8.0\FileAPI.genruntimeconfig.cache
 C:\NastyshaDisk\FileAPI\FileAPI\obj\Debug\net8.0\ref\FileAPI.dll
+C:\NastyshaDisk\FileAPI\FileAPI\bin\Debug\net8.0\FileAPI.staticwebassets.endpoints.json
+C:\NastyshaDisk\FileAPI\FileAPI\obj\Debug\net8.0\staticwebassets.build.endpoints.json
+C:\NastyshaDisk\FileAPI\FileAPI\obj\Debug\net8.0\staticwebassets\msbuild.FileAPI.Microsoft.AspNetCore.StaticWebAssetEndpoints.props
+C:\NastyshaDisk\FileAPI\FileAPI\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt

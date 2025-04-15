@@ -1,16 +1,20 @@
 import React, { useState, useEffect } from 'react';
 import {View, Text, TouchableOpacity, StyleSheet, FlatList, Image, Dimensions, ScrollView, Vibration, ActivityIndicator} from 'react-native';
-import getExtension from '../../../shared/FileProvider';
+import getExtension from '../../../sheared/FileProvider';
 import File from '../../../Entities/FileEntity';
 import DropdownMenu from '../../../widgetes/DropdownMenu';
 import GetIcon from './../UI/GetIcon';
 import GetFilesName from '../API/GetFileNames';
-import { fileEventEmitter, FileEvents } from '../../../shared/UpdateFiles';
+import { fileEventEmitter, FileEvents } from '../../../sheared/UpdateFiles';
 import DelFiles from '../API/DelFiles';
-import GetPathString from '../../../shared/GetPathString';
+import GetPathString from '../../../sheared/GetPathString';
 import DownloadFile from '../API/DownloadFile';
 import ChangeFilaeName from "../API/ChangeFilaeName";
 import ModalName from "./ModalName";
+import ImageModal from './ImageModal';
+import { RootStackParamList } from '../../../app/NavigationType';
+import { useNavigation } from '@react-navigation/native';
+import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 
 interface FileScreenProps {
   longPress: string[] | null;
@@ -32,7 +36,11 @@ const FileScreen: React.FC<FileScreenProps> = ({ longPress, setLongPress, SetPat
   const [totalCount, setTotalCount] = useState<number | null>(null);
   const [modalVisible, setModalVisible] = useState<boolean>(false);
   const [inputValue, setInputValue] = useState<string | null>(null);
-  const [oldPath, setOldPath] = useState<string | null>(null);
+  const [oldPath, setOldPath] = useState<string>("");
+  const [extension, setExtension] = useState<string>("");
+  const [openImage, setOpenImage] = useState<boolean>(false);
+  const [imagePath, setImagePath] = useState<string | null>(null);
+  const navigation = useNavigation<NativeStackNavigationProp<RootStackParamList>>();
 
   useEffect(() => {
     setPage(1);
@@ -122,6 +130,16 @@ const FileScreen: React.FC<FileScreenProps> = ({ longPress, setLongPress, SetPat
       const extension = getExtension(name);
       if (extension == null)
         setPath([...Path, name]);
+      else if (extension.toLowerCase() == 'img' || extension.toLowerCase() == 'jpeg' || extension.toLowerCase() == 'jpg')
+      {
+        if(GetPathString(Path).length > 1)
+        {
+          setImagePath(GetPathString(Path)+ '\\' + name)
+        }
+        else
+          setImagePath(name)
+          setOpenImage(true);
+      }
     }
   };
 
@@ -157,19 +175,39 @@ const FileScreen: React.FC<FileScreenProps> = ({ longPress, setLongPress, SetPat
       const path = [GetPathString(Path) + Name];
       DelFiles(path, false)
     }
-    if(item=='Переименовать')
+    else if(item=='Переименовать')
     {
       const path = GetPathString(Path) + Name;
       setOldPath(path);
-      setInputValue(Name);
+
+      if(Name.includes('.'))
+      {
+        const arrNames = Name.split('.');
+        setInputValue(arrNames[0]);
+        setExtension(arrNames[arrNames.length-1]);
+        console.log(arrNames)
+      }
+      else
+      {
+        console.log(inputValue)
+        setInputValue(Name)
+      }
       setModalVisible(true);
+    }
+    else if(item = 'Управление доступом')
+    {
+      navigation.navigate('Sheare', { path: GetPathString(Path) + Name});
     }
   };
 
   const renameFile = () =>{
     setModalVisible(false);
-    const path = GetPathString(Path) + inputValue;
+    let path = GetPathString(Path) + inputValue;
+    if(extension.length>0)
+      path += '.' + extension;
     ChangeFilaeName(oldPath, path, false);
+    setInputValue('');
+    setExtension('');
   }
 
   const GetPath = () => {
@@ -255,7 +293,9 @@ const FileScreen: React.FC<FileScreenProps> = ({ longPress, setLongPress, SetPat
 
   return (
       <View style={styles.Container}>
+
         <ModalName modalVisible={modalVisible} setModalVisible={setModalVisible} inputValue={inputValue} setInputValue={setInputValue} handleSubmit={renameFile} />
+        <ImageModal modalVisible={openImage} setModalVisible={setOpenImage} path={imagePath} />
         {longPress ? null : (
             <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
               <GetPath />

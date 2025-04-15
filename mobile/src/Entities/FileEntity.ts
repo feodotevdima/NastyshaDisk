@@ -1,5 +1,3 @@
-import React, { useState, useEffect } from 'react';
-
 class File {
     name: string;
     owner: { Id: string, Name: string, Email: string } | null;

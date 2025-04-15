@@ -3,7 +3,7 @@ import { View, Text, TouchableOpacity, StyleSheet, Animated, Image, Dimensions, 
 import FileScreen from './UI/FileScreen';
 import { downloadFile } from './API/AddFiles';
 import DelFiles from './API/DelFiles';
-import GetPathString from '../../shared/GetPathString';
+import GetPathString from '../../sheared/GetPathString';
 import ModalName from './UI/ModalName';
 import NewDir from './API/NewDir';
 import VolumeLine from './UI/Volume';
@@ -167,7 +167,6 @@ const MainPage = () => {
           />
         </View>
       </TouchableOpacity>
-
       {longPress ? 
         <TouchableOpacity onPress={() => DeleteFiles()} style={styles.imageButton}>
           <Image
@@ -185,7 +184,6 @@ const MainPage = () => {
         </TouchableOpacity>
       }
 
-      {/* Меню добавления */}
       <Animated.View style={[
         styles.addMenu,
         {
@@ -243,17 +241,21 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     position: 'relative',
+    paddingTop: 40,
+    paddingHorizontal: 10,
+    backgroundColor: '#ffddf1',
   },
   burgerButton: {
     position: 'absolute',
-    top: 20,
-    left: 16,
+    top: 60,
+    left: 26,
     zIndex: 1,
   },
   iconContainer: {
     width: 35,
     height: 20,
   },
+
   iconLine: {
     width: '100%',
     height: 3,
@@ -264,13 +266,13 @@ const styles = StyleSheet.create({
   },
   menu: {
     position: 'absolute',
-    top: 0,
-    left: 0,
+    top: 40,
+    left: 10,
     width: width * 0.7,
     height: '99%',
     backgroundColor: '#fbf8fa',
     borderRadius: 10,
-    paddingTop: 80,
+    paddingTop: 70,
     paddingLeft: 16,
   },
   menuItem: {
@@ -282,6 +284,7 @@ const styles = StyleSheet.create({
   menu3Icon: {
     width: 30,
     height: 30,
+    top: 40,
   },
   imageButton: {
     position: 'absolute',

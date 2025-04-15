@@ -87,9 +87,84 @@ namespace FileAPI.Controllers
         }
 
 
-        [Route("open_image")]
+        [Route("get_owner")]
         [HttpGet]
-        public IResult OpenImage(bool isPublic, string userId, string path)
+        [Authorize]
+        public async Task<IResult> GetOwnerAsync([FromQuery] string path)
+        {
+            var token = Request.Headers["Authorization"].ToString();
+            token = token.Substring(7);
+            var userId = _filesService.GetUserIdFromToken(token);
+
+            var newFilePath = Path.GetFullPath(_folderPath + userId + path);
+
+            Guid? ownerId = (await _shredDirRepository.GetSheredDirByDirLocationAsync(path)).OwnerId;
+
+            if (ownerId == null)
+            {
+                var dir = (await _shredDirRepository.GetConnectedUsersBySimLinkLocationAsync(path)).SheredDirId;
+                ownerId = (await _shredDirRepository.GetSheredDirByIdAsync(dir)).OwnerId;
+            }
+
+            if (ownerId == null)
+            {
+                return Results.BadRequest();
+            }
+            
+            var response = await _httpClient.GetAsync($"http://localhost:7001/User/id/{ownerId}");
+            if (response.IsSuccessStatusCode)
+            {
+                UserModel user = await response.Content.ReadFromJsonAsync<UserModel>();
+                return Results.Ok(user);
+            }
+            return Results.BadRequest();
+        }
+
+
+
+        [Route("get_connected_users")]
+        [HttpGet]
+        [Authorize]
+        public async Task<IResult> GetConnectedUsersAsync([FromQuery] string path)
+        {
+            var token = Request.Headers["Authorization"].ToString();
+            token = token.Substring(7);
+            var userId = _filesService.GetUserIdFromToken(token);
+
+            var newFilePath = Path.GetFullPath(_folderPath + userId + path);
+
+            Guid? ownerId = (await _shredDirRepository.GetSheredDirByDirLocationAsync(path)).OwnerId;
+
+            if (ownerId == null)
+            {
+                var dir = (await _shredDirRepository.GetConnectedUsersBySimLinkLocationAsync(path)).SheredDirId;
+                ownerId = (await _shredDirRepository.GetSheredDirByIdAsync(dir)).OwnerId;
+            }
+
+            if (ownerId == null)
+            {
+                return Results.BadRequest();
+            }
+
+
+            var users = await _shredDirRepository.GetConnectedUsersBySheredDirIdAsync((Guid)ownerId);
+            List<UserModel> result = new List<UserModel>();
+            foreach (var user in users)
+            {
+                var response = await _httpClient.GetAsync($"http://localhost:7001/User/id/{user.ConnectedUserId}");
+                if (response.IsSuccessStatusCode)
+                {
+                    result.Add( await response.Content.ReadFromJsonAsync<UserModel>());
+                   
+                }
+            }
+            return Results.Ok(result);
+        }
+
+
+        [Route("open_image/{userId}")]
+        [HttpGet]
+        public IResult OpenImage([FromQuery]  bool isPublic, [FromQuery] string path, string userId)
         {
             if (isPublic)
                 userId = "public\\" + userId;
@@ -248,10 +323,8 @@ namespace FileAPI.Controllers
             var fileNames = await _filesRepository.ChangeName(userId, dto.OldPath, dto.NewPath);
             if (fileNames == null)
             {
-                Console.WriteLine(22222);
                 return Results.BadRequest();
             }
-            Console.WriteLine(fileNames);
             return Results.Ok();
         }
 

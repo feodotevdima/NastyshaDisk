@@ -1,12 +1,14 @@
 import React, {useState, useEffect} from 'react';
-import { View, Text, TextInput, Button, StyleSheet, Alert } from 'react-native';
+import { View, StyleSheet } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
-import { createStackNavigator,  StackScreenProps } from '@react-navigation/stack';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import MainPage from '../pages/MainPage/MainPage';
-import { getToken } from '../shared/TokenProvider';
+import { getToken } from '../sheared/TokenProvider';
 import LoginPage from '../pages/LoginPage/LoginPage';
+import SheareScreen from '../pages/ShearePage/ShearePage';
+import { RootStackParamList } from './NavigationType';
 
-
+const Stack = createNativeStackNavigator<RootStackParamList>();
 
 export default function App() {
   const [access, setAccess] = useState<string | null | undefined>("");
@@ -15,32 +17,34 @@ export default function App() {
     checkAuth();
   }, []);
 
-  const checkAuth = async () =>{
+  const checkAuth = async () => {
     const token = await getToken()
     setAccess(token)
   }
 
-
-  if(access!="")
-  {
-    if(access==null)
-      return(
-        <LoginPage checkAuth = {checkAuth} />
-      )
-    else
+  if(access !== "") {
+    if(access === null) {
+      return <LoginPage checkAuth={checkAuth} />;
+    }
     return (
-      // <NavigationContainer>
-      //   <Stack.Navigator>
-      //     <Stack.Screen name="Home" component={HomeScreen} />
-      //     <Stack.Screen name="Details" component={DetailsScreen} />
-      //   </Stack.Navigator>
-      // </NavigationContainer>
-      // <LoginScreen />
-      <View style={styles.container}>
-        < MainPage />
-      </View>
+      <NavigationContainer>
+        <Stack.Navigator>
+        <Stack.Screen 
+          name="Home" 
+          component={MainPage} 
+          options={{ headerShown: false }}
+        />
+          <Stack.Screen 
+            name="Sheare" 
+            component={SheareScreen}
+            options={{ title: 'Управление доступом' }}
+          />
+        </Stack.Navigator>
+      </NavigationContainer>
     );
- }
+  }
+
+  return null; 
 }
 
 const styles = StyleSheet.create({
@@ -51,4 +55,3 @@ const styles = StyleSheet.create({
     backgroundColor: '#ffddf1',
   },
 })
-

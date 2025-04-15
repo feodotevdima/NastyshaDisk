@@ -1,5 +1,5 @@
 import * as FileSystem from 'expo-file-system';
-import { Ip, getToken } from "../../../shared/TokenProvider";
+import { Ip, getToken } from "../../../sheared/TokenProvider";
 
 const DownloadFile = async (path: string, isPublic: boolean): Promise<string> => {
   try {

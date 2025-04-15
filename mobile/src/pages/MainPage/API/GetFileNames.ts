@@ -1,6 +1,6 @@
 import React from "react";
 import axios from "axios";
-import { Ip, getToken } from "../../../shared/TokenProvider";
+import { Ip, getToken } from "../../../sheared/TokenProvider";
 
 const GetFilesName= async (path: string, page: number, pageSize: number, isPublic: boolean) =>{
     const token= await getToken();
