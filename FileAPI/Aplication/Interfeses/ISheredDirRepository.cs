@@ -10,7 +10,7 @@ namespace Aplication.Interfeses
         Task<List<SheredDirOwner>> GetSheredDirByOwnerIdAsync(Guid ownerId);
         Task<SheredDirOwner?> GetSheredDirByDirLocationAsync(string path);
         Task<ConnectedUser?> GetConnectedUsersByIdAsync(Guid id);
-        Task<ConnectedUser?> GetConnectedUsersBySimLinkLocationAsync(string path);
+        Task<ConnectedUser?> GetConnectedUserBySimLinkLocationAsync(string path);
         Task<List<ConnectedUser>> GetConnectedUsersBySheredDirIdAsync(Guid id);
         Task<List<ConnectedUser>> GetConnectedUsersByConnectedUserIdAsync(Guid id);
         Task<SheredDirOwner> AddSheredDirAsync(SheredDirOwner sheredDir);

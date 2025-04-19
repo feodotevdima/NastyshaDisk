@@ -7,6 +7,7 @@ import { getToken } from '../sheared/TokenProvider';
 import LoginPage from '../pages/LoginPage/LoginPage';
 import SheareScreen from '../pages/ShearePage/ShearePage';
 import { RootStackParamList } from './NavigationType';
+import { fileEventEmitter, FileEvents } from '../sheared/UpdateFiles';
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
 
@@ -15,6 +16,11 @@ export default function App() {
 
   useEffect(() => {
     checkAuth();
+    fileEventEmitter.on(FileEvents.CHECK_AUTH, checkAuth);
+    
+    return () => {
+      fileEventEmitter.off(FileEvents.CHECK_AUTH, checkAuth);
+    };
   }, []);
 
   const checkAuth = async () => {
@@ -22,11 +28,12 @@ export default function App() {
     setAccess(token)
   }
 
-  if(access !== "") {
-    if(access === null) {
-      return <LoginPage checkAuth={checkAuth} />;
-    }
+  // if(access !== "") {
+  //   if(access === null) {
+  //     return <LoginPage checkAuth={checkAuth} />;
+  //   }
     return (
+      access?
       <NavigationContainer>
         <Stack.Navigator>
         <Stack.Screen 
@@ -41,8 +48,9 @@ export default function App() {
           />
         </Stack.Navigator>
       </NavigationContainer>
+      : <LoginPage checkAuth={checkAuth} />
     );
-  }
+  //}
 
   return null; 
 }

@@ -104,10 +104,10 @@ namespace Aplication.Services
 
         public async Task<string> CreateSheredDirAsync(string ownerUserId, string path, string connectedUserId)
         {
-            string originalFolderPath = Path.Combine(_folderPath, ownerUserId, path);
+            string originalFolderPath = _folderPath + ownerUserId + path;
             originalFolderPath = Path.GetFullPath(originalFolderPath);
 
-            string symlinkPath = Path.Combine(_folderPath, connectedUserId, path);
+            string symlinkPath = _folderPath + connectedUserId + path;
             symlinkPath = Path.GetFullPath(symlinkPath);
 
             if (!Directory.Exists(originalFolderPath))

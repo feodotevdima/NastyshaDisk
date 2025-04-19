@@ -1602,23 +1602,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Анастасия Феодотьева\\.nuget\\packages\\": {},
+    "C:\\Users\\Дима\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\NastyshaDisk\\FileAPI\\Presistence\\Presistence.csproj",
+      "projectUniqueName": "D:\\NastyshaDisk\\FileAPI\\Presistence\\Presistence.csproj",
       "projectName": "Presistence",
-      "projectPath": "C:\\NastyshaDisk\\FileAPI\\Presistence\\Presistence.csproj",
-      "packagesPath": "C:\\Users\\Анастасия Феодотьева\\.nuget\\packages\\",
-      "outputPath": "C:\\NastyshaDisk\\FileAPI\\Presistence\\obj\\",
+      "projectPath": "D:\\NastyshaDisk\\FileAPI\\Presistence\\Presistence.csproj",
+      "packagesPath": "C:\\Users\\Дима\\.nuget\\packages\\",
+      "outputPath": "D:\\NastyshaDisk\\FileAPI\\Presistence\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\Анастасия Феодотьева\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Дима\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -1634,8 +1634,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\NastyshaDisk\\FileAPI\\Core\\Core.csproj": {
-              "projectPath": "C:\\NastyshaDisk\\FileAPI\\Core\\Core.csproj"
+            "D:\\NastyshaDisk\\FileAPI\\Core\\Core.csproj": {
+              "projectPath": "D:\\NastyshaDisk\\FileAPI\\Core\\Core.csproj"
             }
           }
         }
@@ -1649,8 +1649,7 @@
         "enableAudit": "true",
         "auditLevel": "low",
         "auditMode": "direct"
-      },
-      "SdkAnalysisLevel": "9.0.200"
+      }
     },
     "frameworks": {
       "net8.0": {
@@ -1677,7 +1676,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.203/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

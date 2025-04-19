@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "x6ipWzRhV2kr2TtV/KJm6bgWgAisiGaPCRgJsvAuW5k=",
+  "Hash": "bI+709qIPYg21CQRkj73QyMWA8KU2bqhZzis6dglhKs=",
   "Source": "UserAPI",
   "BasePath": "_content/UserAPI",
   "Mode": "Default",
@@ -10,11 +10,10 @@
     {
       "Name": "UserAPI\\wwwroot",
       "Source": "UserAPI",
-      "ContentRoot": "C:\\NastyshaDisk\\UserAPI\\WebAPI\\wwwroot\\",
+      "ContentRoot": "D:\\NastyshaDisk\\UserAPI\\WebAPI\\wwwroot\\",
       "BasePath": "_content/UserAPI",
       "Pattern": "**"
     }
   ],
-  "Assets": [],
-  "Endpoints": []
+  "Assets": []
 }

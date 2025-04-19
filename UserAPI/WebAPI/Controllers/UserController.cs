@@ -4,6 +4,7 @@ using Core.Interfeses;
 using Presistence.Contracts;
 using Aplication.Interfeses;
 using System.IdentityModel.Tokens.Jwt;
+using Microsoft.AspNetCore.Authorization;
 
 namespace WebAPI.Controllers
 {
@@ -35,20 +36,17 @@ namespace WebAPI.Controllers
         }
 
 
-        [HttpGet("{token}")]
-        public async Task<IResult> GetUserByTokenAsync(string token)
+        [HttpGet("token")]
+        [Authorize]
+        public async Task<IResult> GetUserByTokenAsync()
         {
-            var handler = new JwtSecurityTokenHandler();
-            if (handler.CanReadToken(token))
-            {
-                JwtSecurityToken jwtToken = handler.ReadJwtToken(token);
-                string? userId = jwtToken.Claims.FirstOrDefault(c => c.Type == "sub")?.Value;
-                Guid.TryParse(userId, out var Id);
-                var user = await _userRepository.GetUserByIdAsync(Id);
-                if (user == null) return Results.BadRequest();
-                return Results.Json(user);
-            }
-            return Results.BadRequest();
+            var token = Request.Headers["Authorization"].ToString();
+            token = token.Substring(7);
+            var userId = _userService.GetUserIdFromToken(token);
+            Guid.TryParse(userId, out var Id);
+            var user = await _userRepository.GetUserByIdAsync(Id);
+            if (user == null) return Results.BadRequest();
+            return Results.Json(user);
         }
 
         [HttpGet ("id/{id}")]

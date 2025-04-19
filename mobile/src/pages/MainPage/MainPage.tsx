@@ -7,6 +7,8 @@ import GetPathString from '../../sheared/GetPathString';
 import ModalName from './UI/ModalName';
 import NewDir from './API/NewDir';
 import VolumeLine from './UI/Volume';
+import { Logout } from '../../sheared/TokenProvider';
+import { fileEventEmitter, FileEvents } from '../../sheared/UpdateFiles';
 
 const { width } = Dimensions.get('window');
 
@@ -44,12 +46,6 @@ const MainPage = () => {
       toggleAddMenu();
       downloadFile(Path, false);
     };
-  
-    const handleCreateFolder = () => {
-      toggleAddMenu();
-      // Здесь будет логика создания папки
-      console.log('Создать папку');
-    };
 
   const DeleteFiles = () =>{
     const paths=[];
@@ -62,6 +58,14 @@ const MainPage = () => {
       setLongPress(null);
     }
   }
+
+  const logout = async () => {
+    toggleMenu(); 
+    await Logout();
+    fileEventEmitter.emit(FileEvents.CHECK_AUTH);
+  }
+
+
   const toggleIcon = () => {
   Animated.parallel([
     Animated.timing(iconAnim, {
@@ -216,22 +220,14 @@ const MainPage = () => {
       </View>
 
 
-      <Animated.View
-        style={[
-          styles.menu,
-          {
-            transform: [{ translateX: slideAnim }],
-          },
-        ]}
-      >
+      <Animated.View style={[styles.menu,{transform: [{ translateX: slideAnim }],},]}>
+
         <VolumeLine />
 
-        <TouchableOpacity style={styles.menuItem} onPress={toggleMenu}>
-          <Text style={styles.menuText}>dhftk</Text>
+        <TouchableOpacity style={[styles.menuItem, styles.logoutCunteyner]} onPress={logout}>
+          <Text style={[styles.menuText, styles.logout]}>Выйти</Text>
         </TouchableOpacity>
-        <TouchableOpacity style={styles.menuItem} onPress={toggleMenu}>
-          <Text style={styles.menuText}>sdfgh</Text>
-        </TouchableOpacity>
+
       </Animated.View>
     </View>
   );
@@ -273,7 +269,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#fbf8fa',
     borderRadius: 10,
     paddingTop: 70,
-    paddingLeft: 16,
+    paddingHorizontal: 16,
   },
   menuItem: {
     marginBottom: 20,
@@ -330,6 +326,20 @@ const styles = StyleSheet.create({
     height: 2,
     backgroundColor: 'black',
     marginRight: 24,
+  },
+  logout: {
+    color: 'rgb(255, 0, 76)',
+    fontWeight: 500,
+    textAlign: "center",
+    marginHorizontal: 40, 
+  },
+  logoutCunteyner: {
+    borderColor: 'rgb(255, 0, 76)',
+    borderWidth: 2,
+    borderRadius: 30,
+    padding: 5,
+    marginHorizontal: 40,
+    marginTop: 500
   }
 });
 

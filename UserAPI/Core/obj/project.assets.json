@@ -830,23 +830,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Анастасия Феодотьева\\.nuget\\packages\\": {},
+    "C:\\Users\\Дима\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\NastyshaDisk\\UserAPI\\Core\\Core.csproj",
+      "projectUniqueName": "D:\\NastyshaDisk\\UserAPI\\Core\\Core.csproj",
       "projectName": "Core",
-      "projectPath": "C:\\NastyshaDisk\\UserAPI\\Core\\Core.csproj",
-      "packagesPath": "C:\\Users\\Анастасия Феодотьева\\.nuget\\packages\\",
-      "outputPath": "C:\\NastyshaDisk\\UserAPI\\Core\\obj\\",
+      "projectPath": "D:\\NastyshaDisk\\UserAPI\\Core\\Core.csproj",
+      "packagesPath": "C:\\Users\\Дима\\.nuget\\packages\\",
+      "outputPath": "D:\\NastyshaDisk\\UserAPI\\Core\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\Анастасия Феодотьева\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Дима\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -873,8 +873,7 @@
         "enableAudit": "true",
         "auditLevel": "low",
         "auditMode": "direct"
-      },
-      "SdkAnalysisLevel": "9.0.200"
+      }
     },
     "frameworks": {
       "net7.0": {
@@ -905,7 +904,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.203\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400\\RuntimeIdentifierGraph.json"
       }
     }
   }

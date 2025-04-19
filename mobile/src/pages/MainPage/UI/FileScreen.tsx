@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import {View, Text, TouchableOpacity, StyleSheet, FlatList, Image, Dimensions, ScrollView, Vibration, ActivityIndicator} from 'react-native';
 import getExtension from '../../../sheared/FileProvider';
-import File from '../../../Entities/FileEntity';
 import DropdownMenu from '../../../widgetes/DropdownMenu';
 import GetIcon from './../UI/GetIcon';
 import GetFilesName from '../API/GetFileNames';
@@ -21,6 +20,9 @@ interface FileScreenProps {
   setLongPress: (value: string[] | null) => void;
   SetPath: (value: string | null) => void;
 }
+interface ListItemProps {
+  name: string;
+}
 
 const { height } = Dimensions.get('window');
 const PageSize = 20;
@@ -29,7 +31,7 @@ const FileScreen: React.FC<FileScreenProps> = ({ longPress, setLongPress, SetPat
   const [Path, setPath] = useState<string[]>(['Главная']);
   const [visibleMenuId, setVisibleMenuId] = useState<string | null>(null);
   const [menuPosition, setMenuPosition] = useState({ x: 0, y: 0 });
-  const [fileNames, setfileNames] = useState<File[] | null>(null);
+  const [fileNames, setfileNames] = useState<string[] | null>(null);
   const [page, setPage] = useState<number>(1);
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const [hasMore, setHasMore] = useState<boolean>(true);
@@ -51,7 +53,7 @@ const FileScreen: React.FC<FileScreenProps> = ({ longPress, setLongPress, SetPat
     const fetchInitialData = async () => {
       await loadMoreData(1, true);
       setIsLoading(false);
-    };
+    };  
 
     fetchInitialData();
 
@@ -226,9 +228,10 @@ const FileScreen: React.FC<FileScreenProps> = ({ longPress, setLongPress, SetPat
   };
 
 
-  const ListItem = ({ name, owner, conectedUsers }: File) => {
-    if(name==null)
+  const ListItem: React.FC<ListItemProps> = ({ name }) => {
+    if (name == null || typeof name !== 'string') {
       return null;
+    }
     let items = ['Переименовать', 'Удалить'];
     if(getExtension(name)==null)
     {
@@ -306,7 +309,7 @@ const FileScreen: React.FC<FileScreenProps> = ({ longPress, setLongPress, SetPat
               data={fileNames}
               renderItem={({ item }) => (
                   <View>
-                    <ListItem name={item.name} owner={item.owner} conectedUsers={item.conectedUsers} />
+                    <ListItem name={item} />
                     <View style={styles.separator} />
                   </View>
               )}

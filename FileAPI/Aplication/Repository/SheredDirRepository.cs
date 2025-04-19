@@ -67,7 +67,7 @@ namespace Aplication.Repository
             return ConnectedUser;
         }
 
-        public async Task<ConnectedUser?> GetConnectedUsersBySimLinkLocationAsync(string path)
+        public async Task<ConnectedUser?> GetConnectedUserBySimLinkLocationAsync(string path)
         {
             List<ConnectedUser> ConnectedUsers = await GetConnectedUsersAsync();
             var ConnectedUser = ConnectedUsers.FirstOrDefault(item => item.SimLinkLocation == path);

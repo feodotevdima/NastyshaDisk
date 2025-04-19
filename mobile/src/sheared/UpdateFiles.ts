@@ -1,4 +1,3 @@
-// shared/EventEmitter.ts
 type Listener = (data?: any) => void;
 
 class ReactNativeEventEmitter {
@@ -19,7 +18,7 @@ class ReactNativeEventEmitter {
   }
 
   removeAllListeners(event?: string): void {
-    if (event) {
+    if (event) {   
       delete this.events[event];
     } else {
       this.events = {};
@@ -29,7 +28,7 @@ class ReactNativeEventEmitter {
 
 export enum FileEvents {
   FILES_UPDATED = 'FILES_UPDATED',
-  FILE_DELETED = 'FILE_DELETED',
+  CHECK_AUTH = 'CHECK_AUTH',
 }
 
 export const fileEventEmitter = new ReactNativeEventEmitter();

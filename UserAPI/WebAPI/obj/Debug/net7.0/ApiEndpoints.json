@@ -38,22 +38,6 @@
   },
   {
     "ContainingType": "WebAPI.Controllers.UserController",
-    "Method": "GetUserByTokenAsync",
-    "RelativePath": "User/{token}",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "token",
-        "Type": "System.String",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "WebAPI.Controllers.UserController",
     "Method": "AddUserAsync",
     "RelativePath": "User/add",
     "HttpMethod": "POST",
@@ -108,6 +92,16 @@
         "IsRequired": true
       }
     ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebAPI.Controllers.UserController",
+    "Method": "GetUserByTokenAsync",
+    "RelativePath": "User/token",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
     "ReturnTypes": []
   }
 ]

@@ -28,7 +28,7 @@ function AddFiles()
       const formData = new FormData();
   
       selectedFiles.forEach((file) => {
-        // @ts-ignore - React Native преобразует uri в нужный формат
+        // @ts-ignore
         formData.append('files', {
           uri: file.uri,
           name: file.name,

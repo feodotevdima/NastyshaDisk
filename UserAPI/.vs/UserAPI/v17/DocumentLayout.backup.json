@@ -1,34 +1,34 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\NastyshaDisk\\UserAPI\\",
+  "WorkspaceRootPath": "D:\\NastyshaDisk\\UserAPI\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{7ED8B142-895C-459A-A8D4-C9D8208A4187}|WebAPI\\UserAPI.csproj|c:\\nastyshadisk\\userapi\\webapi\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{7ED8B142-895C-459A-A8D4-C9D8208A4187}|WebAPI\\UserAPI.csproj|d:\\nastyshadisk\\userapi\\webapi\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7ED8B142-895C-459A-A8D4-C9D8208A4187}|WebAPI\\UserAPI.csproj|solutionrelative:webapi\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7ED8B142-895C-459A-A8D4-C9D8208A4187}|WebAPI\\UserAPI.csproj|c:\\nastyshadisk\\userapi\\webapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7ED8B142-895C-459A-A8D4-C9D8208A4187}|WebAPI\\UserAPI.csproj|solutionrelative:webapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C8304F27-5CB1-4F09-92DF-1AC7556AEF65}|Core\\Core.csproj|c:\\nastyshadisk\\userapi\\core\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C8304F27-5CB1-4F09-92DF-1AC7556AEF65}|Core\\Core.csproj|solutionrelative:core\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7ED8B142-895C-459A-A8D4-C9D8208A4187}|WebAPI\\UserAPI.csproj|c:\\nastyshadisk\\userapi\\webapi\\userapi.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{7ED8B142-895C-459A-A8D4-C9D8208A4187}|WebAPI\\UserAPI.csproj|solutionrelative:webapi\\userapi.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EC7E8884-16A8-4FF4-BAD2-BF64FE08413F}|Presistence\\Presistence.csproj|c:\\nastyshadisk\\userapi\\presistence\\usercontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EC7E8884-16A8-4FF4-BAD2-BF64FE08413F}|Presistence\\Presistence.csproj|solutionrelative:presistence\\usercontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9730AAAA-F3B1-4E30-B859-0CCA6DFB00C5}|Aplication\\Aplication.csproj|c:\\nastyshadisk\\userapi\\aplication\\repository\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{9730AAAA-F3B1-4E30-B859-0CCA6DFB00C5}|Aplication\\Aplication.csproj|d:\\nastyshadisk\\userapi\\aplication\\repository\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9730AAAA-F3B1-4E30-B859-0CCA6DFB00C5}|Aplication\\Aplication.csproj|solutionrelative:aplication\\repository\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9730AAAA-F3B1-4E30-B859-0CCA6DFB00C5}|Aplication\\Aplication.csproj|c:\\nastyshadisk\\userapi\\aplication\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{9730AAAA-F3B1-4E30-B859-0CCA6DFB00C5}|Aplication\\Aplication.csproj|d:\\nastyshadisk\\userapi\\aplication\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9730AAAA-F3B1-4E30-B859-0CCA6DFB00C5}|Aplication\\Aplication.csproj|solutionrelative:aplication\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7ED8B142-895C-459A-A8D4-C9D8208A4187}|WebAPI\\UserAPI.csproj|d:\\nastyshadisk\\userapi\\webapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7ED8B142-895C-459A-A8D4-C9D8208A4187}|WebAPI\\UserAPI.csproj|solutionrelative:webapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C8304F27-5CB1-4F09-92DF-1AC7556AEF65}|Core\\Core.csproj|d:\\nastyshadisk\\userapi\\core\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C8304F27-5CB1-4F09-92DF-1AC7556AEF65}|Core\\Core.csproj|solutionrelative:core\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7ED8B142-895C-459A-A8D4-C9D8208A4187}|WebAPI\\UserAPI.csproj|d:\\nastyshadisk\\userapi\\webapi\\userapi.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{7ED8B142-895C-459A-A8D4-C9D8208A4187}|WebAPI\\UserAPI.csproj|solutionrelative:webapi\\userapi.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EC7E8884-16A8-4FF4-BAD2-BF64FE08413F}|Presistence\\Presistence.csproj|d:\\nastyshadisk\\userapi\\presistence\\usercontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EC7E8884-16A8-4FF4-BAD2-BF64FE08413F}|Presistence\\Presistence.csproj|solutionrelative:presistence\\usercontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -38,12 +38,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 9,
+          "SelectedChildIndex": 8,
           "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
@@ -54,11 +50,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "UserAPI.csproj",
-              "DocumentMoniker": "C:\\NastyshaDisk\\UserAPI\\WebAPI\\UserAPI.csproj",
+              "DocumentMoniker": "D:\\NastyshaDisk\\UserAPI\\WebAPI\\UserAPI.csproj",
               "RelativeDocumentMoniker": "WebAPI\\UserAPI.csproj",
-              "ToolTip": "C:\\NastyshaDisk\\UserAPI\\WebAPI\\UserAPI.csproj",
+              "ToolTip": "D:\\NastyshaDisk\\UserAPI\\WebAPI\\UserAPI.csproj",
               "RelativeToolTip": "WebAPI\\UserAPI.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
@@ -66,11 +62,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "UserContext.cs",
-              "DocumentMoniker": "C:\\NastyshaDisk\\UserAPI\\Presistence\\UserContext.cs",
+              "DocumentMoniker": "D:\\NastyshaDisk\\UserAPI\\Presistence\\UserContext.cs",
               "RelativeDocumentMoniker": "Presistence\\UserContext.cs",
-              "ToolTip": "C:\\NastyshaDisk\\UserAPI\\Presistence\\UserContext.cs",
+              "ToolTip": "D:\\NastyshaDisk\\UserAPI\\Presistence\\UserContext.cs",
               "RelativeToolTip": "Presistence\\UserContext.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -78,23 +74,24 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 1,
               "Title": "UserRepository.cs",
-              "DocumentMoniker": "C:\\NastyshaDisk\\UserAPI\\Aplication\\Repository\\UserRepository.cs",
+              "DocumentMoniker": "D:\\NastyshaDisk\\UserAPI\\Aplication\\Repository\\UserRepository.cs",
               "RelativeDocumentMoniker": "Aplication\\Repository\\UserRepository.cs",
-              "ToolTip": "C:\\NastyshaDisk\\UserAPI\\Aplication\\Repository\\UserRepository.cs",
+              "ToolTip": "D:\\NastyshaDisk\\UserAPI\\Aplication\\Repository\\UserRepository.cs",
               "RelativeToolTip": "Aplication\\Repository\\UserRepository.cs",
-              "ViewState": "AgIAACQAAAAAAAAAAAAAAC0AAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAACcAAAAAAAAAAAAAAC0AAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-03T22:42:42.09Z"
+              "WhenOpened": "2024-12-03T22:42:42.09Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "User.cs",
-              "DocumentMoniker": "C:\\NastyshaDisk\\UserAPI\\Core\\User.cs",
+              "DocumentMoniker": "D:\\NastyshaDisk\\UserAPI\\Core\\User.cs",
               "RelativeDocumentMoniker": "Core\\User.cs",
-              "ToolTip": "C:\\NastyshaDisk\\UserAPI\\Core\\User.cs",
+              "ToolTip": "D:\\NastyshaDisk\\UserAPI\\Core\\User.cs",
               "RelativeToolTip": "Core\\User.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -102,37 +99,39 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 2,
               "Title": "UserService.cs",
-              "DocumentMoniker": "C:\\NastyshaDisk\\UserAPI\\Aplication\\Services\\UserService.cs",
+              "DocumentMoniker": "D:\\NastyshaDisk\\UserAPI\\Aplication\\Services\\UserService.cs",
               "RelativeDocumentMoniker": "Aplication\\Services\\UserService.cs",
-              "ToolTip": "C:\\NastyshaDisk\\UserAPI\\Aplication\\Services\\UserService.cs",
+              "ToolTip": "D:\\NastyshaDisk\\UserAPI\\Aplication\\Services\\UserService.cs",
               "RelativeToolTip": "Aplication\\Services\\UserService.cs",
               "ViewState": "AgIAAA8AAAAAAAAAAAAAADgAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-03T19:45:52.85Z"
+              "WhenOpened": "2024-12-03T19:45:52.85Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "Program.cs",
-              "DocumentMoniker": "C:\\NastyshaDisk\\UserAPI\\WebAPI\\Program.cs",
+              "DocumentMoniker": "D:\\NastyshaDisk\\UserAPI\\WebAPI\\Program.cs",
               "RelativeDocumentMoniker": "WebAPI\\Program.cs",
-              "ToolTip": "C:\\NastyshaDisk\\UserAPI\\WebAPI\\Program.cs",
+              "ToolTip": "D:\\NastyshaDisk\\UserAPI\\WebAPI\\Program.cs",
               "RelativeToolTip": "WebAPI\\Program.cs",
-              "ViewState": "AgIAAB8AAAAAAAAAAAAAADkAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAABMAAAAAAAAAAAAAADkAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-25T22:27:56.764Z"
+              "WhenOpened": "2024-11-25T22:27:56.764Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "UserController.cs",
-              "DocumentMoniker": "C:\\NastyshaDisk\\UserAPI\\WebAPI\\Controllers\\UserController.cs",
+              "DocumentMoniker": "D:\\NastyshaDisk\\UserAPI\\WebAPI\\Controllers\\UserController.cs",
               "RelativeDocumentMoniker": "WebAPI\\Controllers\\UserController.cs",
-              "ToolTip": "C:\\NastyshaDisk\\UserAPI\\WebAPI\\Controllers\\UserController.cs",
-              "RelativeToolTip": "WebAPI\\Controllers\\UserController.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAACAAAAA6AAAAAAAAAA==",
+              "ToolTip": "D:\\NastyshaDisk\\UserAPI\\WebAPI\\Controllers\\UserController.cs*",
+              "RelativeToolTip": "WebAPI\\Controllers\\UserController.cs*",
+              "ViewState": "AgIAAB8AAAAAAAAAAAAAADcAAAA6AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-25T20:53:43.013Z",
               "EditorCaption": ""

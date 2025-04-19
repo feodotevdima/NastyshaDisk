@@ -92,7 +92,7 @@ namespace Aplication.Repository
                             FileAttributes attributes = File.GetAttributes(filePath);  
                             if ((attributes & FileAttributes.ReparsePoint) == FileAttributes.ReparsePoint)
                             {
-                                var user = await _sheredDirRepository.GetConnectedUsersBySimLinkLocationAsync(filePath);
+                                var user = await _sheredDirRepository.GetConnectedUserBySimLinkLocationAsync(filePath);
 
                                 if (user != null)
                                 {
@@ -175,7 +175,7 @@ namespace Aplication.Repository
                     FileAttributes attributes = File.GetAttributes(newFilePath);
                     if ((attributes & FileAttributes.ReparsePoint) == FileAttributes.ReparsePoint)
                     {
-                        var user = await _sheredDirRepository.GetConnectedUsersBySimLinkLocationAsync(oldFilePath);
+                        var user = await _sheredDirRepository.GetConnectedUserBySimLinkLocationAsync(oldFilePath);
 
                         if (user != null)
                         {

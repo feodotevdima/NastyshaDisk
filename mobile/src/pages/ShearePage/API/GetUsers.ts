@@ -3,9 +3,9 @@ import axios from "axios";
 import { Ip, getToken } from "../../../sheared/TokenProvider";
 import { fileEventEmitter, FileEvents } from '../../../sheared/UpdateFiles';
 
-const GetUsers= async () =>{
+const GetUsers= async (path: string) =>{
     const token= await getToken();
-    const query = Ip + ":7001/User/all";
+    const query = Ip + ":7003/Files/all_to_add?path="+path;
     const response = await axios.get(
         query,
         {
