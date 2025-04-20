@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import { View, StyleSheet } from 'react-native';
+import { ActivityIndicator, View, StyleSheet } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import MainPage from '../pages/MainPage/MainPage';
@@ -12,10 +12,13 @@ import { fileEventEmitter, FileEvents } from '../sheared/UpdateFiles';
 const Stack = createNativeStackNavigator<RootStackParamList>();
 
 export default function App() {
-  const [access, setAccess] = useState<string | null | undefined>("");
+  const [access, setAccess] = useState<string | null | undefined>(null);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
+
     checkAuth();
+
     fileEventEmitter.on(FileEvents.CHECK_AUTH, checkAuth);
     
     return () => {
@@ -24,14 +27,23 @@ export default function App() {
   }, []);
 
   const checkAuth = async () => {
-    const token = await getToken()
-    setAccess(token)
+    try{
+      const token = await getToken()
+      setAccess(token)
+    }
+    finally{
+      setLoading(false);
+    }
   }
 
-  // if(access !== "") {
-  //   if(access === null) {
-  //     return <LoginPage checkAuth={checkAuth} />;
-  //   }
+    if (loading) {
+        return (
+            <View style={styles.loadingContainer}>
+                <ActivityIndicator size="large" color="#0000ff" />
+            </View>
+        );
+    }
+
     return (
       access?
       <NavigationContainer>
@@ -50,9 +62,6 @@ export default function App() {
       </NavigationContainer>
       : <LoginPage checkAuth={checkAuth} />
     );
-  //}
-
-  return null; 
 }
 
 const styles = StyleSheet.create({
@@ -60,6 +69,12 @@ const styles = StyleSheet.create({
     flex: 1,
     paddingTop: 40,
     paddingHorizontal: 10,
+    backgroundColor: '#ffddf1',
+  },
+  loadingContainer: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
     backgroundColor: '#ffddf1',
   },
 })

@@ -72,19 +72,9 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "ownerUserId",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "path",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "connectedUserId",
-        "Type": "System.String",
-        "IsRequired": false
+        "Name": "dto",
+        "Type": "Presistence.Dtos.AddUserDto",
+        "IsRequired": true
       }
     ],
     "ReturnTypes": []

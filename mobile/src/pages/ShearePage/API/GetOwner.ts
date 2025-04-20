@@ -15,7 +15,7 @@ const GetOwner= async (path: string) =>{
           },
         }
     );
-    
+
     return response;
 }
 

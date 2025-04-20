@@ -14,7 +14,6 @@ const GetConnectedUsers= async (path: string) =>{
           },
         }
     );
-    
     return response;
 }
 

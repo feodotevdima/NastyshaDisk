@@ -2,18 +2,19 @@ import React, { useState, useEffect } from 'react';
 import { View, Text, TextInput, FlatList, TouchableOpacity, StyleSheet } from 'react-native';
 import User from '../../../Entities/UserEntity';
 import AddUser from '../API/AddUser';
+import DelUser from '../API/DelUser';
 
 interface ShareScreenProps {
     allUsers: User[];
     owner: User | null;
     path: string;
     navigation: any;
+    sharedUsers: User[] | null;
 }
 
-const Owner: React.FC<ShareScreenProps> = ({ allUsers, owner, path, navigation }) => {
+const Owner: React.FC<ShareScreenProps> = ({ allUsers, owner, path, navigation, sharedUsers }) => {
     const [searchQuery, setSearchQuery] = useState('');
     const [filteredUsers, setFilteredUsers] = useState<User[]>([]);
-    const [sharedUsers, setSharedUsers] = useState([]);
 
     useEffect(() => {
         if (searchQuery.length > 1) {
@@ -34,15 +35,6 @@ const Owner: React.FC<ShareScreenProps> = ({ allUsers, owner, path, navigation }
 
     return (
         <View style={styles.container}>
-            <View style={styles.section}>
-                <Text style={styles.sectionTitle}>Владелец:</Text>
-                {owner && (
-                    <View style={styles.userItem}>
-                        <Text style={styles.userName}>Имя: {owner.name}</Text>
-                        <Text style={styles.userEmail}>Почта: {owner.email}</Text>
-                    </View>
-                )}
-            </View>
             
             <View style={styles.section}>
                 <Text style={styles.sectionTitle}>Добавить пользователя:</Text>
@@ -74,14 +66,14 @@ const Owner: React.FC<ShareScreenProps> = ({ allUsers, owner, path, navigation }
             
             <View style={styles.section}>
                 <Text style={styles.sectionTitle}>Подключенные пользователи:</Text>
-                {sharedUsers.length > 0 ? (
+                {(sharedUsers!=null && sharedUsers.length > 0) ? (
                     <FlatList
                         data={sharedUsers}
                         renderItem={({ item }) => (
                             <View style={styles.userItem}>
-                                <Text style={styles.userName}>{item}</Text>
-                                <Text style={styles.userEmail}>{item}</Text>
-                                <TouchableOpacity>
+                                <Text style={styles.userName}>{item.name}</Text>
+                                <Text style={styles.userEmail}>{item.email}</Text>
+                                <TouchableOpacity onPress={()=>{DelUser(path, item.id)}}>
                                     <Text style={styles.revokeAccess}>Отозвать доступ</Text>
                                 </TouchableOpacity>
                             </View>

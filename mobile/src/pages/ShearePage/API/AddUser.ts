@@ -1,8 +1,8 @@
 import axios from "axios";
 import { Ip, getToken } from "../../../sheared/TokenProvider";
+import { fileEventEmitter, FileEvents } from '../../../sheared/UpdateFiles';
 
 const AddUser= async (path: string, connectedUserId: string) =>{
-  console.log(1)
     const token= await getToken();
     const query = Ip + ":7003/Files/add_user";
     const response = await axios.post(
@@ -19,8 +19,7 @@ const AddUser= async (path: string, connectedUserId: string) =>{
           },
         }
     );
-    console.log(2)
-    console.log(response)
+    fileEventEmitter.emit(FileEvents.CHECK_CONNECTED_USERS);
     return response;
 }
 

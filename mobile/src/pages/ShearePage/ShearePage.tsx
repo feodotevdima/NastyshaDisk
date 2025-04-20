@@ -6,6 +6,8 @@ import User from '../../Entities/UserEntity';
 import { SheareScreenProps } from '../../app/NavigationType';
 import Owner from './UI/Owner';
 import GetConnectedUsers from './API/GetConnectedUsers';
+import Connected from './UI/Connected';
+import { fileEventEmitter, FileEvents } from './../../sheared/UpdateFiles';
 
 const SheareScreen: React.FC<SheareScreenProps> = ({ route, navigation }) => {
     const [allUsers, setAllUsers] = useState<User[]>([]);
@@ -28,13 +30,23 @@ const SheareScreen: React.FC<SheareScreenProps> = ({ route, navigation }) => {
                 const ownerResponse = await GetOwner(path);
                 setStatus(ownerResponse.status);
                 
-                if (ownerResponse.status === 201) {
+                if (ownerResponse.status === 200) {
                     setOwner(ownerResponse.data);
                 }
             } 
             finally {
                 setLoading(false);
             }
+
+            const update = async () => 
+            {
+                const cUsers = await GetConnectedUsers(path);
+                setConnectedUsers(cUsers.data);
+            }
+            fileEventEmitter.on(FileEvents.CHECK_CONNECTED_USERS, update);
+            return () => {
+                fileEventEmitter.off(FileEvents.CHECK_CONNECTED_USERS, update);
+            };
         };
 
         fetchData();
@@ -64,10 +76,17 @@ const SheareScreen: React.FC<SheareScreenProps> = ({ route, navigation }) => {
                     owner={owner}
                     path={path}
                     navigation={navigation}
+                    sharedUsers={connectedUsers}
                 />
             )}
             {status === 200 && (
-                <View />
+                <Connected 
+                    allUsers={allUsers}
+                    owner={owner}
+                    path={path}
+                    navigation={navigation}
+                    sharedUsers={connectedUsers}
+                />
             )}
         </>
     );

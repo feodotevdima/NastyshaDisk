@@ -101,12 +101,13 @@ namespace FileAPI.Controllers
 
                 var owner = await _shredDirRepository.GetSheredDirByDirLocationAsync(FilePath);
 
+
                 if (owner != null && owner.OwnerId == userId)
                     return Results.StatusCode(201);
 
                 if (owner == null)
                 {
-                    var connectedUser = await _shredDirRepository.GetConnectedUserBySimLinkLocationAsync(path);
+                    var connectedUser = await _shredDirRepository.GetConnectedUserBySimLinkLocationAsync(FilePath);
                     if (connectedUser != null)
                     {
                         owner = await _shredDirRepository.GetSheredDirByIdAsync(connectedUser.SheredDirId);
@@ -117,7 +118,7 @@ namespace FileAPI.Controllers
                     return Results.StatusCode(201);
 
 
-                var response = await _httpClient.GetAsync($"http://localhost:7001/User/id/{owner.Id}");
+                var response = await _httpClient.GetAsync($"http://localhost:7001/User/id/{owner.OwnerId}");
 
                 if (response.IsSuccessStatusCode && response.Content != null)
                 {
@@ -151,7 +152,7 @@ namespace FileAPI.Controllers
 
             if (owner == null)
             {
-                var dir = await _shredDirRepository.GetConnectedUserBySimLinkLocationAsync(path);
+                var dir = await _shredDirRepository.GetConnectedUserBySimLinkLocationAsync(FilePath);
 
                 if (dir == null)
                     return Results.Ok();
@@ -159,8 +160,7 @@ namespace FileAPI.Controllers
                 owner = await _shredDirRepository.GetSheredDirByIdAsync(dir.SheredDirId);
             }
 
-            var ownerId = owner.OwnerId;
-            var users = await _shredDirRepository.GetConnectedUsersBySheredDirIdAsync(ownerId);
+            var users = await _shredDirRepository.GetConnectedUsersBySheredDirIdAsync(owner.Id);
 
             List<UserModel> result = new List<UserModel>();
             foreach (var user in users)
@@ -393,9 +393,14 @@ namespace FileAPI.Controllers
 
         [Route("del_user")]
         [HttpDelete]
-        public async Task<IResult> DelUserToDirAsync(string ownerUserId, string path, string connectedUserId)
+        [Authorize]
+        public async Task<IResult> DelUserToDirAsync([FromBody] AddUserDto dto)
         {
-            var newPath = await _filesService.DeleteConnectedUserAsync(ownerUserId, path, connectedUserId);
+            var token = Request.Headers["Authorization"].ToString();
+            token = token.Substring(7);
+            var ownerUserId = _filesService.GetUserIdFromToken(token);
+
+            var newPath = await _filesService.DeleteConnectedUserAsync(ownerUserId, dto.Path, dto.ConnectedUserId);
 
             if (newPath == null)
                 return Results.BadRequest();

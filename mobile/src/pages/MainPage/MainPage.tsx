@@ -64,7 +64,14 @@ const MainPage = () => {
     await Logout();
     fileEventEmitter.emit(FileEvents.CHECK_AUTH);
   }
-
+  
+  const handleSubmitCreateDir = () => {
+    if(inputValue.includes('.') || inputValue=='' || inputValue==null)
+      return;
+    NewDir(Path+inputValue, false)
+    setModalVisible(false);
+    setInputValue('');
+  };
 
   const toggleIcon = () => {
   Animated.parallel([
@@ -124,15 +131,6 @@ const MainPage = () => {
     inputRange: [0, 1],
     outputRange: [5, -5],
   });
-
-
-  const handleSubmitCreateDir = () => {
-    if(inputValue.includes('.') || inputValue=='' || inputValue==null)
-      return;
-    NewDir(Path+inputValue, false)
-    setModalVisible(false);
-    setInputValue('');
-  };
 
   return (
     <View style={styles.container}>

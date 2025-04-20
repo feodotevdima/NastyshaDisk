@@ -29,6 +29,7 @@ class ReactNativeEventEmitter {
 export enum FileEvents {
   FILES_UPDATED = 'FILES_UPDATED',
   CHECK_AUTH = 'CHECK_AUTH',
+  CHECK_CONNECTED_USERS = 'CHECK_CONNECTED_USERS',
 }
 
 export const fileEventEmitter = new ReactNativeEventEmitter();

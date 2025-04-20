@@ -82,8 +82,7 @@
               "RelativeToolTip": "Aplication\\Repository\\UserRepository.cs",
               "ViewState": "AgIAACcAAAAAAAAAAAAAAC0AAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-03T22:42:42.09Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-03T22:42:42.09Z"
             },
             {
               "$type": "Document",
@@ -107,8 +106,7 @@
               "RelativeToolTip": "Aplication\\Services\\UserService.cs",
               "ViewState": "AgIAAA8AAAAAAAAAAAAAADgAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-03T19:45:52.85Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-03T19:45:52.85Z"
             },
             {
               "$type": "Document",
@@ -120,8 +118,7 @@
               "RelativeToolTip": "WebAPI\\Program.cs",
               "ViewState": "AgIAABMAAAAAAAAAAAAAADkAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-25T22:27:56.764Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-25T22:27:56.764Z"
             },
             {
               "$type": "Document",
@@ -129,8 +126,8 @@
               "Title": "UserController.cs",
               "DocumentMoniker": "D:\\NastyshaDisk\\UserAPI\\WebAPI\\Controllers\\UserController.cs",
               "RelativeDocumentMoniker": "WebAPI\\Controllers\\UserController.cs",
-              "ToolTip": "D:\\NastyshaDisk\\UserAPI\\WebAPI\\Controllers\\UserController.cs*",
-              "RelativeToolTip": "WebAPI\\Controllers\\UserController.cs*",
+              "ToolTip": "D:\\NastyshaDisk\\UserAPI\\WebAPI\\Controllers\\UserController.cs",
+              "RelativeToolTip": "WebAPI\\Controllers\\UserController.cs",
               "ViewState": "AgIAAB8AAAAAAAAAAAAAADcAAAA6AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-25T20:53:43.013Z",

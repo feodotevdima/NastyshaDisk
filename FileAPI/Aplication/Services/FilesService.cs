@@ -150,7 +150,7 @@ namespace Aplication.Services
 
         public async Task<ConnectedUser> DeleteConnectedUserAsync(string ownerUserId, string path, string connectedUserId)
         {
-            string originalFolderPath = Path.Combine(_folderPath, ownerUserId, path);
+            string originalFolderPath = _folderPath + ownerUserId + path;
             originalFolderPath = Path.GetFullPath(originalFolderPath);
 
             if (!Directory.Exists(originalFolderPath))
