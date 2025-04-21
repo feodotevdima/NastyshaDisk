@@ -67,17 +67,20 @@ namespace FileAPI.Controllers
             Guid.TryParse(_filesService.GetUserIdFromToken(token), out var userId);
 
             var FilePath = Path.GetFullPath(_folderPath + userId + path);
-            var connectedUser = await _shredDirRepository.GetConnectedUserBySimLinkLocationAsync(path);
+
 
             var response = await _httpClient.GetAsync("http://localhost:7001/User/all");
             var allUsers = await response.Content.ReadFromJsonAsync<List<UserModel>>();
 
-            if (connectedUser != null)
+            var owner = await _shredDirRepository.GetSheredDirByDirLocationAsync(FilePath);
+            if (owner != null)
             {
-                var owner = await _shredDirRepository.GetSheredDirByIdAsync(connectedUser.SheredDirId);
                 var connectedUsers = await _shredDirRepository.GetConnectedUsersBySheredDirIdAsync(owner.Id);
+                foreach (var user in connectedUsers)
+                {
+                    allUsers = allUsers.Where(item => item.Id != user.ConnectedUserId).ToList();
+                }
 
-                allUsers = allUsers.Where(item => connectedUsers.Any(user => item.Id != user.ConnectedUserId)).ToList();
             }
 
             var users = allUsers.Where(item => item.Id != userId);
@@ -161,6 +164,7 @@ namespace FileAPI.Controllers
             }
 
             var users = await _shredDirRepository.GetConnectedUsersBySheredDirIdAsync(owner.Id);
+            users = users.Where(item => item.ConnectedUserId.ToString() != userId).ToList();
 
             List<UserModel> result = new List<UserModel>();
             foreach (var user in users)

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View, Text, TextInput, TouchableOpacity, StyleSheet, Alert } from 'react-native';
+import { ActivityIndicator, View, Text, TextInput, TouchableOpacity, StyleSheet, Alert } from 'react-native';
 import { getToken, Login } from '../../sheared/TokenProvider';
 
 
@@ -11,6 +11,7 @@ interface LoginPageProps {
 const LoginPage : React.FC<LoginPageProps> = ({checkAuth}) => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [loading, setLoading] = useState(false);
 
   const handleLogin = async () => {
     if (!email || !password) {
@@ -33,17 +34,27 @@ const LoginPage : React.FC<LoginPageProps> = ({checkAuth}) => {
     //       return null
     //     }
         
+    setLoading(true);
     const response: number = await Login(email, password);
-    console.log("response");
       if(response===200)
-        checkAuth();
-      else if((response===400) || (response===401))
+        await checkAuth();
+      setLoading(false);
+      if((response===400) || (response===401))
         Alert.alert("Неверный логин или пароль");
-      else
+      else if(response!=200)
       Alert.alert("Ошибка сервера");
-      
-      return response;
+
+    return response;
   };
+
+  if (loading) 
+  {
+    return (
+      <View style={styles.loadingContainer}>
+        <ActivityIndicator size="large" color="#0000ff" />
+      </View>
+    );
+  }
 
   return (
     <View style={styles.container}>
@@ -85,7 +96,12 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     padding: 16,
   },
-
+  loadingContainer: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#ffddf1',
+  },
   button :{
     backgroundColor: "#f38bc8",
     paddingVertical: 12,
