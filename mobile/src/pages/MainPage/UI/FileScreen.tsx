@@ -1,5 +1,19 @@
 import React, { useState, useEffect } from 'react';
-import {View, Text, TouchableOpacity, StyleSheet, FlatList, Image, Dimensions, ScrollView, Vibration, ActivityIndicator} from 'react-native';
+import {
+  View,
+  Text,
+  TouchableOpacity,
+  StyleSheet,
+  FlatList,
+  Image,
+  Dimensions,
+  ScrollView,
+  Vibration,
+  ActivityIndicator,
+  ToastAndroid,
+  Platform
+} from 'react-native';
+import * as FileSystem from 'expo-file-system';
 import getExtension from '../../../sheared/FileProvider';
 import DropdownMenu from '../../../widgetes/DropdownMenu';
 import GetIcon from './../UI/GetIcon';
@@ -20,8 +34,16 @@ interface FileScreenProps {
   setLongPress: (value: string[] | null) => void;
   SetPath: (value: string | null) => void;
 }
+
 interface ListItemProps {
   name: string;
+}
+
+interface DownloadState {
+  [key: string]: {
+    progress: number;
+    loading: boolean;
+  };
 }
 
 const { height } = Dimensions.get('window');
@@ -41,7 +63,9 @@ const FileScreen: React.FC<FileScreenProps> = ({ longPress, setLongPress, SetPat
   const [oldPath, setOldPath] = useState<string>("");
   const [extension, setExtension] = useState<string>("");
   const [openImage, setOpenImage] = useState<boolean>(false);
-  const [imagePath, setImagePath] = useState<string | null>(null);
+  const [imagesPath, setImagesPath] = useState<string[]>([]);
+  const [index, setIndex] = useState<number | null>(null);
+  const [downloadStates, setDownloadStates] = useState<DownloadState>({});
   const navigation = useNavigation<NativeStackNavigationProp<RootStackParamList>>();
 
   useEffect(() => {
@@ -53,7 +77,7 @@ const FileScreen: React.FC<FileScreenProps> = ({ longPress, setLongPress, SetPat
     const fetchInitialData = async () => {
       await loadMoreData(1, true);
       setIsLoading(false);
-    };  
+    };
 
     fetchInitialData();
 
@@ -64,11 +88,9 @@ const FileScreen: React.FC<FileScreenProps> = ({ longPress, setLongPress, SetPat
     };
   }, [Path]);
 
-
   useEffect(() => {
-    if(longPress?.length==0)
-    {
-      setLongPress(null)
+    if (longPress?.length == 0) {
+      setLongPress(null);
     }
   }, [longPress]);
 
@@ -88,7 +110,7 @@ const FileScreen: React.FC<FileScreenProps> = ({ longPress, setLongPress, SetPat
     const response = await GetFilesName(path, currentPage, PageSize, false);
 
     setfileNames(prevNames =>
-        currentPage === 1 ? response.data : [...(prevNames || []), ...response.data]
+      currentPage === 1 ? response.data : [...(prevNames || []), ...response.data]
     );
 
     setTotalCount(response.totalCount);
@@ -115,32 +137,38 @@ const FileScreen: React.FC<FileScreenProps> = ({ longPress, setLongPress, SetPat
   };
 
   const pressDir = (name: string) => {
-    if(longPress != null)
-    {
-      if(longPress.includes(name))
-      {
-        const newArr : string[] = longPress.filter((i) => i !== name);
+    if (longPress != null) {
+      if (longPress.includes(name)) {
+        const newArr: string[] = longPress.filter((i) => i !== name);
         setLongPress(newArr);
-      }
-      else
-      {
+      } else {
         setLongPress([...longPress, name]);
       }
-    }
-    else
-    {
+    } else {
       const extension = getExtension(name);
-      if (extension == null)
+      if (extension == null) {
         setPath([...Path, name]);
-      else if (extension.toLowerCase() == 'img' || extension.toLowerCase() == 'jpeg' || extension.toLowerCase() == 'jpg')
-      {
-        if(GetPathString(Path).length > 1)
-        {
-          setImagePath(GetPathString(Path)+ '\\' + name)
-        }
-        else
-          setImagePath(name)
+      } else if (['img', 'jpeg', 'jpg', 'png'].includes(extension.toLowerCase())) {
+        const imagePaths = fileNames
+          ?.filter(item => {
+            const ext = getExtension(item)?.toLowerCase();
+            return ext && ['img', 'jpeg', 'jpg', 'png'].includes(ext);
+          })
+          .map(item => {
+            const pathPrefix = '\\' + GetPathString(Path);
+            return pathPrefix + item;
+          }) || [];
+
+        const currentIndex = imagePaths.findIndex(item => {
+          const pathPrefix = '\\' + GetPathString(Path);
+          return item === pathPrefix + name;
+        });
+
+        if (currentIndex !== -1) {
+          setImagesPath(imagePaths);
+          setIndex(currentIndex);
           setOpenImage(true);
+        }
       }
     }
   };
@@ -159,166 +187,247 @@ const FileScreen: React.FC<FileScreenProps> = ({ longPress, setLongPress, SetPat
     Vibration.vibrate(90);
   };
 
-
   const handleMenuPress = (event: any, Name: string) => {
     event.target.measure((x: number, y: number, width: number, height: number, pageX: number, pageY: number) => {
       const menuX = pageX - 180;
       let menuY = pageY;
-      if(getExtension(Name)!=null && menuY>700)
-        menuY+=60;
+      if (getExtension(Name) != null && menuY > 700)
+        menuY += 60;
       setVisibleMenuId(Name);
       setMenuPosition({ x: menuX, y: menuY });
     });
   };
 
   const handleMenuItemSelect = (item: string, Name: string) => {
-    if(item=='Удалить')
-    {
+    if (item == 'Удалить') {
       const path = [GetPathString(Path) + Name];
-      DelFiles(path, false)
-    }
-    else if(item=='Переименовать')
-    {
+      DelFiles(path, false);
+    } else if (item == 'Переименовать') {
       const path = GetPathString(Path) + Name;
       setOldPath(path);
 
-      if(Name.includes('.'))
-      {
+      if (Name.includes('.')) {
         const arrNames = Name.split('.');
         setInputValue(arrNames[0]);
-        setExtension(arrNames[arrNames.length-1]);
-        console.log(arrNames)
-      }
-      else
-      {
-        console.log(inputValue)
-        setInputValue(Name)
+        setExtension(arrNames[arrNames.length - 1]);
+      } else {
+        setInputValue(Name);
       }
       setModalVisible(true);
-    }
-    else if(item = 'Управление доступом')
-    {
-      navigation.navigate('Sheare', { path: GetPathString(Path) + Name});
+    } else if (item == 'Управление доступом') {
+      navigation.navigate('Sheare', { path: GetPathString(Path) + Name });
     }
   };
 
-  const renameFile = () =>{
+  const renameFile = () => {
     setModalVisible(false);
-    let path = GetPathString(Path) + inputValue;
-    if(extension.length>0)
+    let path = '\\'+GetPathString(Path) + inputValue;
+    if (extension.length > 0)
       path += '.' + extension;
-    ChangeFilaeName(oldPath, path, false);
+    ChangeFilaeName('\\'+oldPath, path, false);
     setInputValue('');
     setExtension('');
-  }
+  };
+
+  const handleDownload = async (fileName: string) => {
+    if (downloadStates[fileName]?.loading) return;
+
+    setDownloadStates(prev => ({
+      ...prev,
+      [fileName]: { progress: 0, loading: true }
+    }));
+
+    try {
+      const uri = await DownloadFile(
+        GetPathString(Path) + fileName,
+        false,
+        (progress) => {
+          setDownloadStates(prev => ({
+            ...prev,
+            [fileName]: { ...prev[fileName], progress }
+          }));
+        }
+      );
+
+      setDownloadStates(prev => ({
+        ...prev,
+        [fileName]: { progress: 100, loading: false }
+      }));
+
+      setTimeout(() => {
+        setDownloadStates(prev => {
+          const newState = { ...prev };
+          delete newState[fileName];
+          return newState;
+        });
+      }, 2000);
+
+    } catch (error) {
+      setDownloadStates(prev => {
+        const newState = { ...prev };
+        delete newState[fileName];
+        return newState;
+      });
+    }
+  };
 
   const GetPath = () => {
     return (
-        <View style={pathStyles.container}>
-          {Path.map((value, index) => (
-              <View key={index} style={pathStyles.itemContainer}>
-                <TouchableOpacity onPress={() => pressPath(index)}>
-                  <Text style={pathStyles.text}>{value}</Text>
-                </TouchableOpacity>
-                {index !== Path.length - 1 && <Text style={pathStyles.separator}> \ </Text>}
-              </View>
-          ))}
-        </View>
+      <View style={pathStyles.container}>
+        {Path.map((value, index) => (
+          <View key={index} style={pathStyles.itemContainer}>
+            <TouchableOpacity onPress={() => pressPath(index)}>
+              <Text style={pathStyles.text}>{value}</Text>
+            </TouchableOpacity>
+            {index !== Path.length - 1 && <Text style={pathStyles.separator}> \ </Text>}
+          </View>
+        ))}
+      </View>
     );
   };
-
 
   const ListItem: React.FC<ListItemProps> = ({ name }) => {
     if (name == null || typeof name !== 'string') {
       return null;
     }
+
     let items = ['Переименовать', 'Удалить'];
-    if(getExtension(name)==null)
-    {
+    if (getExtension(name) == null) {
       items = [...items, 'Управление доступом'];
     }
 
-    if(longPress == null)
-    {
+    if (longPress == null) {
       return (
-          <View style={styles.itemContainer}>
-            <TouchableOpacity onPress={() => pressDir(name)} onLongPress={() => handleLongPress(name)} style={styles.touchableContainer}>
-              <GetIcon name={name} />
-              <Text style={styles.itemText}>{name}</Text>
-            </TouchableOpacity>
-            <TouchableOpacity onPress={() =>DownloadFile(GetPathString(Path), false)} style={styles.downloadIconContainer}>
-              <Image
+        <View style={styles.itemContainer}>
+          <TouchableOpacity
+            onPress={() => pressDir(name)}
+            onLongPress={() => handleLongPress(name)}
+            style={styles.touchableContainer}
+          >
+            <GetIcon name={name} />
+            <Text style={styles.itemText}>{name}</Text>
+          </TouchableOpacity>
+
+          <TouchableOpacity
+            onPress={() => handleDownload(name)}
+            style={styles.downloadIconContainer}
+            disabled={downloadStates[name]?.loading}
+          >
+            <View style={styles.downloadWrapper}>
+              {downloadStates[name] ? (
+                <View style={styles.circularProgressContainer}>
+
+                  <View style={[
+                    styles.circularProgressBackground,
+                    {
+                      borderColor: '#e0e0e0' 
+                    }
+                  ]} />
+        
+                  <View style={[
+                    styles.circularProgressFill,
+                    {
+                      borderColor: '#4CAF50', 
+                      transform: [
+                        { rotate: '-90deg' }, 
+                        { scaleY: -1 } 
+                      ],
+                      borderLeftColor: downloadStates[name].progress > 25 ? '#4CAF50' : 'transparent',
+                      borderBottomColor: downloadStates[name].progress > 50 ? '#4CAF50' : 'transparent',
+                      borderRightColor: downloadStates[name].progress > 75 ? '#4CAF50' : 'transparent',
+                      borderTopColor: downloadStates[name].progress > 0 ? '#4CAF50' : 'transparent'
+                      }
+                    ]} />
+                  </View>
+              ) : (
+                <Image
                   source={require('../../../../icons/download.png')}
                   style={styles.downloadIcon}
                   resizeMode="contain"
-              />
-            </TouchableOpacity>
-            <TouchableOpacity
-                onPress={(event) => handleMenuPress(event, name)}
-                style={styles.downloadIconContainer}
-            >
-              <Image
-                  source={require('../../../../icons/menu.png')}
-                  style={styles.menuIcon}
-                  resizeMode="contain"
-              />
-            </TouchableOpacity>
-            <DropdownMenu
-                visible={visibleMenuId === name}
-                onClose={() => setVisibleMenuId(null)}
-                onSelect={(item) => handleMenuItemSelect(item, name)}
-                menuItems={items}
-                position={menuPosition}
+                />
+              )}
+            </View>
+          </TouchableOpacity>
+          <TouchableOpacity
+            onPress={(event) => handleMenuPress(event, name)}
+            style={styles.downloadIconContainer}
+          >
+            <Image
+              source={require('../../../../icons/menu.png')}
+              style={styles.menuIcon}
+              resizeMode="contain"
             />
-            <View style={styles.separator} />
-          </View>
+          </TouchableOpacity>
+
+          <DropdownMenu
+            visible={visibleMenuId === name}
+            onClose={() => setVisibleMenuId(null)}
+            onSelect={(item) => handleMenuItemSelect(item, name)}
+            menuItems={items}
+            position={menuPosition}
+          />
+          <View style={styles.separator} />
+        </View>
       );
-    }
-
-    else
-    {
-      return(
-          <View style={[styles.itemContainer, longPress.includes(name)? {backgroundColor: '#ffddf1'} : {}]}>
-            <TouchableOpacity onPress={() => pressDir(name)} onLongPress={() => handleLongPress(name)} style={styles.touchableContainer}>
-              <GetIcon name={name} />
-              <Text style={styles.itemText}>{name}</Text>
-
-              <Image
-                  source={ longPress.includes(name)? require('../../../../icons/check-mark.png') : require('../../../../icons/circle.png')}
-                  style={[styles.menuIcon ,{marginRight: 25}]}
-                  resizeMode="contain"
-              />
-            </TouchableOpacity>
-          </View>
-      )
+    } else {
+      return (
+        <View style={[styles.itemContainer, longPress.includes(name) ? { backgroundColor: '#ffddf1' } : {}]}>
+          <TouchableOpacity
+            onPress={() => pressDir(name)}
+            onLongPress={() => handleLongPress(name)}
+            style={styles.touchableContainer}
+          >
+            <GetIcon name={name} />
+            <Text style={styles.itemText}>{name}</Text>
+            <Image
+              source={longPress.includes(name) ? require('../../../../icons/check-mark.png') : require('../../../../icons/circle.png')}
+              style={[styles.menuIcon, { marginRight: 25 }]}
+              resizeMode="contain"
+            />
+          </TouchableOpacity>
+        </View>
+      );
     }
   };
 
   return (
-      <View style={styles.Container}>
+    <View style={styles.Container}>
+      <ModalName
+        modalVisible={modalVisible}
+        setModalVisible={setModalVisible}
+        inputValue={inputValue}
+        setInputValue={setInputValue}
+        handleSubmit={renameFile}
+      />
 
-        <ModalName modalVisible={modalVisible} setModalVisible={setModalVisible} inputValue={inputValue} setInputValue={setInputValue} handleSubmit={renameFile} />
-        <ImageModal modalVisible={openImage} setModalVisible={setOpenImage} path={imagePath} />
-        {longPress ? null : (
-            <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
-              <GetPath />
-            </ScrollView>
-        )}
-        <View style={[styles.listContainer, { height: height * 0.88 }, {marginTop: longPress? 28 : 0}]}>
-          <FlatList
-              data={fileNames}
-              renderItem={({ item }) => (
-                  <View>
-                    <ListItem name={item} />
-                    <View style={styles.separator} />
-                  </View>
-              )}
-              onEndReached={handleEndReached}
-              onEndReachedThreshold={0.5}
-              ListFooterComponent={isLoading? <ActivityIndicator /> : null}
-          />
-        </View>
+      <ImageModal
+        modalVisible={openImage}
+        setModalVisible={setOpenImage}
+        images={imagesPath}
+        currentIndex={index || 0}
+      />
+
+      {longPress ? null : (
+        <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
+          <GetPath />
+        </ScrollView>
+      )}
+
+      <View style={[styles.listContainer, { height: height * 0.88 }, { marginTop: longPress ? 28 : 0 }]}>
+        <FlatList
+          data={fileNames}
+          renderItem={({ item }) => (
+            <View>
+              <ListItem name={item} />
+              <View style={styles.separator} />
+            </View>
+          )}
+          onEndReached={handleEndReached}
+          onEndReachedThreshold={0.5}
+          ListFooterComponent={isLoading ? <ActivityIndicator /> : null}
+        />
       </View>
+    </View>
   );
 };
 
@@ -358,14 +467,46 @@ const styles = StyleSheet.create({
   downloadIconContainer: {
     marginRight: 12,
   },
-  downloadIcon: {
-    width: 18,
-    height: 18,
-    marginLeft: 5,
-  },
   menuIcon: {
     width: 30,
     height: 30,
+  },
+
+  downloadWrapper: {
+    width: 30,
+    height: 30,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  circularProgressContainer: {
+    width: 30,
+    height: 30,
+    position: 'relative',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  circularProgressBackground: {
+    position: 'absolute',
+    width: '100%',
+    height: '100%',
+    borderRadius: 15,
+    borderWidth: 2,
+    borderColor: '#e0e0e0',
+  },
+  circularProgressFill: {
+    position: 'absolute',
+    width: '100%',
+    height: '100%',
+    borderRadius: 15,
+    borderWidth: 2,
+    borderLeftColor: 'transparent',
+    borderBottomColor: 'transparent',
+    borderRightColor: 'transparent',
+    borderTopColor: 'transparent',
+  },
+  downloadIcon: {
+    width: 18,
+    height: 18,
   },
 });
 

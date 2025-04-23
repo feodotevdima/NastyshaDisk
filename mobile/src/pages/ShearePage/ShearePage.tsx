@@ -42,6 +42,9 @@ const SheareScreen: React.FC<SheareScreenProps> = ({ route, navigation }) => {
             {
                 const cUsers = await GetConnectedUsers(path);
                 setConnectedUsers(cUsers.data);
+
+                const users = await GetUsers(path);
+                setAllUsers(users);
             }
             fileEventEmitter.on(FileEvents.CHECK_CONNECTED_USERS, update);
             return () => {

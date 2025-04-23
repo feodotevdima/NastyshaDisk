@@ -18,7 +18,7 @@ namespace Aplication.Repository
 
         public FileStream? GetFileStream(string userId, string path)
         {
-            var filePath = Path.Combine(_folderPath, userId, path);
+            var filePath = Path.Combine(_folderPath + userId + path);
 
             if (File.Exists(filePath))
             {

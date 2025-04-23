@@ -19,6 +19,7 @@ builder.Services.AddSingleton<string>("..\\Presistence\\UsersFiles\\");
 builder.Services.AddTransient<IFilesService, FilesService>();
 builder.Services.AddTransient<IFilesRepository, FilesRepository>();
 builder.Services.AddTransient<ISheredDirRepository, SheredDirRepository>();
+builder.Services.AddTransient<ISheredDirService, SheredDirService>();
 
 builder.Services.AddAuthentication(options =>
 {

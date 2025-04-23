@@ -51,10 +51,10 @@ namespace AuthenticationAPI.Controllers
 
             JwtTokenModel? tokens = await _authService.AuthenticationUserAsync(user.login, user.password);
 
-            if (tokens != null)
-                return Results.Json(tokens);
+            if (tokens == null)
+                return Results.Unauthorized();
 
-            return Results.Unauthorized();
+            return Results.Json(tokens);
         }
 
         [HttpPut("refreshToken/{refreshToken}")]

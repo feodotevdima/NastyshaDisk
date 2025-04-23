@@ -1,14 +1,17 @@
 import * as FileSystem from 'expo-file-system';
 import { Ip, getToken } from "../../../sheared/TokenProvider";
+import { ToastAndroid, Platform } from 'react-native';
 
-const DownloadFile = async (path: string, isPublic: boolean): Promise<string> => {
+const DownloadFile = async (
+  path: string, 
+  isPublic: boolean,
+  onProgress?: (progress: number) => void
+): Promise<string> => {
   try {
     const token = await getToken();
     const url = `${Ip}:7003/Files/download?isPublic=${isPublic}&path=${encodeURIComponent(path)}`;
     const filename = path.split('/').pop() || 'file';
     const fileUri = `${FileSystem.documentDirectory}${filename}`;
-
-    console.log(`Starting download to: ${fileUri}`);
 
     const downloadResumable = FileSystem.createDownloadResumable(
       url,
@@ -21,9 +24,9 @@ const DownloadFile = async (path: string, isPublic: boolean): Promise<string> =>
       },
       ({ totalBytesWritten, totalBytesExpectedToWrite }) => {
         const progress = totalBytesExpectedToWrite > 0 
-          ? (totalBytesWritten / totalBytesExpectedToWrite) * 100 
+          ? Math.round((totalBytesWritten / totalBytesExpectedToWrite) * 100)
           : 0;
-        console.log(`Download progress: ${progress.toFixed(1)}%`);
+        onProgress?.(progress);
       }
     );
 
@@ -33,19 +36,16 @@ const DownloadFile = async (path: string, isPublic: boolean): Promise<string> =>
       throw new Error('Download failed: no result');
     }
 
-    // Безопасная проверка файла
-    const fileInfo = await FileSystem.getInfoAsync(result.uri);
-    
-    if (!fileInfo.exists) {
-      throw new Error('File was not saved correctly');
+    if (Platform.OS === 'android') {
+      ToastAndroid.showWithGravityAndOffset(
+        `Файл "${filename}" загружен`,
+        ToastAndroid.LONG,
+        ToastAndroid.BOTTOM,
+        0,
+        50
+      );
     }
 
-    if ('size' in fileInfo) {
-      console.log('Download complete. File size:', fileInfo.size, 'bytes');
-    } else {
-      console.log('Download complete. Size information unavailable');
-    }
-    
     return result.uri;
   } catch (error) {
     console.error('Download error:', error);

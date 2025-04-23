@@ -88,6 +88,7 @@ function TokenProvider(){
                 'Accept': '*/*',
                 'Content-Type': 'application/json',
               },
+              validateStatus: (status) => true
             }
           );
             if(response.status==200)

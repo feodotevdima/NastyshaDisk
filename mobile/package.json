@@ -18,6 +18,8 @@
     "axios": "^1.8.4",
     "expo": "~52.0.38",
     "expo-document-picker": "^13.0.3",
+    "expo-notifications": "^0.29.14",
+    "expo-permissions": "^14.4.0",
     "expo-status-bar": "~2.0.1",
     "file-saver": "^2.0.5",
     "https": "^1.0.0",

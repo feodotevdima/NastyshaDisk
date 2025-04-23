@@ -17,12 +17,16 @@ const GetFilesName= async (path: string, page: number, pageSize: number, isPubli
     );
 
     if(response.status==200)
-        {
-          let json = await response.data;
-          return json;
-        }
+    {
+      let json = await response.data;
+      return json;
+    }
+    else
+    {
+        Alert.alert('Ошибка', response.status);
+    }
     
-        return;
+    return;
 }
 
 export default GetFilesName;

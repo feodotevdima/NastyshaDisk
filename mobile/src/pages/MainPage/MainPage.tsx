@@ -266,7 +266,7 @@ const styles = StyleSheet.create({
     height: '99%',
     backgroundColor: '#fbf8fa',
     borderRadius: 10,
-    paddingTop: 70,
+    paddingTop: 80,
     paddingHorizontal: 16,
   },
   menuItem: {

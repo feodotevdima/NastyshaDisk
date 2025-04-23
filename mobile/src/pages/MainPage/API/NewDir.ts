@@ -28,6 +28,10 @@ const NewDir= async (path: string | null, isPublic: boolean) =>{
         fileEventEmitter.emit(FileEvents.FILES_UPDATED);
       }, 500);
     }
+    else
+    {
+        Alert.alert('Ошибка', response.status);
+    }
     
     return;
 }

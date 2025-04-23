@@ -1,4 +1,5 @@
 ﻿using Core;
+using Presistence.Dtos;
 
 namespace Aplication.Interfeses
 {
@@ -12,5 +13,6 @@ namespace Aplication.Interfeses
         string? GetUserIdFromToken(string token);
         Task<string> CreateSheredDirAsync(string ownerUserId, string path, string id);
         Task<ConnectedUser> DeleteConnectedUserAsync(string ownerUserId, string path, string connectedUserId);
+        VolumeDto GetVolume(string userId);
     }
 }

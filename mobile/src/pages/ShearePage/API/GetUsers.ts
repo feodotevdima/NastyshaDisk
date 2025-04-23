@@ -22,6 +22,10 @@ const GetUsers= async (path: string) =>{
         let json = await response.data;
         return json;
     }
+    else
+    {
+        Alert.alert('Ошибка', response.status);
+    }
     
     return;
 }

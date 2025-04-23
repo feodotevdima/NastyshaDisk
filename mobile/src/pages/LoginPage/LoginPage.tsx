@@ -24,26 +24,17 @@ const LoginPage : React.FC<LoginPageProps> = ({checkAuth}) => {
     //     Alert.alert('Ошибка', 'Пожалуйста, заполните все поля');
     //     return;
     // }
-
-    // const token = getToken();
-    // console.log(token);
-    // if(token!=null)
-    //     if(String(token).length>1)
-    //     {
-    //       //setStatus("Вы уже зашли");
-    //       return null
-    //     }
         
     setLoading(true);
     const response: number = await Login(email, password);
-      if(response===200)
-        await checkAuth();
-      setLoading(false);
-      if((response===400) || (response===401))
-        Alert.alert("Неверный логин или пароль");
-      else if(response!=200)
-      Alert.alert("Ошибка сервера");
+    if(response===200)
+      await checkAuth();
 
+    setLoading(false);
+    if((response===400) || (response===401))
+      Alert.alert("Неверный логин или пароль");
+    else if(response!=200)
+      Alert.alert("Ошибка сервера");
     return response;
   };
 

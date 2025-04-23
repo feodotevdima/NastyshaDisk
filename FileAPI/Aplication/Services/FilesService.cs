@@ -1,5 +1,7 @@
 ﻿using Aplication.Interfeses;
 using Core;
+using Microsoft.AspNetCore.Http;
+using Presistence.Dtos;
 using System.IdentityModel.Tokens.Jwt;
 using System.Runtime.InteropServices;
 
@@ -182,6 +184,31 @@ namespace Aplication.Services
                 await _sheredDirRepository.RemoveSheredDirAsync(owner.Id);
 
             return deleteUser;
+        }
+
+        public VolumeDto GetVolume(string userId)
+        {
+            string programPath = AppDomain.CurrentDomain.BaseDirectory;
+            DriveInfo driveInfo = new DriveInfo(Path.GetPathRoot(programPath));
+            VolumeDto volume = new VolumeDto();
+            volume.Free = driveInfo.TotalFreeSpace;
+
+            var FilePath = Path.GetFullPath(_folderPath + userId);
+            try
+            {
+                volume.Used = new DirectoryInfo(FilePath)
+                    .EnumerateFiles("*", SearchOption.AllDirectories)
+                    .Sum(file => file.Length);
+                return volume;
+            }
+            catch
+            {
+                _filesRepository.MakeDir(userId, "");
+                volume.Used = new DirectoryInfo(FilePath)
+                    .EnumerateFiles("*", SearchOption.AllDirectories)
+                    .Sum(file => file.Length);
+                return volume;
+            }
         }
     }
 }
