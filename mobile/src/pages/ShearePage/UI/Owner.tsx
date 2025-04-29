@@ -40,7 +40,7 @@ const Owner: React.FC<ShareScreenProps> = ({ allUsers, owner, path, navigation, 
                 <Text style={styles.sectionTitle}>Добавить пользователя:</Text>
                 <TextInput
                     style={styles.searchInput}
-                    placeholder="Поиск пользователей..."
+                    placeholder="Поиск пользователей"
                     value={searchQuery}
                     onChangeText={setSearchQuery}
                 />
@@ -68,6 +68,7 @@ const Owner: React.FC<ShareScreenProps> = ({ allUsers, owner, path, navigation, 
                 <Text style={styles.sectionTitle}>Подключенные пользователи:</Text>
                 {(sharedUsers!=null && sharedUsers.length > 0) ? (
                     <FlatList
+                        style={styles.userCunteyner}
                         data={sharedUsers}
                         renderItem={({ item }) => (
                             <View style={styles.userItem}>
@@ -91,7 +92,7 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         padding: 20,
-        backgroundColor: '#ffddf1',
+        backgroundColor: 'rgb(247, 228, 239)',
     },
     section: {
         marginBottom: 25,
@@ -121,6 +122,10 @@ const styles = StyleSheet.create({
         borderBottomWidth: 1,
         borderBottomColor: '#eee',
     },
+    userCunteyner:{
+        borderRadius: 8,
+        backgroundColor: 'white',
+    },
     userName: {
         fontSize: 16,
         fontWeight: '500',
@@ -136,7 +141,7 @@ const styles = StyleSheet.create({
         fontWeight: '500',
     },
     revokeAccess: {
-        color: '#ee5253',
+        color: 'rgb(255, 0, 76)',
         marginTop: 8,
         fontWeight: '500',
     },

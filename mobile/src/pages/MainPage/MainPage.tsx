@@ -125,11 +125,11 @@ const MainPage = () => {
   });
   const translateYFirstLine = translateYAnim.interpolate({
     inputRange: [0, 1],
-    outputRange: [-5, 5],
+    outputRange: [-5, 4],
   });
   const translateYSecondLine = translateYAnim.interpolate({
     inputRange: [0, 1],
-    outputRange: [5, -5],
+    outputRange: [5, -4],
   });
 
   return (
@@ -210,6 +210,14 @@ const MainPage = () => {
         />
       )}
 
+      {isOpen && (
+        <TouchableOpacity 
+          style={styles.overlay}
+          onPress={toggleMenu}
+          activeOpacity={0.5}
+        />
+      )}
+
       <ModalName modalVisible={modalVisible} setModalVisible={setModalVisible} inputValue={inputValue} setInputValue={setInputValue} handleSubmit={handleSubmitCreateDir} />
 
 
@@ -236,24 +244,23 @@ const styles = StyleSheet.create({
     flex: 1,
     position: 'relative',
     paddingTop: 40,
-    paddingHorizontal: 10,
-    backgroundColor: '#ffddf1',
+    backgroundColor: 'rgb(247, 228, 239)',
   },
   burgerButton: {
     position: 'absolute',
     top: 60,
     left: 26,
-    zIndex: 1,
+    zIndex: 11,
   },
   iconContainer: {
-    width: 35,
-    height: 20,
+    width: 31,
   },
 
   iconLine: {
     width: '100%',
-    height: 3,
+    height: 2.5,
     backgroundColor: 'black',
+    borderRadius: 10,
   },
   content: {
     marginTop: 50,
@@ -268,6 +275,7 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     paddingTop: 80,
     paddingHorizontal: 16,
+    zIndex: 10,
   },
   menuItem: {
     marginBottom: 20,
@@ -278,7 +286,7 @@ const styles = StyleSheet.create({
   menu3Icon: {
     width: 30,
     height: 30,
-    top: 40,
+    top: 36,
   },
   imageButton: {
     position: 'absolute',
@@ -326,13 +334,13 @@ const styles = StyleSheet.create({
     marginRight: 24,
   },
   logout: {
-    color: 'rgb(255, 0, 76)',
+    color: 'rgb(253, 93, 187)',
     fontWeight: 500,
     textAlign: "center",
     marginHorizontal: 40, 
   },
   logoutCunteyner: {
-    borderColor: 'rgb(255, 0, 76)',
+    borderColor: 'rgb(253, 93, 187)',
     borderWidth: 2,
     borderRadius: 30,
     padding: 5,

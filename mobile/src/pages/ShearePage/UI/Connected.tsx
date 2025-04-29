@@ -49,7 +49,7 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         padding: 20,
-        backgroundColor: '#ffddf1',
+        backgroundColor: 'rgb(247, 228, 239)',
     },
     section: {
         marginBottom: 25,

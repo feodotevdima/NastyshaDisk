@@ -34,12 +34,11 @@
               "Title": "FilesRepository.cs",
               "DocumentMoniker": "D:\\NastyshaDisk\\FileAPI\\Aplication\\Repository\\FilesRepository.cs",
               "RelativeDocumentMoniker": "Aplication\\Repository\\FilesRepository.cs",
-              "ToolTip": "D:\\NastyshaDisk\\FileAPI\\Aplication\\Repository\\FilesRepository.cs*",
-              "RelativeToolTip": "Aplication\\Repository\\FilesRepository.cs*",
+              "ToolTip": "D:\\NastyshaDisk\\FileAPI\\Aplication\\Repository\\FilesRepository.cs",
+              "RelativeToolTip": "Aplication\\Repository\\FilesRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-23T20:23:05.424Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-23T20:23:05.424Z"
             },
             {
               "$type": "Document",
@@ -47,9 +46,9 @@
               "Title": "FilesController.cs",
               "DocumentMoniker": "D:\\NastyshaDisk\\FileAPI\\FileAPI\\Controllers\\FilesController.cs",
               "RelativeDocumentMoniker": "FileAPI\\Controllers\\FilesController.cs",
-              "ToolTip": "D:\\NastyshaDisk\\FileAPI\\FileAPI\\Controllers\\FilesController.cs*",
-              "RelativeToolTip": "FileAPI\\Controllers\\FilesController.cs*",
-              "ViewState": "AgIAAMkAAAAAAAAAAAAAAOMAAAA5AAAAAAAAAA==",
+              "ToolTip": "D:\\NastyshaDisk\\FileAPI\\FileAPI\\Controllers\\FilesController.cs",
+              "RelativeToolTip": "FileAPI\\Controllers\\FilesController.cs",
+              "ViewState": "AgIAAE4AAAAAAAAAAAAAALsAAAA1AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-03T21:32:33.062Z",
               "EditorCaption": ""

@@ -10,8 +10,6 @@ import {
   ScrollView,
   Vibration,
   ActivityIndicator,
-  ToastAndroid,
-  Platform
 } from 'react-native';
 import * as FileSystem from 'expo-file-system';
 import getExtension from '../../../sheared/FileProvider';
@@ -413,7 +411,7 @@ const FileScreen: React.FC<FileScreenProps> = ({ longPress, setLongPress, SetPat
         </ScrollView>
       )}
 
-      <View style={[styles.listContainer, { height: height * 0.88 }, { marginTop: longPress ? 28 : 0 }]}>
+      <View style={[styles.listContainer, { height: height * 0.89 }, { marginTop: longPress ? 28 : 0 }]}>
         <FlatList
           data={fileNames}
           renderItem={({ item }) => (
@@ -424,7 +422,7 @@ const FileScreen: React.FC<FileScreenProps> = ({ longPress, setLongPress, SetPat
           )}
           onEndReached={handleEndReached}
           onEndReachedThreshold={0.5}
-          ListFooterComponent={isLoading ? <ActivityIndicator /> : null}
+          ListFooterComponent={isLoading ? <ActivityIndicator color='rgb(253, 93, 187)' /> : null}
         />
       </View>
     </View>
@@ -437,7 +435,6 @@ const styles = StyleSheet.create({
   },
   listContainer: {
     backgroundColor: '#fbf8fa',
-    borderRadius: 10,
     borderWidth: 1,
     borderColor: '#cecfd0',
     overflow: 'hidden',
@@ -453,10 +450,11 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     flex: 1,
+    paddingHorizontal:8,
   },
   itemText: {
     fontSize: 16,
-    paddingLeft: 10,
+    paddingHorizontal: 10,
     marginTop: 0,
     flex: 1,
   },
@@ -514,8 +512,8 @@ const pathStyles = StyleSheet.create({
   container: {
     flexDirection: 'row',
     alignItems: 'center',
-    marginBottom: 4,
-    marginLeft: 12,
+    marginBottom: 6,
+    marginLeft: 26,
   },
   itemContainer: {
     flexDirection: 'row',

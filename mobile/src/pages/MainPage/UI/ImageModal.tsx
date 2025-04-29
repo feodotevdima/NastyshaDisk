@@ -7,7 +7,7 @@ import axios from 'axios';
 interface ImageModalProps {
   modalVisible: boolean;
   setModalVisible: (value: boolean) => void;
-  path: string | null;
+  // path: string | null;
   images?: string[];
   currentIndex?: number; 
 }
@@ -15,13 +15,13 @@ interface ImageModalProps {
 const ImageModal: React.FC<ImageModalProps> = ({
   modalVisible,
   setModalVisible,
-  path = "",
+  // path = "",
   images = [],
   currentIndex = 0 
 }) => {
   const [id, setId] = useState<string | null>(null);
   const [currentImageIndex, setCurrentImageIndex] = useState(currentIndex);
-  
+  const path = "";
   useEffect(() => {
       const fetchId = async () => {
         const token = await getToken();

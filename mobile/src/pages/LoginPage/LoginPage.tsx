@@ -42,7 +42,7 @@ const LoginPage : React.FC<LoginPageProps> = ({checkAuth}) => {
   {
     return (
       <View style={styles.loadingContainer}>
-        <ActivityIndicator size="large" color="#0000ff" />
+        <ActivityIndicator size="large" color='rgb(253, 93, 187)' />
       </View>
     );
   }
@@ -82,7 +82,7 @@ const LoginPage : React.FC<LoginPageProps> = ({checkAuth}) => {
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: '#ffddf1',
+    backgroundColor: 'rgb(247, 228, 239)',
     flex: 1,
     justifyContent: 'center',
     padding: 16,
@@ -91,7 +91,7 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#ffddf1',
+    backgroundColor: 'rgb(247, 228, 239)',
   },
   button :{
     backgroundColor: "#f38bc8",

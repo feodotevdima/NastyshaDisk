@@ -58,7 +58,7 @@ const SheareScreen: React.FC<SheareScreenProps> = ({ route, navigation }) => {
     if (loading) {
         return (
             <View style={styles.loadingContainer}>
-                <ActivityIndicator size="large" color="#0000ff" />
+                <ActivityIndicator size="large" color='rgb(253, 93, 187)' />
             </View>
         );
     }
@@ -100,13 +100,13 @@ const styles = StyleSheet.create({
         flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
-        backgroundColor: '#ffddf1',
+        backgroundColor: 'rgb(247, 228, 239)',
     },
     loadingContainer: {
         flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
-        backgroundColor: '#ffddf1',
+        backgroundColor: 'rgb(247, 228, 239)',
     },
     error: {
         color: 'red',
