@@ -1,7 +1,8 @@
 import React from "react";
 import axios from "axios";
+import { Alert } from 'react-native';
 import { Ip, getToken } from "../../../sheared/TokenProvider";
-import { fileEventEmitter, FileEvents } from '../../../sheared/UpdateFiles';
+import { fileEventEmitter, FileEvents} from '../../../sheared/UpdateFiles';
 
 const ChangeFileName= async (OldPath: string, NewPath: string, isPublic: boolean) =>{
     const token= await getToken();
@@ -30,7 +31,7 @@ const ChangeFileName= async (OldPath: string, NewPath: string, isPublic: boolean
     }
     else
     {
-        Alert.alert('Ошибка', response.status);
+        Alert.alert('Ошибка', response.status.toString());
     }
 
     return;

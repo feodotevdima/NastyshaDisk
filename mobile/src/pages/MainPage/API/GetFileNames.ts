@@ -1,5 +1,6 @@
 import React from "react";
 import axios from "axios";
+import { Alert } from 'react-native';
 import { Ip, getToken } from "../../../sheared/TokenProvider";
 
 const GetFilesName= async (path: string, page: number, pageSize: number, isPublic: boolean) =>{
@@ -23,7 +24,7 @@ const GetFilesName= async (path: string, page: number, pageSize: number, isPubli
     }
     else
     {
-        Alert.alert('Ошибка', response.status);
+        Alert.alert('Ошибка', response.status.toString());
     }
     
     return;

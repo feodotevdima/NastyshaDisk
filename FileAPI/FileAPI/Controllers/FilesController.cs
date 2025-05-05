@@ -222,7 +222,6 @@ namespace FileAPI.Controllers
                 if (fileStream == null) return BadRequest();
 
                 var fileLength = fileStream.Length;
-                Console.WriteLine(fileLength.ToString());
 
                 return new FileStreamResult(fileStream, "application/octet-stream")
                 {

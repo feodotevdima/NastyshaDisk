@@ -27,7 +27,7 @@ function TokenProvider(){
             if (!isExpired(getExpirationDate(sessionStorage.accessToken))) 
                 return sessionStorage.accessToken;
 
-            const updatedToken = await fetch("https://localhost:7002/Auth/refreshToken/"+sessionStorage.refreshToken, {method: 'PUT',});
+            const updatedToken = await fetch("http://localhost:7002/Auth/refreshToken/"+sessionStorage.refreshToken, {method: 'PUT',});
             if (updatedToken.status!==200)
             {
                 if (isExpired(getExpirationDate(sessionStorage.accessToken))) 
@@ -57,7 +57,7 @@ function TokenProvider(){
     };
 
     const Login = async (email: string, pass: string) => {
-        const response = await fetch("https://localhost:7002/Auth/login",
+        const response = await fetch("http://localhost:7002/Auth/login",
             {
               method: "POST",
               headers:     
@@ -83,7 +83,7 @@ function TokenProvider(){
     async function Logout()
     {
         const token = await getToken();
-        const response = await fetch("https://localhost:7002/Auth/logout/"+token,
+        const response = await fetch("http://localhost:7002/Auth/logout/"+token,
         {
             method: "DELETE",
             headers:     
@@ -95,6 +95,7 @@ function TokenProvider(){
         if(response.ok)
         {
             setToken(null, null)
+            window.location.reload();
         }
     }       
 

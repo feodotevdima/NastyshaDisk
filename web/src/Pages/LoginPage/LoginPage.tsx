@@ -24,6 +24,8 @@ const LoginPage = () => {
     const response: number = await Login(email, password);
     if(response === 200) {
     //   await checkAuth();
+      await window.location.replace("http://localhost:3000");
+      return;
     }
 
     setLoading(false);
