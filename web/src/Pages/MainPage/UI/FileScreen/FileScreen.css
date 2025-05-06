@@ -3,9 +3,7 @@
   position: relative;
 }
 
-.path-scroll-container {
-  overflow-x: auto;
-  white-space: nowrap;
+.path-container {
   margin-bottom: 6px;
   padding-left: 26px;
 }
@@ -50,6 +48,9 @@
 .file-list {
   display: flex;
   flex-direction: column;
+  overflow-y: auto;  
+  max-height: calc(100vh - 130px); 
+  width: 100%;
 }
 
 .list-item-wrapper {
@@ -76,7 +77,7 @@
   border: none;
   text-align: left;
   cursor: pointer;
-  padding: 8px 0;
+  padding: 4px 0;
   width: 100%;
 }
 
@@ -149,6 +150,11 @@
 }
 
 .download-icon, .menu-icon {
+  width: 20px;
+  height: 20px;
+}
+
+.menu-icon {
   width: 30px;
   height: 30px;
 }

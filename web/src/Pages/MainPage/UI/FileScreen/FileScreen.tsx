@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, useCallback } from 'react';
 import getExtension from '../../../../Shered/FileProvider';
 import DropdownMenu from '../../../../Wigetes/Menu/DropdownMenu';
 import GetIcon from '../GetIcon';
@@ -12,6 +12,7 @@ import ImageModal from '../ImageModal/ImageModal';
 import { useNavigate } from 'react-router-dom';
 import './FileScreen.css';
 import Spinner from '../../../../Wigetes/Spinner/Spinner';
+import { FileEvents, fileEventEmitter } from '../../../../Shered/UpdateFiles';
 
 interface FileScreenProps {
   longPress: string[] | null;
@@ -50,7 +51,7 @@ const FileScreen: React.FC<FileScreenProps> = ({ longPress, setLongPress, SetPat
   const [index, setIndex] = useState<number | null>(null);
   const [downloadStates, setDownloadStates] = useState<DownloadState>({});
   const navigate = useNavigate();
-  const itemRefs = useRef<{[key: string]: HTMLDivElement | null}>({});
+  const fileListRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     setPage(1);
@@ -65,11 +66,11 @@ const FileScreen: React.FC<FileScreenProps> = ({ longPress, setLongPress, SetPat
 
     fetchInitialData();
 
-    // fileEventEmitter.on(FileEvents.FILES_UPDATED, handleFilesUpdated);
+    fileEventEmitter.on(FileEvents.FILES_UPDATED, handleFilesUpdated);
 
-    // return () => {
-    //   fileEventEmitter.off(FileEvents.FILES_UPDATED, handleFilesUpdated);
-    // };
+    return () => {
+      fileEventEmitter.off(FileEvents.FILES_UPDATED, handleFilesUpdated);
+    };
   }, [Path]);
 
   useEffect(() => {
@@ -77,13 +78,6 @@ const FileScreen: React.FC<FileScreenProps> = ({ longPress, setLongPress, SetPat
       setLongPress(null);
     }
   }, [longPress]);
-
-  const handleFilesUpdated = () => {
-    setPage(1);
-    setfileNames(null);
-    setHasMore(true);
-    loadMoreData(1, true);
-  };
 
   const loadMoreData = async (currentPage: number, isInitialLoad: boolean = false) => {
     if (isLoading && !isInitialLoad) return;
@@ -97,8 +91,8 @@ const FileScreen: React.FC<FileScreenProps> = ({ longPress, setLongPress, SetPat
       currentPage === 1 ? response.data : [...(prevNames || []), ...response.data]
     );
 
-    setTotalCount(response.totalCount);
     SetPath(path);
+    setTotalCount(response.totalCount);
     setHasMore(response.data.length === PageSize);
 
     if (isInitialLoad && response.data.length === PageSize) {
@@ -110,6 +104,33 @@ const FileScreen: React.FC<FileScreenProps> = ({ longPress, setLongPress, SetPat
     setIsLoading(false);
   };
 
+  const handleScroll = useCallback(() => {
+    if (fileListRef.current && !isLoading && hasMore) {
+      const { scrollTop, scrollHeight, clientHeight } = fileListRef.current;
+
+      if (scrollHeight - (scrollTop + clientHeight) < 100) {
+        loadMoreData(page);
+      }
+    }
+  }, [isLoading, hasMore, page, loadMoreData]);
+
+  useEffect(() => {
+    const fileList = fileListRef.current;
+    if (fileList) {
+      fileList.addEventListener('scroll', handleScroll);
+      return () => {
+        fileList.removeEventListener('scroll', handleScroll);
+      };
+    }
+  }, [handleScroll]);
+
+  const handleFilesUpdated = () => {
+    setPage(1);
+    setfileNames(null);
+    setHasMore(true);
+    loadMoreData(1, true);
+  };
+
   const handleEndReached = () => {
     if (!isLoading && hasMore) {
       loadMoreData(page);
@@ -117,22 +138,34 @@ const FileScreen: React.FC<FileScreenProps> = ({ longPress, setLongPress, SetPat
   };
 
   const pressPath = (index: number) => {
-    setPath(Path.slice(0, index + 1));
+    setPath(Path.slice(0, index + 1)); 
   };
 
-  const pressDir = (name: string) => {
-    if (longPress != null) {
+  const pressDir = (name: string, e: React.MouseEvent<HTMLButtonElement>) => {
+    if (e.ctrlKey) {
+      if(longPress == null)
+      {
+        setLongPress([name]);
+        return;
+      }
       if (longPress.includes(name)) {
         const newArr = longPress.filter(i => i !== name);
         setLongPress(newArr);
       } else {
         setLongPress([...longPress, name]);
       }
-    } else {
+    } 
+    else {
+      if(longPress != null)
+      {
+        setLongPress(null);
+        return;
+      }
       const extension = getExtension(name);
       if (extension == null) {
         setPath([...Path, name]);
-      } else if (['img', 'jpeg', 'jpg', 'png'].includes(extension.toLowerCase())) {
+      } 
+      else if (['img', 'jpeg', 'jpg', 'png'].includes(extension.toLowerCase())) {
         const imagePaths = fileNames
           ?.filter(item => {
             const ext = getExtension(item)?.toLowerCase();
@@ -157,31 +190,19 @@ const FileScreen: React.FC<FileScreenProps> = ({ longPress, setLongPress, SetPat
     }
   };
 
-  const handleLongPress = (name: string) => {
-    if (longPress == null) {
-      setLongPress([name]);
-    } else {
-      if (longPress.includes(name)) {
-        const newArr = longPress.filter(i => i !== name);
-        setLongPress(newArr);
-      } else {
-        setLongPress([...longPress, name]);
-      }
-    }
-  };
-
   const handleMenuPress = (e: React.MouseEvent, name: string) => {
-    const element = itemRefs.current[name];
-    if (element) {
-      const rect = element.getBoundingClientRect();
-      const menuX = rect.left - 180;
-      let menuY = rect.top;
-      if (getExtension(name) != null && menuY > 700) {
-        menuY += 60;
-      }
-      setVisibleMenuId(name);
-      setMenuPosition({ x: menuX, y: menuY });
+    const menuX =  e.clientX - 220;
+    let menuY =  e.clientY + 20;
+    if(window.innerHeight - e.clientY < 150)
+    {
+      if(getExtension(name) == null)
+        menuY -= 150;
+      else
+        menuY -= 120;
     }
+
+    setVisibleMenuId(name);
+    setMenuPosition({ x: menuX, y: menuY });
   };
 
   const handleMenuItemSelect = (item: string, name: string) => {
@@ -217,7 +238,10 @@ const FileScreen: React.FC<FileScreenProps> = ({ longPress, setLongPress, SetPat
   };
 
   const handleDownload = async (fileName: string) => {
-    if (downloadStates[fileName]?.loading) return;
+    if (downloadStates[fileName]?.loading) 
+      return;
+    if (getExtension(fileName) == null || getExtension(fileName) == "") 
+      return;
 
     setDownloadStates(prev => ({
       ...prev,
@@ -288,15 +312,12 @@ const FileScreen: React.FC<FileScreenProps> = ({ longPress, setLongPress, SetPat
       <div className="list-item-wrapper">
         <div 
           className={`item-container ${longPress && longPress.includes(name) ? 'selected' : ''}`}
-          ref={el => {
-            itemRefs.current[name] = el;
-          }}
         >
           <button
-            onClick={() => pressDir(name)}
+            onClick={(e) => pressDir(name, e)}
             onContextMenu={(e) => {
               e.preventDefault();
-              longPress ? handleLongPress(name) : handleMenuPress(e, name);
+               handleMenuPress(e, name);
             }}
             className="item-button"
           >
@@ -400,7 +421,10 @@ const FileScreen: React.FC<FileScreenProps> = ({ longPress, setLongPress, SetPat
       )}
 
       <div className={`list-container ${longPress ? 'long-press-mode' : ''}`}>
-        <div className="file-list">
+        <div 
+          ref={fileListRef}
+          className="file-list"
+        >
           {fileNames?.map(item => (
             <ListItem key={item} name={item} />
           ))}
@@ -412,3 +436,5 @@ const FileScreen: React.FC<FileScreenProps> = ({ longPress, setLongPress, SetPat
 };
 
 export default FileScreen;
+
+//todo: drop, shere

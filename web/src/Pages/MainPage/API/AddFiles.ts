@@ -1,6 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 import { getToken} from '../../../Shered/TokenProvider';
+import { FileEvents, fileEventEmitter } from '../../../Shered/UpdateFiles';
 
 interface FileResult {
   name: string;
@@ -37,9 +38,9 @@ function AddFiles() {
       );
 
       if (response.status == 200) {
-        // setTimeout(() => {
-        //   fileEventEmitter.emit(FileEvents.FILES_UPDATED);
-        // }, 500);
+        setTimeout(() => {
+          fileEventEmitter.emit(FileEvents.FILES_UPDATED);
+        }, 500);
       }
     } catch (error) {
       alert('Ошибка: Не удалось загрузить файлы');

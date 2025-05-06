@@ -1,6 +1,7 @@
 import React from "react";
 import axios from "axios";
 import {getToken } from "../../../Shered/TokenProvider";
+import { FileEvents, fileEventEmitter } from '../../../Shered/UpdateFiles';
 
 const ChangeFileName= async (OldPath: string, NewPath: string, isPublic: boolean) =>{
     const token= await getToken();
@@ -23,9 +24,9 @@ const ChangeFileName= async (OldPath: string, NewPath: string, isPublic: boolean
 
     if (response.status == 200)
     {
-        // setTimeout(() => {
-        //     fileEventEmitter.emit(FileEvents.FILES_UPDATED);
-        // }, 500);
+        setTimeout(() => {
+            fileEventEmitter.emit(FileEvents.FILES_UPDATED);
+        }, 500);
     }
     else
     {

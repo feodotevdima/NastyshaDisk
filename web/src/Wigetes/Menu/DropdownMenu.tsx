@@ -16,33 +16,18 @@ const DropdownMenu: React.FC<DropdownMenuProps> = ({
   menuItems, 
   position 
 }) => {
-  useEffect(() => {
-    const handleKeyDown = (e: KeyboardEvent) => {
-      if (e.key === 'Escape') {
-        onClose();
-      }
-    };
-
-    if (visible) {
-      window.addEventListener('keydown', handleKeyDown);
-      return () => {
-        window.removeEventListener('keydown', handleKeyDown);
-      };
-    }
-  }, [visible, onClose]);
 
   if (!visible) return null;
 
   const calculatePosition = () => {
-    const yOffset = position.y > 700 ? -195 : -10;
     return {
-      top: `${position.y + yOffset}px`,
+      top: `${position.y}px`,
       left: `${position.x}px`
     };
   };
 
   return (
-    <div className="dropdown-overlay" onClick={onClose}>
+    <div className="dropdown-overlay" onClick={onClose} onContextMenu={onClose}> 
       <div 
         className="dropdown-container" 
         style={calculatePosition()}

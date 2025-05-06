@@ -14,3 +14,18 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+* {
+  -webkit-user-select: none;
+  -moz-user-select: none; 
+  -ms-user-select: none; 
+  user-select: none; 
+}
+
+/* Для элементов, где текст должен быть доступен для выделения */
+.selectable-text {
+  -webkit-user-select: text;
+  -moz-user-select: text;
+  -ms-user-select: text;
+  user-select: text;
+}

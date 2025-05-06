@@ -1,6 +1,7 @@
 import React from "react";
 import axios from "axios";
 import { getToken } from "../../../Shered/TokenProvider";
+import { FileEvents, fileEventEmitter } from '../../../Shered/UpdateFiles';
 
 const DelFiles= async (path: string[], isPublic: boolean) =>{
     const token= await getToken();
@@ -22,9 +23,9 @@ const DelFiles= async (path: string[], isPublic: boolean) =>{
 
     if (response.status == 200)
     {
-    //   setTimeout(() => {
-    //     fileEventEmitter.emit(FileEvents.FILES_UPDATED);
-    //   }, 500);
+      setTimeout(() => {
+        fileEventEmitter.emit(FileEvents.FILES_UPDATED);
+      }, 500);
     }
     else
     {
