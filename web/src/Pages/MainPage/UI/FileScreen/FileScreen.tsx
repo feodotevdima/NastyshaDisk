@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef, useCallback } from 'react';
 import getExtension from '../../../../Shered/FileProvider';
 import DropdownMenu from '../../../../Wigetes/Menu/DropdownMenu';
-import GetIcon from '../GetIcon';
+import { GetIcon, GetIconPath } from '../GetIcon';
 import GetFilesName from '../../API/GetFileNames';
 import DelFiles from '../../API/DelFiles';
 import GetPathString from '../../../../Shered/GetPathString';
@@ -13,6 +13,9 @@ import { useNavigate } from 'react-router-dom';
 import './FileScreen.css';
 import Spinner from '../../../../Wigetes/Spinner/Spinner';
 import { FileEvents, fileEventEmitter } from '../../../../Shered/UpdateFiles';
+import { uploadFiles } from '../../API/AddFiles';
+import FileResult from '../../../../Entities/FileResult';
+import NewDir from '../../API/NewDir';
 
 interface FileScreenProps {
   longPress: string[] | null;
@@ -29,6 +32,11 @@ interface DownloadState {
     progress: number;
     loading: boolean;
   };
+}
+
+interface DragData {
+  path: string;
+  name: string;
 }
 
 const PageSize = 20;
@@ -49,6 +57,7 @@ const FileScreen: React.FC<FileScreenProps> = ({ longPress, setLongPress, SetPat
   const [openImage, setOpenImage] = useState<boolean>(false);
   const [imagesPath, setImagesPath] = useState<string[]>([]);
   const [index, setIndex] = useState<number | null>(null);
+  const [isDragging, setIsDragging] = useState(false);
   const [downloadStates, setDownloadStates] = useState<DownloadState>({});
   const navigate = useNavigate();
   const fileListRef = useRef<HTMLDivElement>(null);
@@ -131,11 +140,49 @@ const FileScreen: React.FC<FileScreenProps> = ({ longPress, setLongPress, SetPat
     loadMoreData(1, true);
   };
 
-  const handleEndReached = () => {
-    if (!isLoading && hasMore) {
-      loadMoreData(page);
-    }
-  };
+    const handleDragOver = useCallback((e: React.DragEvent<HTMLDivElement>) => {
+      const isInternalDrag = e.dataTransfer.types.includes('application/json'); 
+        if (isInternalDrag) 
+          return;
+      e.preventDefault();
+      setIsDragging(true);
+    }, [Path]);
+  
+    const handleDragLeave = useCallback((e: React.DragEvent<HTMLDivElement>) => {
+      e.preventDefault();
+      setIsDragging(false);
+    }, [Path]);
+  
+    const handleDrop = useCallback((e: React.DragEvent<HTMLDivElement>) => {
+      e.preventDefault();
+      setIsDragging(false);
+  
+      const files = Array.from(e.dataTransfer.files);
+
+      const selectedFiles: FileResult[] = Array.from(files).map((file) => ({
+        name: file.name,
+        size: file.size,
+        file: file,
+        mimeType: file.type || 'application/octet-stream',
+      }));
+      uploadFiles(GetPathString(Path), false, selectedFiles);
+    }, [Path]);
+
+    const handleFileMove = useCallback(async (sourcePath: string, sourceName: string, targetPath: string, targetName?: string) => {
+      try {
+        if (targetName) {
+          const newDirPath = `${targetPath}new_path`;
+          await NewDir(newDirPath, false);
+          await ChangeFilaeName(`${targetPath}${targetName}`, `${newDirPath}\\${targetName}`, false);
+          await ChangeFilaeName(`${sourcePath}${sourceName}`, `${newDirPath}\\${sourceName}`, false);
+        } else {
+          await ChangeFilaeName(`${sourcePath}${sourceName}`, `${targetPath}${sourceName}`, false);
+        }
+        fileEventEmitter.emit(FileEvents.FILES_UPDATED);
+      } catch (error) {
+        console.error('Ошибка при перемещении файла:', error);
+      }
+    }, [Path]);
 
   const pressPath = (index: number) => {
     setPath(Path.slice(0, index + 1)); 
@@ -282,13 +329,52 @@ const FileScreen: React.FC<FileScreenProps> = ({ longPress, setLongPress, SetPat
   };
 
   const GetPath = () => {
+    const [isDragOver, setIsDragOver] = useState(false);
+    const currentPath = GetPathString(Path);
+  
+    const handleDragOver = (e: React.DragEvent<HTMLDivElement>) => {
+      const isInternalDrag = e.dataTransfer.types.includes('application/json'); 
+      if (!isInternalDrag) return;
+      
+      e.preventDefault();
+      e.dataTransfer.dropEffect = 'move';
+      setIsDragOver(true);
+    };
+  
+    const handleDragLeave = (e: React.DragEvent<HTMLDivElement>) => {
+      setIsDragOver(false);
+    };
+  
+    const handleDrop = (e: React.DragEvent<HTMLDivElement>, value: string, index: number) => {
+      e.preventDefault();
+      setIsDragOver(false);
+      
+      try {
+        const data: DragData = JSON.parse(e.dataTransfer.getData('application/json'));
+        
+        if (data.path === currentPath && data.name === value) return;
+
+        console.log(index)
+        handleFileMove(data.path, data.name, `${GetPathString(Path.slice(0, index + 1))}\\`);
+      } catch (error) {
+        console.error('Ошибка при обработке перетаскивания:', error);
+      }
+    };
+  
     return (
       <div className="path-container">
         {Path.map((value, index) => (
-          <div key={index} className="path-item-container">
+          <div 
+            key={index} 
+            className="path-item-container"
+            draggable={false}
+            onDragOver={handleDragOver}
+            onDragLeave={handleDragLeave}
+            onDrop={(e) => handleDrop(e, value, index)}
+          >
             <button 
               onClick={() => pressPath(index)}
-              className="path-button"
+              className={`path-button ${isDragOver ? 'drag-over' : ''}`}
             >
               {value}
             </button>
@@ -299,17 +385,97 @@ const FileScreen: React.FC<FileScreenProps> = ({ longPress, setLongPress, SetPat
     );
   };
 
-  const ListItem: React.FC<ListItemProps> = ({ name }) => {
-    if (!name || typeof name !== 'string') {
-      return null;
-    }
-  
+  const ListItem: React.FC<ListItemProps> = ({ name }) => {  
     const items = getExtension(name) ? 
       ['Переименовать', 'Удалить'] : 
       ['Переименовать', 'Удалить', 'Управление доступом'];
+
+
+      const [isDragOver, setIsDragOver] = useState(false);
+      const currentPath = GetPathString(Path);
   
+      const handleDragStart = (e: React.DragEvent<HTMLDivElement>) => {
+        if (longPress) return;
+        
+        const data: DragData = {
+          path: currentPath,
+          name: name,
+        };
+        
+        e.dataTransfer.setData('application/json', JSON.stringify(data));
+        e.dataTransfer.effectAllowed = 'move';
+        e.currentTarget.style.opacity = '0.4';
+      
+        const dragPreview = document.createElement('div');
+        dragPreview.className = 'drag-preview';
+        
+        dragPreview.innerHTML = `
+          <div class="drag-preview-content">
+             <img src="${GetIconPath(name)}" alt="${name}" class="drag-icon"/>
+            <span>${name}</span>
+          </div>
+        `;
+        
+        dragPreview.style.opacity = '1';
+        dragPreview.style.position = 'absolute';
+        dragPreview.style.left = '-9999px';
+        document.body.appendChild(dragPreview);
+        
+        e.dataTransfer.setDragImage(dragPreview, 0, 40);
+        
+        setTimeout(() => document.body.removeChild(dragPreview), 0);
+      };
+  
+      const handleDragEnd = (e: React.DragEvent<HTMLDivElement>) => {
+        e.currentTarget.style.opacity = '1';
+      };
+  
+      const handleDragOver = (e: React.DragEvent<HTMLDivElement>) => {
+        const isInternalDrag = e.dataTransfer.types.includes('application/json'); 
+        if (!isInternalDrag) 
+          return;
+        e.preventDefault();
+        e.dataTransfer.dropEffect = 'move';
+        setIsDragOver(true);
+      };
+  
+      const handleDragLeave = () => {
+        setIsDragOver(false);
+      };
+  
+      const handleDrop = (e: React.DragEvent<HTMLDivElement>) => {
+        e.preventDefault();
+        setIsDragOver(false);
+        
+        try {
+          const data: DragData = JSON.parse(e.dataTransfer.getData('application/json'));
+          
+          if (data.path === currentPath && data.name === name) return;
+  
+          if (getExtension(name) === null) {
+            handleFileMove(data.path, data.name, `${currentPath}${name}\\`);
+          } else {
+            handleFileMove(data.path, data.name, currentPath, name);
+          }
+        } catch (error) {
+          console.error('Ошибка при обработке перетаскивания:', error);
+        }
+      };
+  
+      if (!name || typeof name !== 'string') {
+        return null;
+      }
+
     return (
-      <div className="list-item-wrapper">
+      <div 
+        className={`list-item-wrapper ${isDragOver ? 'drag-over' : ''}`}
+        draggable={!longPress}
+        onDragStart={handleDragStart}
+        onDragEnd={handleDragEnd}
+        onDragOver={handleDragOver}
+        onDragLeave={handleDragLeave}
+        onDrop={handleDrop}
+      >
         <div 
           className={`item-container ${longPress && longPress.includes(name) ? 'selected' : ''}`}
         >
@@ -398,7 +564,12 @@ const FileScreen: React.FC<FileScreenProps> = ({ longPress, setLongPress, SetPat
   };
 
   return (
-    <div className="file-screen-container">
+    <div 
+      className="file-screen-container"
+      onDragOver={handleDragOver}
+      onDragLeave={handleDragLeave}
+      onDrop={handleDrop}>
+
       <ModalName
         modalVisible={modalVisible}
         setModalVisible={setModalVisible}
@@ -414,13 +585,13 @@ const FileScreen: React.FC<FileScreenProps> = ({ longPress, setLongPress, SetPat
         currentIndex={index || 0}
       />
 
-      {!longPress && (
-        <div className="path-scroll-container">
+      {!longPress? (
+        <div>
           <GetPath />
         </div>
-      )}
+      ): <div className="path-long-press-container"/>}
 
-      <div className={`list-container ${longPress ? 'long-press-mode' : ''}`}>
+      <div className={`list-container ${longPress ? 'long-press-mode' : ''}${isDragging ? 'dragging' : ''}`}>
         <div 
           ref={fileListRef}
           className="file-list"
@@ -436,5 +607,3 @@ const FileScreen: React.FC<FileScreenProps> = ({ longPress, setLongPress, SetPat
 };
 
 export default FileScreen;
-
-//todo: drop, shere

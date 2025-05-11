@@ -24,22 +24,19 @@ const MainPage = () => {
       setIsMobileView(window.innerWidth < 768);
     };
 
-    checkMobileView();
-    window.addEventListener('resize', checkMobileView);
-    return () => window.removeEventListener('resize', checkMobileView);
-  }, []);
-
-  useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       if (addMenuRef.current && !addMenuRef.current.contains(event.target as Node)) {
         setShowAddMenu(false);
       }
     };
 
+    checkMobileView();
+    window.addEventListener('resize', checkMobileView);
     document.addEventListener('mousedown', handleClickOutside);
     return () => {
+      window.removeEventListener('resize', checkMobileView);
       document.removeEventListener('mousedown', handleClickOutside);
-    };
+    }
   }, []);
 
   const handleDownload = () => {
@@ -93,7 +90,7 @@ const MainPage = () => {
 
       {longPress ? 
         <button onClick={DeleteFiles} className="action-button">
-          <img src="/icons/del.png" className="action-icon" alt="Delete" />
+          <img src="/icons/del.png" className="action-icon-del" alt="Delete" />
         </button> :
         <button onClick={toggleAddMenu} className="action-button">
           <img src="/icons/plus.png" className="action-icon" alt="Add" />

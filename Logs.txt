@@ -1,0 +1,14 @@
+09.05.2025 21:25:08
+fileApi
+get_files_name
+path = \
+page = 1
+pageSize = 20
+isPublic = False
+System.Exception: acsasc
+   at FileAPI.Controllers.FilesController.GetFilesNameAsync(String path, Int32 page, Int32 pageSize, Boolean isPublic) in D:\NastyshaDisk\FileAPI\FileAPI\Controllers\FilesController.cs:line 49
+
+
+
+
+

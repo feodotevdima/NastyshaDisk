@@ -7,7 +7,7 @@ const DownloadFile = async (
 ): Promise<string> => {
   try {
     const token = await getToken();
-    const url = `$http://localhost:7003/Files/download?isPublic=${isPublic}&path=${encodeURIComponent(path)}`;
+    const url = "http://localhost:7003/Files/download?isPublic="+isPublic+"&path="+path;
     const filename = path.split('/').pop() || 'file';
 
     const response = await fetch(url, {

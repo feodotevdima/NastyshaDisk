@@ -2,19 +2,17 @@ import React from 'react';
 import axios from 'axios';
 import { getToken} from '../../../Shered/TokenProvider';
 import { FileEvents, fileEventEmitter } from '../../../Shered/UpdateFiles';
-
-interface FileResult {
-  name: string;
-  size?: number;
-  file: File;
-  mimeType?: string;
-}
+import FileResult from '../../../Entities/FileResult';
 
 function AddFiles() {
   const downloadFile = async (Path: string | null, isPublic: boolean) => {
+      const selectedFiles = await selectFile();
+      uploadFiles(Path, isPublic, selectedFiles)
+  };
+
+  const uploadFiles = async (Path: string | null, isPublic: boolean, selectedFiles: FileResult[]) => {
     try {
       const token = await getToken();
-      const selectedFiles = await selectFile();
 
       if (selectedFiles.length === 0) {
         return;
@@ -45,7 +43,7 @@ function AddFiles() {
     } catch (error) {
       alert('Ошибка: Не удалось загрузить файлы');
     }
-  };
+  }
 
   const selectFile = (): Promise<FileResult[]> => {
     return new Promise((resolve) => {
@@ -72,7 +70,7 @@ function AddFiles() {
     });
   };
 
-  return { downloadFile };
+  return { downloadFile, uploadFiles };
 }
 
-export const { downloadFile } = AddFiles();
+export const { downloadFile, uploadFiles } = AddFiles();

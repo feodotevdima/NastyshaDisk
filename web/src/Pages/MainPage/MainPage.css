@@ -140,8 +140,17 @@
   }
   
   .action-icon {
+    margin-top: 15px;
+    margin-right: 20px;
     width: 30px;
     height: 30px;
+  }
+
+  .action-icon-del {
+    margin-top: 15px;
+    margin-right: 20px;
+    width: 40px;
+    height: 40px;
   }
   
   .add-menu {
@@ -193,12 +202,13 @@
   .logout-button {
     border: 2px solid rgb(253, 93, 187);
     border-radius: 30px;
-    padding: 5px;
-    margin: 40px;
-    margin-top: 500px;
-    background: none;
+    padding: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+    margin: 50px;
+    margin-top: 65vh;
     cursor: pointer;
-    width: calc(100% - 80px);
+    align-self: center;
   }
   
   .logout-text {

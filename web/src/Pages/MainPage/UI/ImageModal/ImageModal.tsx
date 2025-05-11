@@ -98,7 +98,10 @@ const ImageModal: React.FC<ImageModalProps> = ({
           className="arrow-button left-arrow"
           onClick={handlePrev}
         >
-          ‹
+          <img 
+            src='/icons/back.png' 
+            className="arrow"
+          />
         </button>
       )}
 
@@ -114,7 +117,10 @@ const ImageModal: React.FC<ImageModalProps> = ({
           className="arrow-button right-arrow"
           onClick={handleNext}
         >
-          ›
+          <img 
+            src='/icons/next.png' 
+            className="arrow"
+          />
         </button>
       )}
     </div>

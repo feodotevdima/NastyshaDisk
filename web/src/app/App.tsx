@@ -5,6 +5,7 @@ import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import { getToken } from '../Shered/TokenProvider';
 import Spinner from '../Wigetes/Spinner/Spinner';
 import MainPage from '../Pages/MainPage/MainPage';
+import SharePage from '../Pages/SharePage/SharePage';
 
 function App() {
   const [access, setAccess] = useState<string | null | undefined>(null);
@@ -48,7 +49,7 @@ function App() {
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<MainPage />} />
-            {/* <Route path="*" element={<Navigate to="/login" replace />} /> */}
+            <Route path="/share" element={<SharePage />} />
           </Routes>
         </BrowserRouter>
         </div>

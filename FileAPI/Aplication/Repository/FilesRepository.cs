@@ -160,10 +160,8 @@ namespace Aplication.Repository
         {
             try
             {
-                var oldFilePath = Path.GetFullPath(_folderPath + userId + oldPath);
-                var newFilePath = Path.GetFullPath(_folderPath + userId + newPath);
-                Console.WriteLine("ttttt"+oldFilePath);
-                Console.WriteLine("ttttt" + newFilePath);
+                var oldFilePath = Path.GetFullPath(_folderPath + userId + "\\" + oldPath);
+                var newFilePath = Path.GetFullPath(_folderPath + userId + "\\" + newPath);
                 if (File.Exists(oldFilePath))
                 {
                     File.Move(oldFilePath, newFilePath);

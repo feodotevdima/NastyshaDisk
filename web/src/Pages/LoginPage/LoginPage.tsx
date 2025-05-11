@@ -44,7 +44,7 @@ const LoginPage = () => {
   }
 
   return (
-    <div className="container">
+    <div className="loginContainer">
       <h1 className="title">Вход в приложение</h1>
 
       <input
