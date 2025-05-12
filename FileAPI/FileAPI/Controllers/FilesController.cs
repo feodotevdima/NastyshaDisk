@@ -258,7 +258,7 @@ namespace FileAPI.Controllers
             }
             catch
             {
-                return Results.BadRequest();
+                return Results.Problem();
             }
         }
 
@@ -297,7 +297,7 @@ namespace FileAPI.Controllers
             }
             catch
             {
-                return Results.BadRequest();
+                return Results.Problem();
             }
         }
 
@@ -316,17 +316,17 @@ namespace FileAPI.Controllers
                     userId = "public\\" + userId;
 
                 var fileNames = _filesRepository.MakeDir(userId, dto.path);
-                Console.WriteLine(fileNames);
+
                 if (fileNames == null)
                 {
                     return Results.BadRequest();
                 }
 
-                return Results.Ok();
+                return Results.Ok(fileNames);
             }
             catch
             {
-                return Results.BadRequest();
+                return Results.Problem();
             }
         }
 
@@ -349,11 +349,50 @@ namespace FileAPI.Controllers
                 {
                     return Results.BadRequest();
                 }
+                return Results.Ok(fileNames);
+            }
+            catch
+            {
+                return Results.Problem();
+            }
+        }
+
+        [Route("union_files")]
+        [HttpPut]
+        [Authorize]
+        public async Task<IResult> UnionFilesAsync([FromBody] UnionDto dto)
+        {
+            try
+            {
+                var names = dto.Names;
+                var path = dto.Path;
+                var dirName = dto.DirName;
+
+                var token = Request.Headers["Authorization"].ToString();
+                token = token.Substring(7);
+                var userId = _filesService.GetUserIdFromToken(token);
+
+                if (dto.IsPublic)
+                    userId = "public\\" + userId;
+
+                if (names == null || names.Count() == 0)
+                {
+                    return Results.BadRequest();
+                }
+
+                dirName = _filesRepository.MakeDir(userId, path + dirName);
+                string[] parts = dirName.Split("\\");
+                dirName = parts.Length > 0 ? parts[parts.Length-1] : path;
+
+                foreach (var name in names)
+                {
+                    var fileNames = await _filesRepository.ChangeName(userId, path + name, path+ dirName + "\\" + name);
+                }
                 return Results.Ok();
             }
             catch
             {
-                return Results.BadRequest();
+                return Results.Problem();
             }
         }
 
@@ -376,11 +415,11 @@ namespace FileAPI.Controllers
                     return Results.BadRequest();
                 }
 
-                return Results.Ok();
+                return Results.Ok(fileNames);
             }
             catch
             {
-                return Results.BadRequest();
+                return Results.Problem();
             }
         }
 
@@ -398,11 +437,11 @@ namespace FileAPI.Controllers
                 string newPath = await _filesService.CreateSheredDirAsync(ownerUserId, dto.Path, dto.ConnectedUserId);
                 if (newPath == null)
                     return Results.BadRequest();
-                return Results.Ok();
+                return Results.Ok(newPath);
             }
             catch
             {
-                return Results.BadRequest();
+                return Results.Problem();
             }
         }
 
@@ -417,15 +456,15 @@ namespace FileAPI.Controllers
                 token = token.Substring(7);
                 var ownerUserId = _filesService.GetUserIdFromToken(token);
 
-                var newPath = await _filesService.DeleteConnectedUserAsync(ownerUserId, dto.Path, dto.ConnectedUserId);
+                var user = await _filesService.DeleteConnectedUserAsync(ownerUserId, dto.Path, dto.ConnectedUserId);
 
-                if (newPath == null)
+                if (user == null)
                     return Results.BadRequest();
-                return Results.Ok();
+                return Results.Ok(user);
             }
             catch
             {
-                return Results.BadRequest();
+                return Results.Problem();
             }
         }
     }

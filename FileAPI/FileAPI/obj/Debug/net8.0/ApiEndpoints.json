@@ -207,6 +207,22 @@
   },
   {
     "ContainingType": "FileAPI.Controllers.FilesController",
+    "Method": "UnionFilesAsync",
+    "RelativePath": "Files/union_files",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "Presistence.Dtos.UnionDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FileAPI.Controllers.FilesController",
     "Method": "UploadFilesAsync",
     "RelativePath": "Files/upload",
     "HttpMethod": "POST",

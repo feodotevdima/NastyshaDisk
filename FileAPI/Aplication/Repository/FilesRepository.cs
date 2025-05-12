@@ -1,6 +1,8 @@
 ﻿using Aplication.Interfeses;
 using Microsoft.AspNetCore.Http;
 using System.Diagnostics;
+using System.Diagnostics.Metrics;
+using System.IO;
 
 namespace Aplication.Repository
 {
@@ -36,7 +38,24 @@ namespace Aplication.Repository
                 return null;
             }
 
-            var filePath = _folderPath + userId+ "\\" + path + file.FileName;
+            var directory = _folderPath + userId + "\\" + path;
+            var originalFileName = file.FileName;
+            var filePath = directory + originalFileName;
+
+            if (File.Exists(filePath))
+            {
+                var fileNameWithoutExt = Path.GetFileNameWithoutExtension(originalFileName);
+                var fileExt = Path.GetExtension(originalFileName);
+                int counter = 1;
+
+                do
+                {
+                    var newFileName = $"{fileNameWithoutExt} ({counter}){fileExt}";
+                    filePath = directory + newFileName;
+                    counter++;
+                } while (File.Exists(filePath));
+            }
+
             try
             {
                 using (var stream = new FileStream(filePath, FileMode.Create))
@@ -55,7 +74,19 @@ namespace Aplication.Repository
         public string? MakeDir(String userId, string path)
         {
             string folderPath = _folderPath + userId + "\\" + path;
-            Console.WriteLine(folderPath);
+           
+            if(Directory.Exists(folderPath))
+            {
+                var originalFolderPath = folderPath;
+                int counter = 1;
+                do
+                {
+                    var newfloderName = $"{originalFolderPath} ({counter})";
+                    folderPath = newfloderName;
+                    counter++;
+                } while (Directory.Exists(folderPath));
+            }
+
             try
             {
                 if (!Directory.Exists(folderPath))

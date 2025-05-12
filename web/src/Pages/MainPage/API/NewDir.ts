@@ -21,12 +21,9 @@ const NewDir= async (path: string | null, isPublic: boolean) =>{
         }
     );
 
-    console.log(response.status)
     if (response.status == 200)
     {
-      setTimeout(() => {
-        fileEventEmitter.emit(FileEvents.FILES_UPDATED);
-      }, 500);
+      fileEventEmitter.emit(FileEvents.FILES_UPDATED);
     }
     else
     {

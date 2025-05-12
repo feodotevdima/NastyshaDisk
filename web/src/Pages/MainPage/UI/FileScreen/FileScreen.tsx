@@ -16,6 +16,7 @@ import { FileEvents, fileEventEmitter } from '../../../../Shered/UpdateFiles';
 import { uploadFiles } from '../../API/AddFiles';
 import FileResult from '../../../../Entities/FileResult';
 import NewDir from '../../API/NewDir';
+import UnionFiles from '../../API/UnionFiles';
 
 interface FileScreenProps {
   longPress: string[] | null;
@@ -58,6 +59,10 @@ const FileScreen: React.FC<FileScreenProps> = ({ longPress, setLongPress, SetPat
   const [imagesPath, setImagesPath] = useState<string[]>([]);
   const [index, setIndex] = useState<number | null>(null);
   const [isDragging, setIsDragging] = useState(false);
+  const [isModalUnion, setIsModalUnion] = useState(false);
+  const [unionInput, setUnionInput] = useState<string | null>(null);
+  const [unionPath, setUnionPath] = useState<string | null>(null);
+  const [unionNames, setUnionNames] = useState<string[] | null>(null);
   const [downloadStates, setDownloadStates] = useState<DownloadState>({});
   const navigate = useNavigate();
   const fileListRef = useRef<HTMLDivElement>(null);
@@ -145,12 +150,15 @@ const FileScreen: React.FC<FileScreenProps> = ({ longPress, setLongPress, SetPat
         if (isInternalDrag) 
           return;
       e.preventDefault();
+      e.stopPropagation();
       setIsDragging(true);
     }, [Path]);
   
     const handleDragLeave = useCallback((e: React.DragEvent<HTMLDivElement>) => {
       e.preventDefault();
-      setIsDragging(false);
+      if (!e.currentTarget.contains(e.relatedTarget as Node)) {
+        setIsDragging(false);
+      }
     }, [Path]);
   
     const handleDrop = useCallback((e: React.DragEvent<HTMLDivElement>) => {
@@ -171,10 +179,9 @@ const FileScreen: React.FC<FileScreenProps> = ({ longPress, setLongPress, SetPat
     const handleFileMove = useCallback(async (sourcePath: string, sourceName: string, targetPath: string, targetName?: string) => {
       try {
         if (targetName) {
-          const newDirPath = `${targetPath}new_path`;
-          await NewDir(newDirPath, false);
-          await ChangeFilaeName(`${targetPath}${targetName}`, `${newDirPath}\\${targetName}`, false);
-          await ChangeFilaeName(`${sourcePath}${sourceName}`, `${newDirPath}\\${sourceName}`, false);
+          setUnionNames([sourceName, targetName]);
+          setUnionPath(sourcePath);
+          setIsModalUnion(true);
         } else {
           await ChangeFilaeName(`${sourcePath}${sourceName}`, `${targetPath}${sourceName}`, false);
         }
@@ -183,6 +190,20 @@ const FileScreen: React.FC<FileScreenProps> = ({ longPress, setLongPress, SetPat
         console.error('Ошибка при перемещении файла:', error);
       }
     }, [Path]);
+
+    const union = async () => {
+      if(unionPath != null && unionNames != null && unionInput != null)
+      {
+        setIsModalUnion(false);
+        await UnionFiles(unionPath, unionNames, unionInput, false)
+        setUnionNames(null);
+        setUnionPath(null);
+        setUnionInput(null);
+      }
+    }
+
+
+
 
   const pressPath = (index: number) => {
     setPath(Path.slice(0, index + 1)); 
@@ -435,12 +456,15 @@ const FileScreen: React.FC<FileScreenProps> = ({ longPress, setLongPress, SetPat
         if (!isInternalDrag) 
           return;
         e.preventDefault();
+        e.stopPropagation();
         e.dataTransfer.dropEffect = 'move';
         setIsDragOver(true);
       };
   
-      const handleDragLeave = () => {
-        setIsDragOver(false);
+      const handleDragLeave = (e: React.DragEvent<HTMLDivElement>) => {
+        if (!e.currentTarget.contains(e.relatedTarget as Node)) {
+          setIsDragOver(false);
+        }
       };
   
       const handleDrop = (e: React.DragEvent<HTMLDivElement>) => {
@@ -576,6 +600,14 @@ const FileScreen: React.FC<FileScreenProps> = ({ longPress, setLongPress, SetPat
         inputValue={inputValue}
         setInputValue={setInputValue}
         handleSubmit={renameFile}
+      />
+
+      <ModalName
+        modalVisible={isModalUnion}
+        setModalVisible={setIsModalUnion}
+        inputValue={unionInput}
+        setInputValue={setUnionInput}
+        handleSubmit={union}
       />
 
       <ImageModal

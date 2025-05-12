@@ -89,11 +89,19 @@ const MainPage = () => {
       )}
 
       {longPress ? 
-        <button onClick={DeleteFiles} className="action-button">
-          <img src="/icons/del.png" className="action-icon-del" alt="Delete" />
-        </button> :
+        <div className='buttonContainer'>
+          <button onClick={DeleteFiles} className="action-button-press">
+            <img src="/icons/del.png" className="action-icon press" alt="Delete" />
+          </button> 
+          <button className="action-button-press">
+            <img src="/icons/download.png" className="action-icon press" alt="Download" />
+          </button> 
+          <button className="action-button-press">
+            <img src="/icons/union.png" className="action-icon press" alt="Union" />
+          </button> 
+        </div>:
         <button onClick={toggleAddMenu} className="action-button">
-          <img src="/icons/plus.png" className="action-icon" alt="Add" />
+          <img src="/icons/plus.png" className="action-icon add" alt="Add" />
         </button>
       }
 

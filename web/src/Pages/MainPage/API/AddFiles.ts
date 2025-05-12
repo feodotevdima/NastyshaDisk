@@ -36,9 +36,7 @@ function AddFiles() {
       );
 
       if (response.status == 200) {
-        setTimeout(() => {
-          fileEventEmitter.emit(FileEvents.FILES_UPDATED);
-        }, 500);
+        fileEventEmitter.emit(FileEvents.FILES_UPDATED);
       }
     } catch (error) {
       alert('Ошибка: Не удалось загрузить файлы');

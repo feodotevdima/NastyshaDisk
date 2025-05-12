@@ -24,9 +24,7 @@ const ChangeFileName= async (OldPath: string, NewPath: string, isPublic: boolean
 
     if (response.status == 200)
     {
-        setTimeout(() => {
-            fileEventEmitter.emit(FileEvents.FILES_UPDATED);
-        }, 500);
+        fileEventEmitter.emit(FileEvents.FILES_UPDATED);
     }
     else
     {
