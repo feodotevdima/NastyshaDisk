@@ -8,6 +8,9 @@ import NewDir from './API/NewDir';
 import VolumeLine from './UI/Volume/Volume';
 import { Logout } from '../../Shered/TokenProvider';
 import './MainPage.css';
+import DownloadFile from './API/DownloadFile';
+import path from 'path';
+import UnionFiles from './API/UnionFiles';
 
 const MainPage = () => {
   const [Path, SetPath] = useState<string | null>(null);
@@ -17,6 +20,8 @@ const MainPage = () => {
   const [modalVisible, setModalVisible] = useState(false);
   const [inputValue, setInputValue] = useState('');
   const [isMobileView, setIsMobileView] = useState(false);
+  const [isModalUnion, setIsModalUnion] = useState(false);
+  const [unionInput, setUnionInput] = useState<string | null>(null);
   const addMenuRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -52,6 +57,24 @@ const MainPage = () => {
     }
   };
 
+  const download = async () => {
+    if (longPress != null) {
+        for (const element of longPress) {
+            await DownloadFile(Path + element, false);
+        }
+        setLongPress(null);
+    }
+  };
+
+  const union = async () => {
+    if (longPress != null && Path != null && unionInput != null) {
+        await UnionFiles(Path, longPress, unionInput, false)
+        setIsModalUnion(false);
+        setLongPress(null);
+        setUnionInput(null);
+    }
+  };
+
   const logout = async () => {
     await Logout();
   };
@@ -75,6 +98,21 @@ const MainPage = () => {
 
   return (
     <div className="main-container">
+      <ModalName 
+        modalVisible={modalVisible} 
+        setModalVisible={setModalVisible} 
+        inputValue={inputValue} 
+        setInputValue={setInputValue} 
+        handleSubmit={handleSubmitCreateDir} 
+      />
+      <ModalName
+        modalVisible={isModalUnion}
+        setModalVisible={setIsModalUnion}
+        inputValue={unionInput}
+        setInputValue={setUnionInput}
+        handleSubmit={union}
+      />
+
       {isMobileView && (
         <button
           onClick={toggleMobileMenu}
@@ -93,10 +131,10 @@ const MainPage = () => {
           <button onClick={DeleteFiles} className="action-button-press">
             <img src="/icons/del.png" className="action-icon press" alt="Delete" />
           </button> 
-          <button className="action-button-press">
+          <button onClick={download} className="action-button-press">
             <img src="/icons/download.png" className="action-icon press" alt="Download" />
           </button> 
-          <button className="action-button-press">
+          <button onClick={() => {setIsModalUnion(true)}} className="action-button-press">
             <img src="/icons/union.png" className="action-icon press" alt="Union" />
           </button> 
         </div>:
@@ -128,14 +166,6 @@ const MainPage = () => {
           setIsMobileMenuOpen(false);
         }}></div>
       )}
-
-      <ModalName 
-        modalVisible={modalVisible} 
-        setModalVisible={setModalVisible} 
-        inputValue={inputValue} 
-        setInputValue={setInputValue} 
-        handleSubmit={handleSubmitCreateDir} 
-      />
 
       <div className="content-wrapper">
         {(!isMobileView || isMobileMenuOpen) && (

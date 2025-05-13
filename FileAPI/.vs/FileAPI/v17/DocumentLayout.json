@@ -42,8 +42,7 @@
               "RelativeToolTip": "Presistence\\Dtos\\DeleteFilesDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-12T17:59:12.315Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-12T17:59:12.315Z"
             },
             {
               "$type": "Document",
@@ -53,7 +52,7 @@
               "RelativeDocumentMoniker": "Aplication\\Repository\\FilesRepository.cs",
               "ToolTip": "D:\\NastyshaDisk\\FileAPI\\Aplication\\Repository\\FilesRepository.cs",
               "RelativeToolTip": "Aplication\\Repository\\FilesRepository.cs",
-              "ViewState": "AgIAALwAAAAAAAAAAAAAAL4AAAAIAAAAAAAAAA==",
+              "ViewState": "AgIAAKQAAAAAAAAAAAAAAL4AAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-23T20:23:05.424Z",
               "EditorCaption": ""
@@ -66,7 +65,7 @@
               "RelativeDocumentMoniker": "FileAPI\\Controllers\\FilesController.cs",
               "ToolTip": "D:\\NastyshaDisk\\FileAPI\\FileAPI\\Controllers\\FilesController.cs",
               "RelativeToolTip": "FileAPI\\Controllers\\FilesController.cs",
-              "ViewState": "AgIAAG8BAAAAAAAAAAAowIIBAAArAAAAAAAAAA==",
+              "ViewState": "AgIAAMkAAAAAAAAAAAAAAIIBAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-03T21:32:33.062Z",
               "EditorCaption": ""
