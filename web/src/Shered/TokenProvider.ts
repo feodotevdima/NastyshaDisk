@@ -1,5 +1,7 @@
 function TokenProvider(){
 
+    const Ip = 'http://192.168.10.45';
+
     const getExpirationDate = (jwtToken : string) => {
         if ((jwtToken==null) || (jwtToken=="")|| (jwtToken==" ")) {
             return null;
@@ -19,23 +21,23 @@ function TokenProvider(){
 
     const getToken = async () => 
     {
-        if (sessionStorage.accessToken==null || sessionStorage.accessToken=="" || sessionStorage.accessToken==" ") 
+        if (localStorage.accessToken==null || localStorage.accessToken=="" || localStorage.accessToken==" ") 
             return null;
  
-        if (isExpired(getExpirationDate(sessionStorage.accessToken))) 
+        if (isExpired(getExpirationDate(localStorage.accessToken))) 
         {
-            if (!isExpired(getExpirationDate(sessionStorage.accessToken))) 
-                return sessionStorage.accessToken;
+            if (!isExpired(getExpirationDate(localStorage.accessToken))) 
+                return localStorage.accessToken;
 
-            const updatedToken = await fetch("http://localhost:7002/Auth/refreshToken/"+sessionStorage.refreshToken, {method: 'PUT',});
+            const updatedToken = await fetch(Ip + ":7002/Auth/refreshToken/"+localStorage.refreshToken, {method: 'PUT',});
             if (updatedToken.status!==200)
             {
-                if (isExpired(getExpirationDate(sessionStorage.accessToken))) 
+                if (isExpired(getExpirationDate(localStorage.accessToken))) 
                 {
                     setToken(null, null);
                     return;
                 }
-                else return sessionStorage.accessToken;
+                else return localStorage.accessToken;
             }
             if (updatedToken.status===200)
             {
@@ -43,21 +45,21 @@ function TokenProvider(){
                 setToken(j.accessToken, j.refreshToken);
             }
         }
-        return sessionStorage.accessToken;       
+        return localStorage.accessToken;       
     };
 
     const setToken = (accessToken : string | null, refreshToken : string | null) => {
         if (accessToken !=null && refreshToken!=null) {
-            sessionStorage.setItem("accessToken", accessToken);
-            sessionStorage.setItem("refreshToken", refreshToken);
+            localStorage.setItem("accessToken", accessToken);
+            localStorage.setItem("refreshToken", refreshToken);
         } else {
-            sessionStorage.removeItem("accessToken");
-            sessionStorage.removeItem("refreshToken");
+            localStorage.removeItem("accessToken");
+            localStorage.removeItem("refreshToken");
         }
     };
 
     const Login = async (email: string, pass: string) => {
-        const response = await fetch("http://localhost:7002/Auth/login",
+        const response = await fetch(Ip + ":7002/Auth/login",
             {
               method: "POST",
               headers:     
@@ -83,7 +85,7 @@ function TokenProvider(){
     async function Logout()
     {
         const token = await getToken();
-        const response = await fetch("http://localhost:7002/Auth/logout/"+token,
+        const response = await fetch(Ip + ":7002/Auth/logout/"+token,
         {
             method: "DELETE",
             headers:     
@@ -100,6 +102,7 @@ function TokenProvider(){
     }       
 
     return {
+        Ip,
         getToken,
         setToken,
         Login,
@@ -107,4 +110,4 @@ function TokenProvider(){
     };
 };
 
-export const {getToken, setToken, Login, Logout} = TokenProvider();
+export const {Ip, getToken, setToken, Login, Logout} = TokenProvider();

@@ -1,10 +1,10 @@
 import React from "react";
 import axios from "axios";
-import { getToken } from "../../../Shered/TokenProvider";
+import { Ip, getToken } from "../../../Shered/TokenProvider";
 
 const GetUsers= async (path: string) =>{
     const token= await getToken();
-    const query = "http://localhost:7003/Files/all_to_add?path="+path;
+    const query = Ip + ":7003/Files/all_to_add?path="+path;
     const response = await axios.get(
         query,
         {

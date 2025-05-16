@@ -1,4 +1,4 @@
-import { getToken } from "../../../Shered/TokenProvider";
+import { Ip, getToken } from "../../../Shered/TokenProvider";
 
 const DownloadFile = async (
   path: string, 
@@ -7,7 +7,7 @@ const DownloadFile = async (
 ): Promise<string> => {
   try {
     const token = await getToken();
-    const url = "http://localhost:7003/Files/download?isPublic="+isPublic+"&path="+path;
+    const url = Ip + ":7003/Files/download?isPublic="+isPublic+"&path="+path;
     const filename = path.split('/').pop() || 'file';
 
     const response = await fetch(url, {
@@ -49,21 +49,16 @@ const DownloadFile = async (
     const blob = new Blob(chunks);
     const downloadUrl = window.URL.createObjectURL(blob);
     
-    // Создаем временную ссылку для скачивания
     const a = document.createElement('a');
     a.href = downloadUrl;
     a.download = filename;
     document.body.appendChild(a);
     a.click();
     
-    // Очищаем
     window.URL.revokeObjectURL(downloadUrl);
     document.body.removeChild(a);
 
-    // Показываем уведомление (можно заменить на более красивый toast)
     console.log(`Файл "${filename}" загружен`);
-    // Или использовать alert:
-    // alert(`Файл "${filename}" успешно загружен`);
 
     return downloadUrl;
   } catch (error) {

@@ -255,6 +255,10 @@ const FileScreen: React.FC<FileScreenProps> = ({ longPress, setLongPress, SetPat
           setOpenImage(true);
         }
       }
+      else if(extension.toLocaleLowerCase() == 'pdf')
+      {
+        navigate('/pdf', { state: { path: GetPathString(Path) + name, isPublic: false} });
+      }
     }
   };
 

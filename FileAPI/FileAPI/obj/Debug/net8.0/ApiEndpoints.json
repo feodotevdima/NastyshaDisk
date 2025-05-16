@@ -207,6 +207,27 @@
   },
   {
     "ContainingType": "FileAPI.Controllers.FilesController",
+    "Method": "OpenPdf",
+    "RelativePath": "Files/open_pdf",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "isPublic",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      },
+      {
+        "Name": "path",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FileAPI.Controllers.FilesController",
     "Method": "UnionFilesAsync",
     "RelativePath": "Files/union_files",
     "HttpMethod": "PUT",

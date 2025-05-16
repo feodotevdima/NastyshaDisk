@@ -6,6 +6,7 @@ import { getToken } from '../Shered/TokenProvider';
 import Spinner from '../Wigetes/Spinner/Spinner';
 import MainPage from '../Pages/MainPage/MainPage';
 import SharePage from '../Pages/SharePage/SharePage';
+import PDFViewer from '../Pages/Pdf/Pdf';
 
 function App() {
   const [access, setAccess] = useState<string | null | undefined>(null);
@@ -49,6 +50,7 @@ function App() {
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<MainPage />} />
+            <Route path="/pdf" element={<PDFViewer />} />
             <Route path="/share" element={<SharePage />} />
           </Routes>
         </BrowserRouter>

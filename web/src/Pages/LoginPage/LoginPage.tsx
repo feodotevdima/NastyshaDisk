@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './Login.css'; 
-import { getToken, Login } from '../../Shered/TokenProvider';
+import { Ip, Login } from '../../Shered/TokenProvider';
 import Spinner from '../../Wigetes/Spinner/Spinner';
 
 const LoginPage = () => {
@@ -23,8 +23,7 @@ const LoginPage = () => {
     setLoading(true);
     const response: number = await Login(email, password);
     if(response === 200) {
-    //   await checkAuth();
-      await window.location.replace("http://localhost:3000");
+      await window.location.replace(Ip + ":3000");
       return;
     }
 

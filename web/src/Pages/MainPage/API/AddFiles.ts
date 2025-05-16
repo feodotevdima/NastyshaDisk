@@ -1,6 +1,6 @@
 import React from 'react';
 import axios from 'axios';
-import { getToken} from '../../../Shered/TokenProvider';
+import { Ip, getToken} from '../../../Shered/TokenProvider';
 import { FileEvents, fileEventEmitter } from '../../../Shered/UpdateFiles';
 import FileResult from '../../../Entities/FileResult';
 
@@ -25,7 +25,7 @@ function AddFiles() {
       });
 
       const response = await axios.post(
-        "http://localhost:7003/Files/upload?path=" + Path + "&isPublic=" + isPublic,
+        Ip + ":7003/Files/upload?path=" + Path + "&isPublic=" + isPublic,
         formData,
         {
           headers: {

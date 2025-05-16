@@ -1,11 +1,11 @@
 import React from "react";
 import axios from "axios";
-import {getToken } from "../../../Shered/TokenProvider";
+import { Ip, getToken } from "../../../Shered/TokenProvider";
 import { FileEvents, fileEventEmitter } from '../../../Shered/UpdateFiles';
 
 const ChangeFileName= async (OldPath: string, NewPath: string, isPublic: boolean) =>{
     const token= await getToken();
-    const query = "http://localhost:7003/Files/change_name";
+    const query = Ip + ":7003/Files/change_name";
     const response = await axios.put(
         query,
         {

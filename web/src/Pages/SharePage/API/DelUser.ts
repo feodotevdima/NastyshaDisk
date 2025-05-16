@@ -1,10 +1,10 @@
 import axios from "axios";
-import { getToken } from "../../../Shered/TokenProvider";
+import { Ip, getToken } from "../../../Shered/TokenProvider";
 import { FileEvents, fileEventEmitter } from "../../../Shered/UpdateFiles";
 
 const DelUser= async (path: string, connectedUserId: string) =>{
     const token= await getToken();
-    const query = "http://localhost:7003/Files/del_user";
+    const query = Ip + ":7003/Files/del_user";
     const response = await axios.delete(
         query, 
         {

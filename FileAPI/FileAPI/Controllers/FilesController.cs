@@ -205,6 +205,26 @@ namespace FileAPI.Controllers
 
         }
 
+        [Route("open_pdf")]
+        [HttpGet]
+        [Authorize]
+        public IActionResult OpenPdf([FromQuery] bool isPublic, [FromQuery] string path)
+        {
+            var token = Request.Headers["Authorization"].ToString();
+            token = token.Substring(7);
+            var userId = _filesService.GetUserIdFromToken(token);
+
+            if (isPublic)
+                userId = "public\\" + userId;
+
+            var fileStream = _filesRepository.GetFileStream(userId, path);
+
+            if (fileStream == null) return BadRequest();
+
+            return File(fileStream, "application/pdf", enableRangeProcessing: true);
+
+        }
+
         [Route("download")]
         [HttpGet]
         [Authorize]

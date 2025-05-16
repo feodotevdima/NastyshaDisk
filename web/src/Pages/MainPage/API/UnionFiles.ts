@@ -1,13 +1,13 @@
 import React from "react";
 import axios from "axios";
-import { getToken } from "../../../Shered/TokenProvider";
+import { Ip, getToken } from "../../../Shered/TokenProvider";
 import { FileEvents, fileEventEmitter } from '../../../Shered/UpdateFiles';
 
 const UnionFiles= async (path: string, names: string[], dirName: string, isPublic: boolean) =>{
   console.log(path)
   console.log(names)
     const token= await getToken();
-    const query = "http://localhost:7003/Files/union_files";
+    const query = Ip + ":7003/Files/union_files";
     const response = await axios.put(
         query,
         {
