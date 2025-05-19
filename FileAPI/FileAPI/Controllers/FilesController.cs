@@ -17,9 +17,10 @@ namespace FileAPI.Controllers
         private readonly IFilesRepository _filesRepository;
         private readonly ISheredDirRepository _shredDirRepository;
         private readonly ISheredDirService _sheredDirService;
+        private readonly IPdfRepository _pdfRepository;
         private readonly string _folderPath;
 
-        public FilesController(IFilesService filesService, IFilesRepository filesRepository, string folderPath, ISheredDirRepository sheredDirRepository, HttpClient httpClient, ISheredDirService sheredDirService)
+        public FilesController(IFilesService filesService, IFilesRepository filesRepository, string folderPath, ISheredDirRepository sheredDirRepository, HttpClient httpClient, ISheredDirService sheredDirService, IPdfRepository pdfRepository)
         {
             _filesService = filesService;
             _filesRepository = filesRepository;
@@ -27,6 +28,7 @@ namespace FileAPI.Controllers
             _shredDirRepository = sheredDirRepository;
             _httpClient = httpClient;
             _sheredDirService = sheredDirService;
+            _pdfRepository = pdfRepository;
         }
 
         [Route("get_files_name")]
@@ -208,7 +210,7 @@ namespace FileAPI.Controllers
         [Route("open_pdf")]
         [HttpGet]
         [Authorize]
-        public IActionResult OpenPdf([FromQuery] bool isPublic, [FromQuery] string path)
+        public async Task<IActionResult> OpenPdfAsync([FromQuery] bool isPublic, [FromQuery] string path)
         {
             var token = Request.Headers["Authorization"].ToString();
             token = token.Substring(7);
@@ -221,11 +223,34 @@ namespace FileAPI.Controllers
 
             if (fileStream == null) return BadRequest();
 
-            return File(fileStream, "application/pdf", enableRangeProcessing: true);
+            var page = await _pdfRepository.GetCurrentPageAsync(userId, path);
+            if (page == null)
+                return NotFound();
 
+            Response.Headers.Append("X-Current-Page", page.ToString());
+            Response.Headers.Append("Access-Control-Expose-Headers", "X-Current-Page");
+
+            return File(fileStream, "application/pdf", enableRangeProcessing: true);
         }
 
-        [Route("download")]
+        [Route("add_pdf_page")]
+        [HttpPost]
+        [Authorize]
+        public async Task<IResult> AddPdfPageAsync([FromBody] CurentPageDto dto)
+        {
+            var token = Request.Headers["Authorization"].ToString();
+            token = token.Substring(7);
+            var userId = _filesService.GetUserIdFromToken(token);
+
+            if (dto.IsPublic)
+                userId = "public\\" + userId;
+
+            var page = await _pdfRepository.AddCurrentPageAsync(userId, dto.Path, dto.CurentPage);
+            if (page == null) return Results.NotFound();
+            return Results.Ok(page);
+        }
+
+            [Route("download")]
         [HttpGet]
         [Authorize]
         public IActionResult DownloadFile([FromQuery] bool isPublic, [FromQuery] string path)

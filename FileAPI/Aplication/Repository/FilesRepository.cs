@@ -1,8 +1,9 @@
 ﻿using Aplication.Interfeses;
 using Microsoft.AspNetCore.Http;
+using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using System.Diagnostics;
-using System.Diagnostics.Metrics;
 using System.IO;
+
 
 namespace Aplication.Repository
 {
@@ -10,17 +11,19 @@ namespace Aplication.Repository
     {
         private readonly string _folderPath;
         private readonly ISheredDirRepository _sheredDirRepository;
+        private readonly IPdfRepository _pdfRepository;
 
-        public FilesRepository(string folderPath, ISheredDirRepository sheredDirRepository)
+        public FilesRepository(string folderPath, ISheredDirRepository sheredDirRepository, IPdfRepository pdfRepository)
         {
             _folderPath = folderPath;
             _sheredDirRepository = sheredDirRepository;
+            _pdfRepository = pdfRepository;
         }
 
 
         public FileStream? GetFileStream(string userId, string path)
         {
-            var filePath = Path.Combine(_folderPath + userId+ "\\" + path);
+            var filePath = Path.Combine(_folderPath + userId + "\\" + path);
 
             if (File.Exists(filePath))
             {
@@ -64,9 +67,9 @@ namespace Aplication.Repository
                 }
                 return filePath;
             }
-            catch 
-            { 
-                return null; 
+            catch
+            {
+                return null;
             }
         }
 
@@ -74,8 +77,8 @@ namespace Aplication.Repository
         public string? MakeDir(String userId, string path)
         {
             string folderPath = _folderPath + userId + "\\" + path;
-           
-            if(Directory.Exists(folderPath))
+
+            if (Directory.Exists(folderPath))
             {
                 var originalFolderPath = folderPath;
                 int counter = 1;
@@ -113,6 +116,12 @@ namespace Aplication.Repository
                     {
                         var filePath = Path.GetFullPath(_folderPath + userId + "\\" + path);
 
+                        if(Path.GetExtension(path) == ".pdf")
+                        {
+                            var pdfPath = _folderPath + userId + "\\" + path;
+                            _pdfRepository.RemovePdfAsync(pdfPath);
+                        }
+
                         Console.WriteLine(filePath);
                         if (File.Exists(filePath))
                         {
@@ -120,7 +129,7 @@ namespace Aplication.Repository
                         }
                         else if (Directory.Exists(filePath))
                         {
-                            FileAttributes attributes = File.GetAttributes(filePath);  
+                            FileAttributes attributes = File.GetAttributes(filePath);
                             if ((attributes & FileAttributes.ReparsePoint) == FileAttributes.ReparsePoint)
                             {
                                 var user = await _sheredDirRepository.GetConnectedUserBySimLinkLocationAsync(filePath);
@@ -142,10 +151,10 @@ namespace Aplication.Repository
                             {
                                 Guid.TryParse(userId, out var id);
                                 var owner = await _sheredDirRepository.GetSheredDirByDirLocationAsync(Path.GetFullPath(filePath));
-                                if (owner != null )
+                                if (owner != null)
                                 {
                                     var users = await _sheredDirRepository.GetConnectedUsersBySheredDirIdAsync(owner.Id);
-                                    foreach(var user in users)
+                                    foreach (var user in users)
                                     {
                                         Directory.Delete(user.SimLinkLocation, true);
                                         await _sheredDirRepository.RemoveConnectedUserAsync(user.Id);
@@ -158,18 +167,22 @@ namespace Aplication.Repository
                         }
                     }
                 });
-                return paths;      
+                return paths;
             }
             catch
             {
                 return null;
-            }           
+            }
         }
 
         public string? Delete(string path)
         {
             try
             {
+                if (Path.GetExtension(path) == ".pdf")
+                {
+                    _pdfRepository.RemovePdfAsync(path);
+                }
 
                 if (File.Exists(path))
                 {
@@ -193,6 +206,20 @@ namespace Aplication.Repository
             {
                 var oldFilePath = Path.GetFullPath(_folderPath + userId + "\\" + oldPath);
                 var newFilePath = Path.GetFullPath(_folderPath + userId + "\\" + newPath);
+
+                if (Path.GetExtension(oldPath) == ".pdf")
+                {
+                    var pdfPath = _folderPath + userId + "\\" + oldPath;
+                    var pdf = await _pdfRepository.GetPdfByPathAsync(pdfPath);
+                    if (pdf != null)
+                    {
+                        pdf.Path = _folderPath + userId + "\\" + newPath;
+                        _pdfRepository.UpdatePdfAsync(pdf);
+                    }
+                }
+
+                //todo: apdate, delete, mobile!!!!!!
+
                 if (File.Exists(oldFilePath))
                 {
                     File.Move(oldFilePath, newFilePath);
@@ -211,7 +238,7 @@ namespace Aplication.Repository
                             user.SimLinkLocation = newFilePath;
                             var changeUser = await _sheredDirRepository.UpdateConnectedUserAsync(user);
                         }
-                     
+
                     }
 
                     else
@@ -233,7 +260,7 @@ namespace Aplication.Repository
                 }
                 return newPath;
             }
-            catch 
+            catch
             {
                 return null;
             }

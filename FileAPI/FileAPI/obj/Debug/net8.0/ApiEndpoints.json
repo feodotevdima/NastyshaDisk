@@ -17,6 +17,22 @@
   },
   {
     "ContainingType": "FileAPI.Controllers.FilesController",
+    "Method": "AddPdfPageAsync",
+    "RelativePath": "Files/add_pdf_page",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "Presistence.Dtos.CurentPageDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FileAPI.Controllers.FilesController",
     "Method": "AddUserToDirAsync",
     "RelativePath": "Files/add_user",
     "HttpMethod": "POST",
@@ -207,7 +223,7 @@
   },
   {
     "ContainingType": "FileAPI.Controllers.FilesController",
-    "Method": "OpenPdf",
+    "Method": "OpenPdfAsync",
     "RelativePath": "Files/open_pdf",
     "HttpMethod": "GET",
     "IsController": true,
