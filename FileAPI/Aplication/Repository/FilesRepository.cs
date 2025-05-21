@@ -118,8 +118,8 @@ namespace Aplication.Repository
 
                         if(Path.GetExtension(path) == ".pdf")
                         {
-                            var pdfPath = _folderPath + userId + "\\" + path;
-                            _pdfRepository.RemovePdfAsync(pdfPath);
+                            var pdfPath = DelSlash(_folderPath + userId + path);
+                            await _pdfRepository.RemovePdfAsync(pdfPath);
                         }
 
                         Console.WriteLine(filePath);
@@ -181,7 +181,7 @@ namespace Aplication.Repository
             {
                 if (Path.GetExtension(path) == ".pdf")
                 {
-                    _pdfRepository.RemovePdfAsync(path);
+                    _pdfRepository.RemovePdfAsync(DelSlash(path));
                 }
 
                 if (File.Exists(path))
@@ -209,16 +209,14 @@ namespace Aplication.Repository
 
                 if (Path.GetExtension(oldPath) == ".pdf")
                 {
-                    var pdfPath = _folderPath + userId + "\\" + oldPath;
+                    var pdfPath = DelSlash(_folderPath + userId + "\\" + oldPath);
                     var pdf = await _pdfRepository.GetPdfByPathAsync(pdfPath);
                     if (pdf != null)
                     {
-                        pdf.Path = _folderPath + userId + "\\" + newPath;
-                        _pdfRepository.UpdatePdfAsync(pdf);
+                        pdf.Path = DelSlash(_folderPath + userId + "\\" + newPath);
+                        await _pdfRepository.UpdatePdfAsync(pdf);
                     }
                 }
-
-                //todo: apdate, delete, mobile!!!!!!
 
                 if (File.Exists(oldFilePath))
                 {
@@ -303,6 +301,28 @@ namespace Aplication.Repository
                 return symlinkPath;
             }
             return null;
+        }
+
+
+        public string DelSlash(string path)
+        {
+            bool isSlash = false;
+            string result = "";
+            foreach(var s in path)
+            {
+                if(s == '\\' && !isSlash)
+                {
+                    isSlash = true;
+                    result += '\\';
+                }
+                if (s != '\\')
+                {
+                    if (isSlash)
+                        isSlash = false;
+                    result += s;
+                }
+            }
+            return result;
         }
     }
 }

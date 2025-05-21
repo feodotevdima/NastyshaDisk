@@ -69,7 +69,7 @@ namespace Aplication.Repository
 
         public async Task<int?> GetCurrentPageAsync(string userId, string path)
         {
-            var foolPath = _folderPath + userId + "\\" + path;
+            var foolPath = DelSlash(_folderPath + userId + "\\" + path);
             var pdf = await GetPdfByPathAsync(foolPath);
             if (pdf == null)
             {
@@ -86,7 +86,7 @@ namespace Aplication.Repository
 
         public async Task<int?> AddCurrentPageAsync(string userId, string path, int page)
         {
-            var foolPath = _folderPath + userId + "\\" + path;
+            var foolPath = DelSlash(_folderPath + userId + "\\" + path);
             var pdf = await GetPdfByPathAsync(foolPath);
             if (pdf == null)
             {
@@ -104,6 +104,28 @@ namespace Aplication.Repository
                 if (newPdf == null) return null;
                 return page;
             }
+        }
+
+
+        public string DelSlash(string path)
+        {
+            bool isSlash = false;
+            string result = "";
+            foreach (var s in path)
+            {
+                if (s == '\\' && !isSlash)
+                {
+                    isSlash = true;
+                    result += '\\';
+                }
+                if (s != '\\')
+                {
+                    if (isSlash)
+                        isSlash = false;
+                    result += s;
+                }
+            }
+            return result;
         }
     }
 }
