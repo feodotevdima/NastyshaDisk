@@ -21,6 +21,7 @@ builder.Services.AddTransient<IFilesRepository, FilesRepository>();
 builder.Services.AddTransient<ISheredDirRepository, SheredDirRepository>();
 builder.Services.AddTransient<ISheredDirService, SheredDirService>();
 builder.Services.AddTransient<IPdfRepository, PdfRepository>();
+builder.Services.AddTransient<IUserService, UserService>();
 
 builder.Services.AddAuthentication(options =>
 {

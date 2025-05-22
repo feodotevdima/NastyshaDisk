@@ -5,6 +5,7 @@ using Core;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Authorization;
 using System.Diagnostics.Eventing.Reader;
+using System.IO;
 
 namespace FileAPI.Controllers
 {
@@ -18,9 +19,11 @@ namespace FileAPI.Controllers
         private readonly ISheredDirRepository _shredDirRepository;
         private readonly ISheredDirService _sheredDirService;
         private readonly IPdfRepository _pdfRepository;
+        private readonly IUserService _userService;
         private readonly string _folderPath;
 
-        public FilesController(IFilesService filesService, IFilesRepository filesRepository, string folderPath, ISheredDirRepository sheredDirRepository, HttpClient httpClient, ISheredDirService sheredDirService, IPdfRepository pdfRepository)
+        public FilesController(IFilesService filesService, IFilesRepository filesRepository, string folderPath, ISheredDirRepository sheredDirRepository,
+            HttpClient httpClient, ISheredDirService sheredDirService, IPdfRepository pdfRepository, IUserService userService)
         {
             _filesService = filesService;
             _filesRepository = filesRepository;
@@ -29,6 +32,7 @@ namespace FileAPI.Controllers
             _httpClient = httpClient;
             _sheredDirService = sheredDirService;
             _pdfRepository = pdfRepository;
+            _userService = userService;
         }
 
         [Route("get_files_name")]
@@ -38,18 +42,20 @@ namespace FileAPI.Controllers
         {
             try
             {
-                var userId = _filesService.GetId(Request);
+                var userId = _userService.GetId(Request);
 
                 if (isPublic)
                     userId = "public\\" + userId;
 
-                var fileNames = await _filesService.GetFileNames(userId, path, page, pageSize);
+                var fulPath = _filesService.GetPath(userId, path);
+
+                var fileNames = await _filesService.GetFileNames(fulPath, page, pageSize);
 
                 if (fileNames == null)
                     return Results.BadRequest();
 
 
-                var totalCount = await _filesService.GetTotalFileCount(userId, path);
+                var totalCount = await _filesService.GetTotalFileCount(fulPath);
 
                 return Results.Json(new
                 {
@@ -73,9 +79,9 @@ namespace FileAPI.Controllers
         {
             try
             {
-                Guid.TryParse(_filesService.GetId(Request), out var userId);
+                Guid.TryParse(_userService.GetId(Request), out var userId);
 
-                var FilePath = Path.GetFullPath(_folderPath + userId + path);
+                var FilePath = _filesService.GetPath(userId.ToString(), path);
 
 
                 var response = await _httpClient.GetAsync("http://localhost:7001/User/all");
@@ -111,9 +117,10 @@ namespace FileAPI.Controllers
         {
             try
             {
-                Guid.TryParse(_filesService.GetId(Request), out var userId);
+                Guid.TryParse(_userService.GetId(Request), out var userId);
+                var fulPath = _filesService.GetPath(userId.ToString(), path);
 
-                var owner = await _sheredDirService.GetOwnerAsync(userId, path);
+                var owner = await _sheredDirService.GetOwnerAsync(userId, fulPath);
 
                 if (owner == null)
                     return Results.StatusCode(201);
@@ -144,9 +151,10 @@ namespace FileAPI.Controllers
         {
             try
             {
-                var userId = _filesService.GetId(Request);
+                var userId = _userService.GetId(Request);
+                var fulPath = _filesService.GetPath(userId, path);
 
-                var users = await _sheredDirService.GetConnectedUsersAsync(userId, path);
+                var users = await _sheredDirService.GetConnectedUsersAsync(userId, fulPath);
 
                 if (users == null)
                     return Results.StatusCode(201);
@@ -175,16 +183,19 @@ namespace FileAPI.Controllers
         [HttpGet]
         public IResult OpenImage([FromQuery] bool isPublic, [FromQuery] string path, string userId)
         {
-            if (isPublic)
-                userId = "public\\" + userId;
             try
             {
+                if (isPublic)
+                    userId = "public\\" + userId;
+
                 if (!_filesService.IsImageFile(path))
                 {
                     return Results.BadRequest();
                 }
 
-                var fileStream = _filesRepository.GetFileStream(userId, path);
+                var fulPath = _filesService.GetPath(userId, path);
+
+                var fileStream = _filesRepository.GetFileStream(fulPath);
 
                 var mimeType = _filesService.GetImageMimeType(path);
 
@@ -204,16 +215,17 @@ namespace FileAPI.Controllers
         [Authorize]
         public async Task<IActionResult> OpenPdfAsync([FromQuery] bool isPublic, [FromQuery] string path)
         {
-            var userId = _filesService.GetId(Request);
+            var userId = _userService.GetId(Request);
+            var fulPath = _filesService.GetPath(userId, path);
 
             if (isPublic)
                 userId = "public\\" + userId;
 
-            var fileStream = _filesRepository.GetFileStream(userId, path);
+            var fileStream = _filesRepository.GetFileStream(fulPath);
 
             if (fileStream == null) return BadRequest();
 
-            var page = await _pdfRepository.GetCurrentPageAsync(userId, path);
+            var page = await _pdfRepository.GetCurrentPageAsync(fulPath);
             if (page == null)
                 return NotFound();
 
@@ -228,28 +240,30 @@ namespace FileAPI.Controllers
         [Authorize]
         public async Task<IResult> AddPdfPageAsync([FromBody] CurentPageDto dto)
         {
-            var userId = _filesService.GetId(Request);
+            var userId = _userService.GetId(Request);
+            var fulPath = _filesService.GetPath(userId, dto.Path);
 
             if (dto.IsPublic)
                 userId = "public\\" + userId;
 
-            var page = await _pdfRepository.AddCurrentPageAsync(userId, dto.Path, dto.CurentPage);
+            var page = await _pdfRepository.AddCurrentPageAsync(fulPath, dto.CurentPage);
             if (page == null) return Results.NotFound();
             return Results.Ok(page);
         }
 
-            [Route("download")]
+        [Route("download")]
         [HttpGet]
         [Authorize]
         public IActionResult DownloadFile([FromQuery] bool isPublic, [FromQuery] string path)
         {
-            var userId = _filesService.GetId(Request);
-            if (userId == null)
-                return Unauthorized();
-
             try
             {
-                var fileStream = _filesRepository.GetFileStream(userId, path);
+                var userId = _userService.GetId(Request);
+                var fulPath = _filesService.GetPath(userId, path);
+                if (userId == null)
+                    return Unauthorized();
+
+                var fileStream = _filesRepository.GetFileStream(fulPath);
                 if (fileStream == null) return BadRequest();
 
                 var fileLength = fileStream.Length;
@@ -277,7 +291,7 @@ namespace FileAPI.Controllers
         {
             try
             {
-                var userId = _filesService.GetId(Request);
+                var userId = _userService.GetId(Request);
                 if (userId == null)
                     return Results.BadRequest();
 
@@ -299,8 +313,8 @@ namespace FileAPI.Controllers
         {
             try
             {
-                var userId = _filesService.GetId(Request);
-
+                var userId = _userService.GetId(Request);
+                var fulPath = _filesService.GetPath(userId, path);
 
                 if (files == null || files.Count == 0)
                     return Results.BadRequest("No files uploaded.");
@@ -312,7 +326,7 @@ namespace FileAPI.Controllers
 
                 foreach (var file in files)
                 {
-                    string filePath = await _filesRepository.Upload(userId, path, file);
+                    string filePath = await _filesRepository.Upload(fulPath, file);
 
                     if (filePath == null)
                         return Results.BadRequest($"Failed to upload file: {file.FileName}");
@@ -335,12 +349,13 @@ namespace FileAPI.Controllers
         {
             try
             {
-                var userId = _filesService.GetId(Request);
+                var userId = _userService.GetId(Request);
+                var fulPath = _filesService.GetPath(userId, dto.path);
 
                 if (dto.isPublic)
                     userId = "public\\" + userId;
 
-                var fileNames = _filesRepository.MakeDir(userId, dto.path);
+                var fileNames = _filesRepository.MakeDir(fulPath);
 
                 if (fileNames == null)
                 {
@@ -362,12 +377,14 @@ namespace FileAPI.Controllers
         {
             try
             {
-                var userId =_filesService.GetId(Request);
+                var userId = _userService.GetId(Request);
+                var oldPath = _filesService.GetPath(userId, dto.OldPath);
+                var newPath = _filesService.GetPath(userId, dto.NewPath);
 
                 if (dto.IsPublic)
                     userId = "public\\" + userId;
 
-                var fileNames = await _filesRepository.ChangeName(userId, dto.OldPath, dto.NewPath);
+                var fileNames = await _filesRepository.ChangeName(oldPath, newPath);
                 if (fileNames == null)
                 {
                     return Results.BadRequest();
@@ -391,7 +408,7 @@ namespace FileAPI.Controllers
                 var path = dto.Path;
                 var dirName = dto.DirName;
 
-                var userId = _filesService.GetId(Request);
+                var userId = _userService.GetId(Request);
 
                 if (dto.IsPublic)
                     userId = "public\\" + userId;
@@ -401,13 +418,19 @@ namespace FileAPI.Controllers
                     return Results.BadRequest();
                 }
 
-                dirName = _filesRepository.MakeDir(userId, path + dirName);
+                var dirPath = _filesService.GetPath(userId, path+dirName);
+
+                dirName = _filesRepository.MakeDir(dirPath);
+
                 string[] parts = dirName.Split("\\");
+
                 dirName = parts.Length > 0 ? parts[parts.Length-1] : path;
 
                 foreach (var name in names)
                 {
-                    var fileNames = await _filesRepository.ChangeName(userId, path + name, path+ dirName + "\\" + name);
+                    var oldPath = _filesService.GetPath(userId, path+name);
+                    var newPath = _filesService.GetPath(userId, dirName + "\\" + name);
+                    var fileNames = await _filesRepository.ChangeName(oldPath, newPath);
                 }
                 return Results.Ok();
             }
@@ -423,12 +446,16 @@ namespace FileAPI.Controllers
         {
             try
             {
-                var userId = _filesService.GetId(Request);
-
+                var userId = _userService.GetId(Request);
                 if (dto.IsPublic)
                     userId = "public\\" + userId;
 
-                var fileNames = await _filesRepository.Delete(userId, dto.Pathes);
+                for (int i = 0; i<dto.Pathes.Count(); i++)
+                {
+                    dto.Pathes[i] = _filesService.GetPath(userId, dto.Pathes[i]);
+                }
+
+                var fileNames = await _filesRepository.Delete(dto.Pathes);
                 if (fileNames == null)
                 {
                     return Results.BadRequest();
@@ -449,9 +476,9 @@ namespace FileAPI.Controllers
         {
             try
             {
-                var ownerUserId = _filesService.GetId(Request);
+                var ownerUserId = _userService.GetId(Request);
 
-                string newPath = await _filesService.CreateSheredDirAsync(ownerUserId, dto.Path, dto.ConnectedUserId);
+                string newPath = await _sheredDirService.CreateSheredDirAsync(ownerUserId, dto.Path, dto.ConnectedUserId);
                 if (newPath == null)
                     return Results.BadRequest();
                 return Results.Ok(newPath);
@@ -469,9 +496,9 @@ namespace FileAPI.Controllers
         {
             try
             {
-                var ownerUserId = _filesService.GetId(Request);
+                var ownerUserId = _userService.GetId(Request);
 
-                var user = await _filesService.DeleteConnectedUserAsync(ownerUserId, dto.Path, dto.ConnectedUserId);
+                var user = await _sheredDirService.DeleteConnectedUserAsync(ownerUserId, dto.Path, dto.ConnectedUserId);
 
                 if (user == null)
                     return Results.BadRequest();

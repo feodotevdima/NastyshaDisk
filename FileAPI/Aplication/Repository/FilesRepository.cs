@@ -21,29 +21,26 @@ namespace Aplication.Repository
         }
 
 
-        public FileStream? GetFileStream(string userId, string path)
+        public FileStream? GetFileStream(string path)
         {
-            var filePath = Path.Combine(_folderPath + userId + "\\" + path);
-
-            if (File.Exists(filePath))
+            if (File.Exists(path))
             {
-                return new FileStream(filePath, FileMode.Open, FileAccess.Read);
+                return new FileStream(path, FileMode.Open, FileAccess.Read);
             }
             return null;
         }
 
 
 
-        public async Task<string> Upload(string userId, string path, IFormFile file)
+        public async Task<string> Upload(string path, IFormFile file)
         {
             if (file == null || file.Length == 0)
             {
                 return null;
             }
 
-            var directory = _folderPath + userId + "\\" + path;
             var originalFileName = file.FileName;
-            var filePath = directory + originalFileName;
+            var filePath = path + originalFileName;
 
             if (File.Exists(filePath))
             {
@@ -54,7 +51,7 @@ namespace Aplication.Repository
                 do
                 {
                     var newFileName = $"{fileNameWithoutExt} ({counter}){fileExt}";
-                    filePath = directory + newFileName;
+                    filePath = path + newFileName;
                     counter++;
                 } while (File.Exists(filePath));
             }
@@ -74,28 +71,26 @@ namespace Aplication.Repository
         }
 
 
-        public string? MakeDir(String userId, string path)
-        {
-            string folderPath = _folderPath + userId + "\\" + path;
-
-            if (Directory.Exists(folderPath))
+        public string? MakeDir(string path)
+        { 
+            if (Directory.Exists(path))
             {
-                var originalFolderPath = folderPath;
+                var originalFolderPath = path;
                 int counter = 1;
                 do
                 {
                     var newfloderName = $"{originalFolderPath} ({counter})";
-                    folderPath = newfloderName;
+                    path = newfloderName;
                     counter++;
-                } while (Directory.Exists(folderPath));
+                } while (Directory.Exists(path));
             }
 
             try
             {
-                if (!Directory.Exists(folderPath))
+                if (!Directory.Exists(path))
                 {
-                    Directory.CreateDirectory(folderPath);
-                    return folderPath;
+                    Directory.CreateDirectory(path);
+                    return path;
                 }
                 return null;
             }
@@ -106,7 +101,7 @@ namespace Aplication.Repository
         }
 
 
-        public async Task<List<string>>? Delete(string userId, List<string> paths)
+        public async Task<List<string>>? Delete(List<string> paths)
         {
             try
             {
@@ -114,25 +109,21 @@ namespace Aplication.Repository
                 {
                     foreach (var path in paths)
                     {
-                        var filePath = Path.GetFullPath(_folderPath + userId + "\\" + path);
-
                         if(Path.GetExtension(path) == ".pdf")
                         {
-                            var pdfPath = DelSlash(_folderPath + userId + path);
-                            await _pdfRepository.RemovePdfAsync(pdfPath);
+                            await _pdfRepository.RemovePdfAsync(path);
                         }
 
-                        Console.WriteLine(filePath);
-                        if (File.Exists(filePath))
+                        if (File.Exists(path))
                         {
-                            File.Delete(filePath);
+                            File.Delete(path);
                         }
-                        else if (Directory.Exists(filePath))
+                        else if (Directory.Exists(path))
                         {
-                            FileAttributes attributes = File.GetAttributes(filePath);
+                            FileAttributes attributes = File.GetAttributes(path);
                             if ((attributes & FileAttributes.ReparsePoint) == FileAttributes.ReparsePoint)
                             {
-                                var user = await _sheredDirRepository.GetConnectedUserBySimLinkLocationAsync(filePath);
+                                var user = await _sheredDirRepository.GetConnectedUserBySimLinkLocationAsync(path);
 
                                 if (user != null)
                                 {
@@ -149,8 +140,7 @@ namespace Aplication.Repository
                             }
                             else
                             {
-                                Guid.TryParse(userId, out var id);
-                                var owner = await _sheredDirRepository.GetSheredDirByDirLocationAsync(Path.GetFullPath(filePath));
+                                var owner = await _sheredDirRepository.GetSheredDirByDirLocationAsync(Path.GetFullPath(path));
                                 if (owner != null)
                                 {
                                     var users = await _sheredDirRepository.GetConnectedUsersBySheredDirIdAsync(owner.Id);
@@ -163,7 +153,7 @@ namespace Aplication.Repository
                                 }
                             }
 
-                            Directory.Delete(filePath, true);
+                            Directory.Delete(path, true);
                         }
                     }
                 });
@@ -179,11 +169,6 @@ namespace Aplication.Repository
         {
             try
             {
-                if (Path.GetExtension(path) == ".pdf")
-                {
-                    _pdfRepository.RemovePdfAsync(DelSlash(path));
-                }
-
                 if (File.Exists(path))
                 {
                     File.Delete(path);
@@ -200,40 +185,36 @@ namespace Aplication.Repository
             }
         }
 
-        public async Task<string> ChangeName(string userId, string oldPath, string newPath)
+        public async Task<string> ChangeName(string oldPath, string newPath)
         {
             try
             {
-                var oldFilePath = Path.GetFullPath(_folderPath + userId + "\\" + oldPath);
-                var newFilePath = Path.GetFullPath(_folderPath + userId + "\\" + newPath);
-
                 if (Path.GetExtension(oldPath) == ".pdf")
                 {
-                    var pdfPath = DelSlash(_folderPath + userId + "\\" + oldPath);
-                    var pdf = await _pdfRepository.GetPdfByPathAsync(pdfPath);
+                    var pdf = await _pdfRepository.GetPdfByPathAsync(oldPath);
                     if (pdf != null)
                     {
-                        pdf.Path = DelSlash(_folderPath + userId + "\\" + newPath);
+                        pdf.Path = newPath;
                         await _pdfRepository.UpdatePdfAsync(pdf);
                     }
                 }
 
-                if (File.Exists(oldFilePath))
+                if (File.Exists(oldPath))
                 {
-                    File.Move(oldFilePath, newFilePath);
+                    File.Move(oldPath, newPath);
                 }
-                else if (Directory.Exists(oldFilePath))
+                else if (Directory.Exists(oldPath))
                 {
-                    Directory.Move(oldFilePath, newFilePath);
+                    Directory.Move(oldPath, newPath);
 
-                    FileAttributes attributes = File.GetAttributes(newFilePath);
+                    FileAttributes attributes = File.GetAttributes(newPath);
                     if ((attributes & FileAttributes.ReparsePoint) == FileAttributes.ReparsePoint)
                     {
-                        var user = await _sheredDirRepository.GetConnectedUserBySimLinkLocationAsync(oldFilePath);
+                        var user = await _sheredDirRepository.GetConnectedUserBySimLinkLocationAsync(oldPath);
 
                         if (user != null)
                         {
-                            user.SimLinkLocation = newFilePath;
+                            user.SimLinkLocation = newPath;
                             var changeUser = await _sheredDirRepository.UpdateConnectedUserAsync(user);
                         }
 
@@ -241,17 +222,16 @@ namespace Aplication.Repository
 
                     else
                     {
-                        Guid.TryParse(userId, out var id);
-                        var owner = await _sheredDirRepository.GetSheredDirByDirLocationAsync(Path.GetFullPath(oldFilePath));
+                        var owner = await _sheredDirRepository.GetSheredDirByDirLocationAsync(Path.GetFullPath(oldPath));
                         if (owner != null)
                         {
                             var users = await _sheredDirRepository.GetConnectedUsersBySheredDirIdAsync(owner.Id);
                             foreach (var user in users)
                             {
                                 Directory.Delete(user.SimLinkLocation, true);
-                                CreateSymlinkWindows(newFilePath, user.SimLinkLocation);
+                                CreateSymlinkWindows(newPath, user.SimLinkLocation);
                             }
-                            owner.DirLocation = newFilePath;
+                            owner.DirLocation = newPath;
                             await _sheredDirRepository.UpdateSheredDirAsync(owner);
                         }
                     }
@@ -301,28 +281,6 @@ namespace Aplication.Repository
                 return symlinkPath;
             }
             return null;
-        }
-
-
-        public string DelSlash(string path)
-        {
-            bool isSlash = false;
-            string result = "";
-            foreach(var s in path)
-            {
-                if(s == '\\' && !isSlash)
-                {
-                    isSlash = true;
-                    result += '\\';
-                }
-                if (s != '\\')
-                {
-                    if (isSlash)
-                        isSlash = false;
-                    result += s;
-                }
-            }
-            return result;
         }
     }
 }

@@ -14,7 +14,7 @@ namespace Aplication.Interfeses
         Task<PdfModel> AddPdfAsync(PdfModel pdf);
         Task<PdfModel> RemovePdfAsync(string path);
         Task<PdfModel> UpdatePdfAsync(PdfModel pdf);
-        Task<int?> GetCurrentPageAsync(string userId, string path);
-        Task<int?> AddCurrentPageAsync(string userId, string path, int page);
+        Task<int?> GetCurrentPageAsync(string path);
+        Task<int?> AddCurrentPageAsync(string path, int page);
     }
 }

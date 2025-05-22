@@ -11,5 +11,7 @@ namespace Aplication.Interfeses
     {
         Task<SheredDirOwner?> GetOwnerAsync(Guid userId, string path);
         Task<List<ConnectedUser>> GetConnectedUsersAsync(string userId, string path);
+        Task<string> CreateSheredDirAsync(string ownerUserId, string path, string id);
+        Task<ConnectedUser> DeleteConnectedUserAsync(string ownerUserId, string path, string connectedUserId);
     }
 }

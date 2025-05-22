@@ -67,14 +67,13 @@ namespace Aplication.Repository
         }
 
 
-        public async Task<int?> GetCurrentPageAsync(string userId, string path)
+        public async Task<int?> GetCurrentPageAsync(string path)
         {
-            var foolPath = DelSlash(_folderPath + userId + "\\" + path);
-            var pdf = await GetPdfByPathAsync(foolPath);
+            var pdf = await GetPdfByPathAsync(path);
             if (pdf == null)
             {
                 pdf = new PdfModel();
-                pdf.Path = foolPath;
+                pdf.Path = path;
                 pdf.CurrentPage = 1;
                 var newPdf = await AddPdfAsync(pdf);
                 if (newPdf == null) return null;
@@ -84,14 +83,13 @@ namespace Aplication.Repository
                 return pdf.CurrentPage;
         }
 
-        public async Task<int?> AddCurrentPageAsync(string userId, string path, int page)
+        public async Task<int?> AddCurrentPageAsync(string path, int page)
         {
-            var foolPath = DelSlash(_folderPath + userId + "\\" + path);
-            var pdf = await GetPdfByPathAsync(foolPath);
+            var pdf = await GetPdfByPathAsync(path);
             if (pdf == null)
             {
                 pdf = new PdfModel();
-                pdf.Path = foolPath;
+                pdf.Path = path;
                 pdf.CurrentPage = page;
                 var newPdf = await AddPdfAsync(pdf);
                 if (newPdf == null) return null;
@@ -104,28 +102,6 @@ namespace Aplication.Repository
                 if (newPdf == null) return null;
                 return page;
             }
-        }
-
-
-        public string DelSlash(string path)
-        {
-            bool isSlash = false;
-            string result = "";
-            foreach (var s in path)
-            {
-                if (s == '\\' && !isSlash)
-                {
-                    isSlash = true;
-                    result += '\\';
-                }
-                if (s != '\\')
-                {
-                    if (isSlash)
-                        isSlash = false;
-                    result += s;
-                }
-            }
-            return result;
         }
     }
 }
