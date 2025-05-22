@@ -91,6 +91,14 @@ namespace Aplication.Services
             };
         }
 
+        public string GetId(HttpRequest request)
+        {
+            var token = request.Headers["Authorization"].ToString();
+            token = token.Substring(7);
+            var userId = GetUserIdFromToken(token);
+            return userId;
+        }
+
         public string? GetUserIdFromToken(string token)
         {
             var handler = new JwtSecurityTokenHandler();
@@ -210,8 +218,5 @@ namespace Aplication.Services
                 return volume;
             }
         }
-
-
-
     }
 }

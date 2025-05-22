@@ -1,4 +1,5 @@
 ﻿using Core;
+using Microsoft.AspNetCore.Http;
 using Presistence.Dtos;
 
 namespace Aplication.Interfeses
@@ -10,6 +11,7 @@ namespace Aplication.Interfeses
         string GetImageMimeType(string fileName);
         string GetMimeType(string extension);
         bool IsImageFile(string fileName);
+        string GetId(HttpRequest request);
         string? GetUserIdFromToken(string token);
         Task<string> CreateSheredDirAsync(string ownerUserId, string path, string id);
         Task<ConnectedUser> DeleteConnectedUserAsync(string ownerUserId, string path, string connectedUserId);

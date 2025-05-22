@@ -38,9 +38,7 @@ namespace FileAPI.Controllers
         {
             try
             {
-                var token = Request.Headers["Authorization"].ToString();
-                token = token.Substring(7);
-                var userId = _filesService.GetUserIdFromToken(token);
+                var userId = _filesService.GetId(Request);
 
                 if (isPublic)
                     userId = "public\\" + userId;
@@ -75,9 +73,7 @@ namespace FileAPI.Controllers
         {
             try
             {
-                var token = Request.Headers["Authorization"].ToString();
-                token = token.Substring(7);
-                Guid.TryParse(_filesService.GetUserIdFromToken(token), out var userId);
+                Guid.TryParse(_filesService.GetId(Request), out var userId);
 
                 var FilePath = Path.GetFullPath(_folderPath + userId + path);
 
@@ -115,9 +111,7 @@ namespace FileAPI.Controllers
         {
             try
             {
-                var token = Request.Headers["Authorization"].ToString();
-                token = token.Substring(7);
-                Guid.TryParse(_filesService.GetUserIdFromToken(token), out var userId);
+                Guid.TryParse(_filesService.GetId(Request), out var userId);
 
                 var owner = await _sheredDirService.GetOwnerAsync(userId, path);
 
@@ -150,9 +144,7 @@ namespace FileAPI.Controllers
         {
             try
             {
-                var token = Request.Headers["Authorization"].ToString();
-                token = token.Substring(7);
-                var userId = _filesService.GetUserIdFromToken(token);
+                var userId = _filesService.GetId(Request);
 
                 var users = await _sheredDirService.GetConnectedUsersAsync(userId, path);
 
@@ -212,9 +204,7 @@ namespace FileAPI.Controllers
         [Authorize]
         public async Task<IActionResult> OpenPdfAsync([FromQuery] bool isPublic, [FromQuery] string path)
         {
-            var token = Request.Headers["Authorization"].ToString();
-            token = token.Substring(7);
-            var userId = _filesService.GetUserIdFromToken(token);
+            var userId = _filesService.GetId(Request);
 
             if (isPublic)
                 userId = "public\\" + userId;
@@ -238,9 +228,7 @@ namespace FileAPI.Controllers
         [Authorize]
         public async Task<IResult> AddPdfPageAsync([FromBody] CurentPageDto dto)
         {
-            var token = Request.Headers["Authorization"].ToString();
-            token = token.Substring(7);
-            var userId = _filesService.GetUserIdFromToken(token);
+            var userId = _filesService.GetId(Request);
 
             if (dto.IsPublic)
                 userId = "public\\" + userId;
@@ -255,9 +243,7 @@ namespace FileAPI.Controllers
         [Authorize]
         public IActionResult DownloadFile([FromQuery] bool isPublic, [FromQuery] string path)
         {
-            var token = Request.Headers["Authorization"].ToString();
-            token = token.Substring(7);
-            var userId = _filesService.GetUserIdFromToken(token);
+            var userId = _filesService.GetId(Request);
             if (userId == null)
                 return Unauthorized();
 
@@ -291,9 +277,7 @@ namespace FileAPI.Controllers
         {
             try
             {
-                var token = Request.Headers["Authorization"].ToString();
-                token = token.Substring(7);
-                var userId = _filesService.GetUserIdFromToken(token);
+                var userId = _filesService.GetId(Request);
                 if (userId == null)
                     return Results.BadRequest();
 
@@ -315,9 +299,7 @@ namespace FileAPI.Controllers
         {
             try
             {
-                var token = Request.Headers["Authorization"].ToString();
-                token = token.Substring(7);
-                var userId = _filesService.GetUserIdFromToken(token);
+                var userId = _filesService.GetId(Request);
 
 
                 if (files == null || files.Count == 0)
@@ -353,9 +335,7 @@ namespace FileAPI.Controllers
         {
             try
             {
-                var token = Request.Headers["Authorization"].ToString();
-                token = token.Substring(7);
-                var userId = _filesService.GetUserIdFromToken(token);
+                var userId = _filesService.GetId(Request);
 
                 if (dto.isPublic)
                     userId = "public\\" + userId;
@@ -382,9 +362,7 @@ namespace FileAPI.Controllers
         {
             try
             {
-                var token = Request.Headers["Authorization"].ToString();
-                token = token.Substring(7);
-                var userId = _filesService.GetUserIdFromToken(token);
+                var userId =_filesService.GetId(Request);
 
                 if (dto.IsPublic)
                     userId = "public\\" + userId;
@@ -413,9 +391,7 @@ namespace FileAPI.Controllers
                 var path = dto.Path;
                 var dirName = dto.DirName;
 
-                var token = Request.Headers["Authorization"].ToString();
-                token = token.Substring(7);
-                var userId = _filesService.GetUserIdFromToken(token);
+                var userId = _filesService.GetId(Request);
 
                 if (dto.IsPublic)
                     userId = "public\\" + userId;
@@ -447,9 +423,7 @@ namespace FileAPI.Controllers
         {
             try
             {
-                var token = Request.Headers["Authorization"].ToString();
-                token = token.Substring(7);
-                var userId = _filesService.GetUserIdFromToken(token);
+                var userId = _filesService.GetId(Request);
 
                 if (dto.IsPublic)
                     userId = "public\\" + userId;
@@ -475,9 +449,7 @@ namespace FileAPI.Controllers
         {
             try
             {
-                var token = Request.Headers["Authorization"].ToString();
-                token = token.Substring(7);
-                var ownerUserId = _filesService.GetUserIdFromToken(token);
+                var ownerUserId = _filesService.GetId(Request);
 
                 string newPath = await _filesService.CreateSheredDirAsync(ownerUserId, dto.Path, dto.ConnectedUserId);
                 if (newPath == null)
@@ -497,9 +469,7 @@ namespace FileAPI.Controllers
         {
             try
             {
-                var token = Request.Headers["Authorization"].ToString();
-                token = token.Substring(7);
-                var ownerUserId = _filesService.GetUserIdFromToken(token);
+                var ownerUserId = _filesService.GetId(Request);
 
                 var user = await _filesService.DeleteConnectedUserAsync(ownerUserId, dto.Path, dto.ConnectedUserId);
 
