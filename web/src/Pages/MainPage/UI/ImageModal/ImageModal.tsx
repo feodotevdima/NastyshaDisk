@@ -2,6 +2,7 @@ import React, { useState, useEffect, useCallback } from 'react';
 import { getToken } from '../../../../Shered/TokenProvider';
 import axios from 'axios';
 import './ImageModal.css';
+import { Ip } from '../../../../Shered/TokenProvider';
 
 interface ImageModalProps {
   modalVisible: boolean;
@@ -22,7 +23,7 @@ const ImageModal: React.FC<ImageModalProps> = ({
   useEffect(() => {
     const fetchId = async () => {
       const token = await getToken();
-      const query = `http://localhost:7001/User/token`;
+      const query = Ip+`:7001/User/token`;
       const response = await axios.get(query, {
         headers: {
           'Accept': '*/*',
@@ -78,7 +79,7 @@ const ImageModal: React.FC<ImageModalProps> = ({
   }
 
   const getImageUri = (imgPath: string) => {
-    return `http://localhost:7003/Files/open_image/${id}?isPublic=false&path=${encodeURIComponent(imgPath)}`;
+    return Ip+`:7003/Files/open_image/${id}?isPublic=false&path=${encodeURIComponent(imgPath)}`;
   };
 
   const currentPath = images.length > 0 ? images[currentImageIndex] : null;

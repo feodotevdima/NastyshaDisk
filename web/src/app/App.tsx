@@ -52,6 +52,7 @@ function App() {
             <Route path="/" element={<MainPage />} />
             <Route path="/pdf" element={<PDFViewer />} />
             <Route path="/share" element={<SharePage />} />
+            <Route path="*" element={<Navigate to="/" replace />} />
           </Routes>
         </BrowserRouter>
         </div>

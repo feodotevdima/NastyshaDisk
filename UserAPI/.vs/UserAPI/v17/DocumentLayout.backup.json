@@ -3,20 +3,20 @@
   "WorkspaceRootPath": "C:\\NastyshaDisk\\UserAPI\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{7ED8B142-895C-459A-A8D4-C9D8208A4187}|WebAPI\\UserAPI.csproj|c:\\nastyshadisk\\userapi\\webapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7ED8B142-895C-459A-A8D4-C9D8208A4187}|WebAPI\\UserAPI.csproj|solutionrelative:webapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7ED8B142-895C-459A-A8D4-C9D8208A4187}|WebAPI\\UserAPI.csproj|c:\\nastyshadisk\\userapi\\webapi\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7ED8B142-895C-459A-A8D4-C9D8208A4187}|WebAPI\\UserAPI.csproj|solutionrelative:webapi\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9730AAAA-F3B1-4E30-B859-0CCA6DFB00C5}|Aplication\\Aplication.csproj|c:\\nastyshadisk\\userapi\\aplication\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9730AAAA-F3B1-4E30-B859-0CCA6DFB00C5}|Aplication\\Aplication.csproj|solutionrelative:aplication\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{9730AAAA-F3B1-4E30-B859-0CCA6DFB00C5}|Aplication\\Aplication.csproj|c:\\nastyshadisk\\userapi\\aplication\\repository\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9730AAAA-F3B1-4E30-B859-0CCA6DFB00C5}|Aplication\\Aplication.csproj|solutionrelative:aplication\\repository\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9730AAAA-F3B1-4E30-B859-0CCA6DFB00C5}|Aplication\\Aplication.csproj|c:\\nastyshadisk\\userapi\\aplication\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9730AAAA-F3B1-4E30-B859-0CCA6DFB00C5}|Aplication\\Aplication.csproj|solutionrelative:aplication\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7ED8B142-895C-459A-A8D4-C9D8208A4187}|WebAPI\\UserAPI.csproj|c:\\nastyshadisk\\userapi\\webapi\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7ED8B142-895C-459A-A8D4-C9D8208A4187}|WebAPI\\UserAPI.csproj|solutionrelative:webapi\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7ED8B142-895C-459A-A8D4-C9D8208A4187}|WebAPI\\UserAPI.csproj|c:\\nastyshadisk\\userapi\\webapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7ED8B142-895C-459A-A8D4-C9D8208A4187}|WebAPI\\UserAPI.csproj|solutionrelative:webapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C8304F27-5CB1-4F09-92DF-1AC7556AEF65}|Core\\Core.csproj|c:\\nastyshadisk\\userapi\\core\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -38,7 +38,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Bookmark",
@@ -78,7 +78,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "UserRepository.cs",
               "DocumentMoniker": "C:\\NastyshaDisk\\UserAPI\\Aplication\\Repository\\UserRepository.cs",
               "RelativeDocumentMoniker": "Aplication\\Repository\\UserRepository.cs",
@@ -102,19 +102,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "UserService.cs",
               "DocumentMoniker": "C:\\NastyshaDisk\\UserAPI\\Aplication\\Services\\UserService.cs",
               "RelativeDocumentMoniker": "Aplication\\Services\\UserService.cs",
               "ToolTip": "C:\\NastyshaDisk\\UserAPI\\Aplication\\Services\\UserService.cs",
               "RelativeToolTip": "Aplication\\Services\\UserService.cs",
-              "ViewState": "AgIAACcAAAAAAAAAAAAAADgAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAABUAAAAAAAAAAAAAADgAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-03T19:45:52.85Z"
+              "WhenOpened": "2024-12-03T19:45:52.85Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\NastyshaDisk\\UserAPI\\WebAPI\\Program.cs",
               "RelativeDocumentMoniker": "WebAPI\\Program.cs",
@@ -122,21 +123,19 @@
               "RelativeToolTip": "WebAPI\\Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-25T22:27:56.764Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-25T22:27:56.764Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "UserController.cs",
               "DocumentMoniker": "C:\\NastyshaDisk\\UserAPI\\WebAPI\\Controllers\\UserController.cs",
               "RelativeDocumentMoniker": "WebAPI\\Controllers\\UserController.cs",
               "ToolTip": "C:\\NastyshaDisk\\UserAPI\\WebAPI\\Controllers\\UserController.cs",
               "RelativeToolTip": "WebAPI\\Controllers\\UserController.cs",
-              "ViewState": "AgIAAD8AAAAAAAAAAAAAAEYAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAEUAAAAAAAAAAAAAAFMAAAALAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-25T20:53:43.013Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-25T20:53:43.013Z"
             }
           ]
         }

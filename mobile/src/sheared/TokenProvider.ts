@@ -4,7 +4,7 @@ import axios from 'axios';
 function TokenProvider(){
 
     // const Ip : string ="http://192.168.253.222";
-    const Ip : string ="http://192.168.10.27";
+    const Ip : string ="http://192.168.54.222";
 
     const getExpirationDate = (jwtToken : string) => {
         if ((jwtToken==null) || (jwtToken=="")|| (jwtToken==" ")) {

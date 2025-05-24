@@ -17,6 +17,7 @@ import { uploadFiles } from '../../API/AddFiles';
 import FileResult from '../../../../Entities/FileResult';
 import NewDir from '../../API/NewDir';
 import UnionFiles from '../../API/UnionFiles';
+import { isMobile } from 'react-device-detect';
 
 interface FileScreenProps {
   longPress: string[] | null;
@@ -257,7 +258,6 @@ const FileScreen: React.FC<FileScreenProps> = ({ longPress, setLongPress, SetPat
       }
       else if(extension.toLocaleLowerCase() == 'pdf')
       {
-        // console.log(2)
         navigate('/pdf', { state: { path: GetPathString(Path) + name, isPublic: false} });
       }
     }
@@ -310,6 +310,25 @@ const FileScreen: React.FC<FileScreenProps> = ({ longPress, setLongPress, SetPat
     setExtension('');
   };
 
+  const toMobile = (file: string) =>{
+    if(isMobile)
+    {
+      const maxLength = 10;
+      if (file.length > maxLength) 
+      {    
+        let ext = getExtension(file)
+        if(ext == null)
+          ext = '';
+        return file.slice(0, maxLength) + '...'+ext;  
+      }
+      else 
+        return file;
+    }
+    else
+    {
+      return file;
+    }
+  }
   const handleDownload = async (fileName: string) => {
     if (downloadStates[fileName]?.loading) 
       return;
@@ -402,7 +421,7 @@ const FileScreen: React.FC<FileScreenProps> = ({ longPress, setLongPress, SetPat
               onClick={() => pressPath(index)}
               className={`path-button ${isDragOver ? 'drag-over' : ''}`}
             >
-              {value}
+              {toMobile(value)}
             </button>
             {index !== Path.length - 1 && <span className="path-separator"> / </span>}
           </div>
@@ -498,7 +517,7 @@ const FileScreen: React.FC<FileScreenProps> = ({ longPress, setLongPress, SetPat
     return (
       <div 
         className={`list-item-wrapper ${isDragOver ? 'drag-over' : ''}`}
-        draggable={!longPress}
+        draggable={!isMobile && !longPress}
         onDragStart={handleDragStart}
         onDragEnd={handleDragEnd}
         onDragOver={handleDragOver}
@@ -514,10 +533,11 @@ const FileScreen: React.FC<FileScreenProps> = ({ longPress, setLongPress, SetPat
               e.preventDefault();
                handleMenuPress(e, name);
             }}
+            // onTouchStart={() => }
             className="item-button"
           >
             <GetIcon name={name} />
-            <span className="item-text">{name}</span>
+            <span className="item-text">{toMobile(name)}</span>
             
             {!longPress && (
               <>
