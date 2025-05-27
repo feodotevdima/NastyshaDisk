@@ -2,6 +2,7 @@ using Application.Interfeses;
 using Application.Repository;
 using Application.Services;
 using Core.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json.Linq;
 using Presistence.Contracts;
@@ -20,12 +21,6 @@ namespace AuthenticationAPI.Controllers
         {
             _authService = authService;
             _sessionRepository = sessionRepository;
-        }
-
-        [HttpGet]
-        public async Task<IResult> SessionsAsync()
-        {
-            return Results.Json(await _sessionRepository.GetSessionsAsync());
         }
 
         [HttpDelete("logout/{token}")]

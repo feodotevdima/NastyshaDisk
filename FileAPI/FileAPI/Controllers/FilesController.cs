@@ -47,6 +47,12 @@ namespace FileAPI.Controllers
                 if (isPublic)
                     userId = "public\\" + userId;
 
+                var userPath = _filesService.GetPath(userId, "");
+                if (!Path.Exists(userPath))
+                {
+                    _filesRepository.MakeDir(userPath);
+                }
+
                 var fulPath = _filesService.GetPath(userId, path);
 
                 var fileNames = await _filesService.GetFileNames(fulPath, page, pageSize);
@@ -83,8 +89,22 @@ namespace FileAPI.Controllers
 
                 var FilePath = _filesService.GetPath(userId.ToString(), path);
 
+                var authHeader = Request.Headers["Authorization"].FirstOrDefault();
 
-                var response = await _httpClient.GetAsync("http://localhost:7001/User/all");
+                var request = new HttpRequestMessage(HttpMethod.Get, "http://localhost:7001/User/all");
+
+                if (!string.IsNullOrEmpty(authHeader))
+                {
+                    request.Headers.Add("Authorization", authHeader);
+                }
+
+                var response = await _httpClient.SendAsync(request);
+
+                if (!response.IsSuccessStatusCode)
+                {
+                    return Results.BadRequest();
+                }
+
                 var allUsers = await response.Content.ReadFromJsonAsync<List<UserModel>>();
 
                 var owner = await _shredDirRepository.GetSheredDirByDirLocationAsync(FilePath);
@@ -95,7 +115,6 @@ namespace FileAPI.Controllers
                     {
                         allUsers = allUsers.Where(item => item.Id != user.ConnectedUserId).ToList();
                     }
-
                 }
 
                 var users = allUsers.Where(item => item.Id != userId);
@@ -104,7 +123,6 @@ namespace FileAPI.Controllers
             }
             catch
             {
-
                 return Results.Problem();
             }
         }

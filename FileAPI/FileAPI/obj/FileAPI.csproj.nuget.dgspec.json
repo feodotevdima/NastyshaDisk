@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\NastyshaDisk\\FileAPI\\FileAPI\\FileAPI.csproj": {}
+    "D:\\NastyshaDisk\\FileAPI\\FileAPI\\FileAPI.csproj": {}
   },
   "projects": {
-    "C:\\NastyshaDisk\\FileAPI\\Aplication\\Aplication.csproj": {
+    "D:\\NastyshaDisk\\FileAPI\\Aplication\\Aplication.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\NastyshaDisk\\FileAPI\\Aplication\\Aplication.csproj",
+        "projectUniqueName": "D:\\NastyshaDisk\\FileAPI\\Aplication\\Aplication.csproj",
         "projectName": "Aplication",
-        "projectPath": "C:\\NastyshaDisk\\FileAPI\\Aplication\\Aplication.csproj",
-        "packagesPath": "C:\\Users\\Анастасия Феодотьева\\.nuget\\packages\\",
-        "outputPath": "C:\\NastyshaDisk\\FileAPI\\Aplication\\obj\\",
+        "projectPath": "D:\\NastyshaDisk\\FileAPI\\Aplication\\Aplication.csproj",
+        "packagesPath": "C:\\Users\\Дима\\.nuget\\packages\\",
+        "outputPath": "D:\\NastyshaDisk\\FileAPI\\Aplication\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Анастасия Феодотьева\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Дима\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -33,11 +33,11 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\NastyshaDisk\\FileAPI\\Core\\Core.csproj": {
-                "projectPath": "C:\\NastyshaDisk\\FileAPI\\Core\\Core.csproj"
+              "D:\\NastyshaDisk\\FileAPI\\Core\\Core.csproj": {
+                "projectPath": "D:\\NastyshaDisk\\FileAPI\\Core\\Core.csproj"
               },
-              "C:\\NastyshaDisk\\FileAPI\\Presistence\\Presistence.csproj": {
-                "projectPath": "C:\\NastyshaDisk\\FileAPI\\Presistence\\Presistence.csproj"
+              "D:\\NastyshaDisk\\FileAPI\\Presistence\\Presistence.csproj": {
+                "projectPath": "D:\\NastyshaDisk\\FileAPI\\Presistence\\Presistence.csproj"
               }
             }
           }
@@ -51,8 +51,7 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        },
-        "SdkAnalysisLevel": "9.0.200"
+        }
       },
       "frameworks": {
         "net8.0": {
@@ -62,9 +61,9 @@
               "target": "Package",
               "version": "[8.0.13, )"
             },
-            "Microsoft.EntityFrameworkCore.Sqlite": {
+            "Npgsql.EntityFrameworkCore.PostgreSQL": {
               "target": "Package",
-              "version": "[9.0.2, )"
+              "version": "[7.0.18, )"
             }
           },
           "imports": [
@@ -83,24 +82,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.203/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\NastyshaDisk\\FileAPI\\Core\\Core.csproj": {
+    "D:\\NastyshaDisk\\FileAPI\\Core\\Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\NastyshaDisk\\FileAPI\\Core\\Core.csproj",
+        "projectUniqueName": "D:\\NastyshaDisk\\FileAPI\\Core\\Core.csproj",
         "projectName": "Core",
-        "projectPath": "C:\\NastyshaDisk\\FileAPI\\Core\\Core.csproj",
-        "packagesPath": "C:\\Users\\Анастасия Феодотьева\\.nuget\\packages\\",
-        "outputPath": "C:\\NastyshaDisk\\FileAPI\\Core\\obj\\",
+        "projectPath": "D:\\NastyshaDisk\\FileAPI\\Core\\Core.csproj",
+        "packagesPath": "C:\\Users\\Дима\\.nuget\\packages\\",
+        "outputPath": "D:\\NastyshaDisk\\FileAPI\\Core\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Анастасия Феодотьева\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Дима\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -127,8 +126,7 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        },
-        "SdkAnalysisLevel": "9.0.200"
+        }
       },
       "frameworks": {
         "net8.0": {
@@ -138,9 +136,9 @@
               "target": "Package",
               "version": "[8.0.13, )"
             },
-            "Microsoft.EntityFrameworkCore.Sqlite": {
+            "Npgsql.EntityFrameworkCore.PostgreSQL": {
               "target": "Package",
-              "version": "[9.0.2, )"
+              "version": "[7.0.18, )"
             }
           },
           "imports": [
@@ -159,24 +157,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.203/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\NastyshaDisk\\FileAPI\\FileAPI\\FileAPI.csproj": {
+    "D:\\NastyshaDisk\\FileAPI\\FileAPI\\FileAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\NastyshaDisk\\FileAPI\\FileAPI\\FileAPI.csproj",
+        "projectUniqueName": "D:\\NastyshaDisk\\FileAPI\\FileAPI\\FileAPI.csproj",
         "projectName": "FileAPI",
-        "projectPath": "C:\\NastyshaDisk\\FileAPI\\FileAPI\\FileAPI.csproj",
-        "packagesPath": "C:\\Users\\Анастасия Феодотьева\\.nuget\\packages\\",
-        "outputPath": "C:\\NastyshaDisk\\FileAPI\\FileAPI\\obj\\",
+        "projectPath": "D:\\NastyshaDisk\\FileAPI\\FileAPI\\FileAPI.csproj",
+        "packagesPath": "C:\\Users\\Дима\\.nuget\\packages\\",
+        "outputPath": "D:\\NastyshaDisk\\FileAPI\\FileAPI\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Анастасия Феодотьева\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Дима\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -192,14 +190,14 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\NastyshaDisk\\FileAPI\\Aplication\\Aplication.csproj": {
-                "projectPath": "C:\\NastyshaDisk\\FileAPI\\Aplication\\Aplication.csproj"
+              "D:\\NastyshaDisk\\FileAPI\\Aplication\\Aplication.csproj": {
+                "projectPath": "D:\\NastyshaDisk\\FileAPI\\Aplication\\Aplication.csproj"
               },
-              "C:\\NastyshaDisk\\FileAPI\\Core\\Core.csproj": {
-                "projectPath": "C:\\NastyshaDisk\\FileAPI\\Core\\Core.csproj"
+              "D:\\NastyshaDisk\\FileAPI\\Core\\Core.csproj": {
+                "projectPath": "D:\\NastyshaDisk\\FileAPI\\Core\\Core.csproj"
               },
-              "C:\\NastyshaDisk\\FileAPI\\Presistence\\Presistence.csproj": {
-                "projectPath": "C:\\NastyshaDisk\\FileAPI\\Presistence\\Presistence.csproj"
+              "D:\\NastyshaDisk\\FileAPI\\Presistence\\Presistence.csproj": {
+                "projectPath": "D:\\NastyshaDisk\\FileAPI\\Presistence\\Presistence.csproj"
               }
             }
           }
@@ -213,8 +211,7 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        },
-        "SdkAnalysisLevel": "9.0.200"
+        }
       },
       "frameworks": {
         "net8.0": {
@@ -224,9 +221,9 @@
               "target": "Package",
               "version": "[8.0.13, )"
             },
-            "Microsoft.EntityFrameworkCore.Sqlite": {
+            "Npgsql.EntityFrameworkCore.PostgreSQL": {
               "target": "Package",
-              "version": "[9.0.2, )"
+              "version": "[7.0.18, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
@@ -252,24 +249,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.203/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\NastyshaDisk\\FileAPI\\Presistence\\Presistence.csproj": {
+    "D:\\NastyshaDisk\\FileAPI\\Presistence\\Presistence.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\NastyshaDisk\\FileAPI\\Presistence\\Presistence.csproj",
+        "projectUniqueName": "D:\\NastyshaDisk\\FileAPI\\Presistence\\Presistence.csproj",
         "projectName": "Presistence",
-        "projectPath": "C:\\NastyshaDisk\\FileAPI\\Presistence\\Presistence.csproj",
-        "packagesPath": "C:\\Users\\Анастасия Феодотьева\\.nuget\\packages\\",
-        "outputPath": "C:\\NastyshaDisk\\FileAPI\\Presistence\\obj\\",
+        "projectPath": "D:\\NastyshaDisk\\FileAPI\\Presistence\\Presistence.csproj",
+        "packagesPath": "C:\\Users\\Дима\\.nuget\\packages\\",
+        "outputPath": "D:\\NastyshaDisk\\FileAPI\\Presistence\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Анастасия Феодотьева\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Дима\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -285,8 +282,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\NastyshaDisk\\FileAPI\\Core\\Core.csproj": {
-                "projectPath": "C:\\NastyshaDisk\\FileAPI\\Core\\Core.csproj"
+              "D:\\NastyshaDisk\\FileAPI\\Core\\Core.csproj": {
+                "projectPath": "D:\\NastyshaDisk\\FileAPI\\Core\\Core.csproj"
               }
             }
           }
@@ -300,16 +297,15 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        },
-        "SdkAnalysisLevel": "9.0.200"
+        }
       },
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
-            "Microsoft.EntityFrameworkCore.Sqlite": {
+            "Npgsql.EntityFrameworkCore.PostgreSQL": {
               "target": "Package",
-              "version": "[9.0.2, )"
+              "version": "[7.0.18, )"
             }
           },
           "imports": [
@@ -328,7 +324,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.203/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

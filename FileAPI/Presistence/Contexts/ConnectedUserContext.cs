@@ -6,11 +6,10 @@ namespace Presistence.Contexts
     public class ConnectedUserContext : DbContext
     {
         public DbSet<ConnectedUser> ConnectedUsers => Set<ConnectedUser>();
-        public ConnectedUserContext() => Database.EnsureCreated();
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlite("Data Source = ConnectedUsers.db");
+            optionsBuilder.UseNpgsql("Host=192.168.10.54;Database=NastyshaDisk;Username=user;Password=1234");
         }
     }
 }

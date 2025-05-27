@@ -103,10 +103,7 @@ namespace Aplication.Services
             }
             catch
             {
-                _filesRepository.MakeDir(userId);
-                volume.Used = new DirectoryInfo(FilePath)
-                    .EnumerateFiles("*", SearchOption.AllDirectories)
-                    .Sum(file => file.Length);
+                volume.Used = 0;
                 return volume;
             }
         }

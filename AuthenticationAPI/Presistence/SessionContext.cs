@@ -7,15 +7,9 @@ namespace Presistence
     {
         public DbSet<JwtTokenModel> Sessions => Set<JwtTokenModel>();
 
-        public SessionContext()
-        {
-            //Database.EnsureDeleted();
-            Database.EnsureCreated();
-        }
-
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlite("Data Source = Sessions.db");
+            optionsBuilder.UseNpgsql("Host=192.168.10.54;Database=NastyshaDisk;Username=user;Password=1234");
         }
     }
 }
