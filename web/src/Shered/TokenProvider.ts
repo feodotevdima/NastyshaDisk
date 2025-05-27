@@ -1,6 +1,6 @@
 function TokenProvider(){
 
-    const Ip = 'http://192.168.54.222';
+    const Ip = 'http://192.168.214.222';
 
     const getExpirationDate = (jwtToken : string) => {
         if ((jwtToken==null) || (jwtToken=="")|| (jwtToken==" ")) {

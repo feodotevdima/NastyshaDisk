@@ -18,6 +18,7 @@ import FileResult from '../../../../Entities/FileResult';
 import NewDir from '../../API/NewDir';
 import UnionFiles from '../../API/UnionFiles';
 import { isMobile } from 'react-device-detect';
+import path from 'path';
 
 interface FileScreenProps {
   longPress: string[] | null;
@@ -67,6 +68,8 @@ const FileScreen: React.FC<FileScreenProps> = ({ longPress, setLongPress, SetPat
   const [downloadStates, setDownloadStates] = useState<DownloadState>({});
   const navigate = useNavigate();
   const fileListRef = useRef<HTMLDivElement>(null);
+  const [isPressed, setIsPressed] = useState(false);
+  const pressTimerRef = useRef<NodeJS.Timeout | null>(null);
 
   useEffect(() => {
     setPage(1);
@@ -220,14 +223,25 @@ const FileScreen: React.FC<FileScreenProps> = ({ longPress, setLongPress, SetPat
       if (longPress.includes(name)) {
         const newArr = longPress.filter(i => i !== name);
         setLongPress(newArr);
-      } else {
+      } 
+      else 
         setLongPress([...longPress, name]);
-      }
     } 
     else {
       if(longPress != null)
       {
-        setLongPress(null);
+        if(isMobile)
+        {
+          if (longPress.includes(name)) {
+            const newArr = longPress.filter(i => i !== name);
+            setLongPress(newArr);
+          } 
+          else 
+            setLongPress([...longPress, name]);
+        }
+        else
+          setLongPress(null);
+
         return;
       }
       const extension = getExtension(name);
@@ -530,10 +544,20 @@ const FileScreen: React.FC<FileScreenProps> = ({ longPress, setLongPress, SetPat
           <button
             onClick={(e) => pressDir(name, e)}
             onContextMenu={(e) => {
-              e.preventDefault();
-               handleMenuPress(e, name);
+              if(!isMobile)
+              {
+                e.preventDefault();
+                handleMenuPress(e, name);
+              }
+              else{
+                if(longPress == null)
+                  setLongPress([name]);
+                else
+                  setLongPress([...longPress, name]);
+                if ('vibrate' in navigator) 
+                  navigator.vibrate(100);
+              }
             }}
-            // onTouchStart={() => }
             className="item-button"
           >
             <GetIcon name={name} />

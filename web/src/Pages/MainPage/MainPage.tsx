@@ -89,7 +89,10 @@ const MainPage = () => {
   };
 
   const toggleMobileMenu = () => {
-    setIsMobileMenuOpen(!isMobileMenuOpen);
+    if(longPress)
+      setLongPress(null);
+    else
+      setIsMobileMenuOpen(!isMobileMenuOpen);
   };
 
   const toggleAddMenu = () => {
@@ -118,7 +121,7 @@ const MainPage = () => {
           onClick={toggleMobileMenu}
           className="mobile-menu-button"
         >
-          <div className={`burger-icon ${isMobileMenuOpen ? 'open' : ''}`}>
+          <div className={`burger-icon ${(isMobileMenuOpen || longPress) ? 'open' : ''}`}>
             <span className="burger-line"></span>
             <span className="burger-line"></span>
             <span className="burger-line"></span>

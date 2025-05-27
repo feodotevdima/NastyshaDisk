@@ -429,7 +429,7 @@ namespace FileAPI.Controllers
                 foreach (var name in names)
                 {
                     var oldPath = _filesService.GetPath(userId, path+name);
-                    var newPath = _filesService.GetPath(userId, dirName + "\\" + name);
+                    var newPath = _filesService.GetPath(userId, path + dirName + "\\" + name);
                     var fileNames = await _filesRepository.ChangeName(oldPath, newPath);
                 }
                 return Results.Ok();
