@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "bI+709qIPYg21CQRkj73QyMWA8KU2bqhZzis6dglhKs=",
+  "Hash": "BpMO/SX390ACn1eITwyBQSk6xma7sAAuFxWwVc0SKSo=",
   "Source": "UserAPI",
   "BasePath": "_content/UserAPI",
   "Mode": "Default",
@@ -10,7 +10,7 @@
     {
       "Name": "UserAPI\\wwwroot",
       "Source": "UserAPI",
-      "ContentRoot": "D:\\NastyshaDisk\\UserAPI\\WebAPI\\wwwroot\\",
+      "ContentRoot": "D:\\aa\\NastyshaDisk\\UserAPI\\WebAPI\\wwwroot\\",
       "BasePath": "_content/UserAPI",
       "Pattern": "**"
     }

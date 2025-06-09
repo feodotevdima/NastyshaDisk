@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "d1259jXK4h8=",
+  "dgSpecHash": "bW2wT1FghNk=",
   "success": true,
-  "projectFilePath": "D:\\NastyshaDisk\\UserAPI\\Core\\Core.csproj",
+  "projectFilePath": "D:\\aa\\NastyshaDisk\\UserAPI\\Core\\Core.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Дима\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\7.0.20\\microsoft.aspnetcore.authentication.jwtbearer.7.0.20.nupkg.sha512",
     "C:\\Users\\Дима\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",

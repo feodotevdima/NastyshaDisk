@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Q+HPe2K8PH8=",
+  "dgSpecHash": "IcMvOWsjX8I=",
   "success": true,
-  "projectFilePath": "D:\\NastyshaDisk\\UserAPI\\Presistence\\Presistence.csproj",
+  "projectFilePath": "D:\\aa\\NastyshaDisk\\UserAPI\\Presistence\\Presistence.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Дима\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\7.0.20\\microsoft.aspnetcore.authentication.jwtbearer.7.0.20.nupkg.sha512",
     "C:\\Users\\Дима\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",

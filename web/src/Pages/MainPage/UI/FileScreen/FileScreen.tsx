@@ -414,7 +414,7 @@ const FileScreen: React.FC<FileScreenProps> = ({ longPress, setLongPress, SetPat
         if (data.path === currentPath && data.name === value) return;
 
         console.log(index)
-        handleFileMove(data.path, data.name, `${GetPathString(Path.slice(0, index + 1))}\\`);
+        handleFileMove(data.path, data.name, `${GetPathString(Path.slice(0, index + 1))}/`);
       } catch (error) {
         console.error('Ошибка при обработке перетаскивания:', error);
       }
@@ -515,7 +515,7 @@ const FileScreen: React.FC<FileScreenProps> = ({ longPress, setLongPress, SetPat
           if (data.path === currentPath && data.name === name) return;
   
           if (getExtension(name) === null) {
-            handleFileMove(data.path, data.name, `${currentPath}${name}\\`);
+            handleFileMove(data.path, data.name, `${currentPath}${name}/`);
           } else {
             handleFileMove(data.path, data.name, currentPath, name);
           }

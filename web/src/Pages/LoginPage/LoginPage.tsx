@@ -15,10 +15,10 @@ const LoginPage = () => {
     }
     
     const pattern = /^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/;
-    // if(!email.match(pattern)) {е
-    //     alert('Ошибка: Пожалуйста, введите корректный email');
-    //     return;
-    // }
+    if(!email.match(pattern)) {
+        alert('Ошибка: Пожалуйста, введите корректный email');
+        return;
+    }
         
     setLoading(true);
     const response: number = await Login(email, password);

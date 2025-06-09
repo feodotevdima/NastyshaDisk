@@ -1,34 +1,22 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\NastyshaDisk\\FileAPI\\",
+  "WorkspaceRootPath": "D:\\aa\\NastyshaDisk\\FileAPI\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{25D9AC31-259F-480E-896B-F3E132ECC560}|Presistence\\Presistence.csproj|d:\\nastyshadisk\\fileapi\\presistence\\contexts\\shereddirownercontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{25D9AC31-259F-480E-896B-F3E132ECC560}|Presistence\\Presistence.csproj|solutionrelative:presistence\\contexts\\shereddirownercontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{39C5DAAC-88FC-4512-B687-B05055B81AAF}|FileAPI\\FileAPI.csproj|d:\\aa\\nastyshadisk\\fileapi\\fileapi\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{39C5DAAC-88FC-4512-B687-B05055B81AAF}|FileAPI\\FileAPI.csproj|solutionrelative:fileapi\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{25D9AC31-259F-480E-896B-F3E132ECC560}|Presistence\\Presistence.csproj|d:\\nastyshadisk\\fileapi\\presistence\\contexts\\pdfcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{25D9AC31-259F-480E-896B-F3E132ECC560}|Presistence\\Presistence.csproj|solutionrelative:presistence\\contexts\\pdfcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{39C5DAAC-88FC-4512-B687-B05055B81AAF}|FileAPI\\FileAPI.csproj|d:\\aa\\nastyshadisk\\fileapi\\fileapi\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{39C5DAAC-88FC-4512-B687-B05055B81AAF}|FileAPI\\FileAPI.csproj|solutionrelative:fileapi\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{25D9AC31-259F-480E-896B-F3E132ECC560}|Presistence\\Presistence.csproj|d:\\nastyshadisk\\fileapi\\presistence\\contexts\\connectedusercontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{25D9AC31-259F-480E-896B-F3E132ECC560}|Presistence\\Presistence.csproj|solutionrelative:presistence\\contexts\\connectedusercontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3AE2FDA0-992D-465E-8397-9325F228B648}|Aplication\\Aplication.csproj|d:\\aa\\nastyshadisk\\fileapi\\aplication\\repository\\filesrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3AE2FDA0-992D-465E-8397-9325F228B648}|Aplication\\Aplication.csproj|solutionrelative:aplication\\repository\\filesrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3AE2FDA0-992D-465E-8397-9325F228B648}|Aplication\\Aplication.csproj|d:\\nastyshadisk\\fileapi\\aplication\\services\\filesservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3AE2FDA0-992D-465E-8397-9325F228B648}|Aplication\\Aplication.csproj|solutionrelative:aplication\\services\\filesservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{39C5DAAC-88FC-4512-B687-B05055B81AAF}|FileAPI\\FileAPI.csproj|d:\\nastyshadisk\\fileapi\\fileapi\\controllers\\filescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{39C5DAAC-88FC-4512-B687-B05055B81AAF}|FileAPI\\FileAPI.csproj|solutionrelative:fileapi\\controllers\\filescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{78CAB7C6-B0EA-4894-90C2-DBF680FD05D3}|Core\\Core.csproj|d:\\nastyshadisk\\fileapi\\core\\shereddirowner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{78CAB7C6-B0EA-4894-90C2-DBF680FD05D3}|Core\\Core.csproj|solutionrelative:core\\shereddirowner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{78CAB7C6-B0EA-4894-90C2-DBF680FD05D3}|Core\\Core.csproj|d:\\nastyshadisk\\fileapi\\core\\pdfmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{78CAB7C6-B0EA-4894-90C2-DBF680FD05D3}|Core\\Core.csproj|solutionrelative:core\\pdfmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{39C5DAAC-88FC-4512-B687-B05055B81AAF}|FileAPI\\FileAPI.csproj|d:\\aa\\nastyshadisk\\fileapi\\fileapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{39C5DAAC-88FC-4512-B687-B05055B81AAF}|FileAPI\\FileAPI.csproj|solutionrelative:fileapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -51,93 +39,51 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "SheredDirOwnerContext.cs",
-              "DocumentMoniker": "D:\\NastyshaDisk\\FileAPI\\Presistence\\Contexts\\SheredDirOwnerContext.cs",
-              "RelativeDocumentMoniker": "Presistence\\Contexts\\SheredDirOwnerContext.cs",
-              "ToolTip": "D:\\NastyshaDisk\\FileAPI\\Presistence\\Contexts\\SheredDirOwnerContext.cs",
-              "RelativeToolTip": "Presistence\\Contexts\\SheredDirOwnerContext.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-27T23:19:37.226Z",
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "D:\\aa\\NastyshaDisk\\FileAPI\\FileAPI\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "FileAPI\\Properties\\launchSettings.json",
+              "ToolTip": "D:\\aa\\NastyshaDisk\\FileAPI\\FileAPI\\Properties\\launchSettings.json",
+              "RelativeToolTip": "FileAPI\\Properties\\launchSettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-06-08T22:26:31.14Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "PdfContext.cs",
-              "DocumentMoniker": "D:\\NastyshaDisk\\FileAPI\\Presistence\\Contexts\\PdfContext.cs",
-              "RelativeDocumentMoniker": "Presistence\\Contexts\\PdfContext.cs",
-              "ToolTip": "D:\\NastyshaDisk\\FileAPI\\Presistence\\Contexts\\PdfContext.cs*",
-              "RelativeToolTip": "Presistence\\Contexts\\PdfContext.cs*",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-27T23:19:31.564Z",
-              "EditorCaption": ""
+              "Title": "Dockerfile",
+              "DocumentMoniker": "D:\\aa\\NastyshaDisk\\FileAPI\\FileAPI\\Dockerfile",
+              "RelativeDocumentMoniker": "FileAPI\\Dockerfile",
+              "ToolTip": "D:\\aa\\NastyshaDisk\\FileAPI\\FileAPI\\Dockerfile",
+              "RelativeToolTip": "FileAPI\\Dockerfile",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-06-08T19:10:33.944Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "ConnectedUserContext.cs",
-              "DocumentMoniker": "D:\\NastyshaDisk\\FileAPI\\Presistence\\Contexts\\ConnectedUserContext.cs",
-              "RelativeDocumentMoniker": "Presistence\\Contexts\\ConnectedUserContext.cs",
-              "ToolTip": "D:\\NastyshaDisk\\FileAPI\\Presistence\\Contexts\\ConnectedUserContext.cs*",
-              "RelativeToolTip": "Presistence\\Contexts\\ConnectedUserContext.cs*",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
+              "Title": "FilesRepository.cs",
+              "DocumentMoniker": "D:\\aa\\NastyshaDisk\\FileAPI\\Aplication\\Repository\\FilesRepository.cs",
+              "RelativeDocumentMoniker": "Aplication\\Repository\\FilesRepository.cs",
+              "ToolTip": "D:\\aa\\NastyshaDisk\\FileAPI\\Aplication\\Repository\\FilesRepository.cs",
+              "RelativeToolTip": "Aplication\\Repository\\FilesRepository.cs",
+              "ViewState": "AgIAAOoAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-27T23:18:49.613Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-08T15:16:50.471Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "FilesService.cs",
-              "DocumentMoniker": "D:\\NastyshaDisk\\FileAPI\\Aplication\\Services\\FilesService.cs",
-              "RelativeDocumentMoniker": "Aplication\\Services\\FilesService.cs",
-              "ToolTip": "D:\\NastyshaDisk\\FileAPI\\Aplication\\Services\\FilesService.cs",
-              "RelativeToolTip": "Aplication\\Services\\FilesService.cs",
-              "ViewState": "AgIAAEIAAAAAAAAAAAAAAGkAAAAgAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-27T23:13:01.019Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "SheredDirOwner.cs",
-              "DocumentMoniker": "D:\\NastyshaDisk\\FileAPI\\Core\\SheredDirOwner.cs",
-              "RelativeDocumentMoniker": "Core\\SheredDirOwner.cs",
-              "ToolTip": "D:\\NastyshaDisk\\FileAPI\\Core\\SheredDirOwner.cs",
-              "RelativeToolTip": "Core\\SheredDirOwner.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAfAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-27T22:08:23.773Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "PdfModel.cs",
-              "DocumentMoniker": "D:\\NastyshaDisk\\FileAPI\\Core\\PdfModel.cs",
-              "RelativeDocumentMoniker": "Core\\PdfModel.cs",
-              "ToolTip": "D:\\NastyshaDisk\\FileAPI\\Core\\PdfModel.cs",
-              "RelativeToolTip": "Core\\PdfModel.cs",
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\aa\\NastyshaDisk\\FileAPI\\FileAPI\\Program.cs",
+              "RelativeDocumentMoniker": "FileAPI\\Program.cs",
+              "ToolTip": "D:\\aa\\NastyshaDisk\\FileAPI\\FileAPI\\Program.cs",
+              "RelativeToolTip": "FileAPI\\Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-27T22:05:34.405Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "FilesController.cs",
-              "DocumentMoniker": "D:\\NastyshaDisk\\FileAPI\\FileAPI\\Controllers\\FilesController.cs",
-              "RelativeDocumentMoniker": "FileAPI\\Controllers\\FilesController.cs",
-              "ToolTip": "D:\\NastyshaDisk\\FileAPI\\FileAPI\\Controllers\\FilesController.cs",
-              "RelativeToolTip": "FileAPI\\Controllers\\FilesController.cs",
-              "ViewState": "AgIAABcBAAAAAAAAAAAAADkAAAA2AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-27T10:33:42.099Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-08T15:14:08.63Z"
             }
           ]
         }

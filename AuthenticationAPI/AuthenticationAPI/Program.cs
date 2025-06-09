@@ -55,16 +55,16 @@ var app = builder.Build();
 
 app.UseCors();
 
+app.MapGet("/ping", () => "pong");
+
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI();
 }
 
-app.UseHttpsRedirection();
-
 app.UseAuthorization();
 
 app.MapControllers();
 
-app.Run("http://0.0.0.0:7002");
+app.Run();

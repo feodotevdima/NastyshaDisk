@@ -14,7 +14,7 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-builder.Services.AddSingleton<string>("..\\Presistence\\UsersFiles\\");
+builder.Services.AddSingleton<string>("/app/UsersFiles");
 
 builder.Services.AddTransient<IFilesService, FilesService>();
 builder.Services.AddTransient<IFilesRepository, FilesRepository>();
@@ -65,12 +65,12 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-app.UseHttpsRedirection();
+app.MapGet("/ping", () => "pong");
 
 app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllers();
 
-app.Run("http://0.0.0.0:7003");
+app.Run();
 

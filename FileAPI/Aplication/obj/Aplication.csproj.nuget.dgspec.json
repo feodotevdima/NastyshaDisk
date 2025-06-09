@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\NastyshaDisk\\FileAPI\\Aplication\\Aplication.csproj": {}
+    "D:\\aa\\NastyshaDisk\\FileAPI\\Aplication\\Aplication.csproj": {}
   },
   "projects": {
-    "D:\\NastyshaDisk\\FileAPI\\Aplication\\Aplication.csproj": {
+    "D:\\aa\\NastyshaDisk\\FileAPI\\Aplication\\Aplication.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\NastyshaDisk\\FileAPI\\Aplication\\Aplication.csproj",
+        "projectUniqueName": "D:\\aa\\NastyshaDisk\\FileAPI\\Aplication\\Aplication.csproj",
         "projectName": "Aplication",
-        "projectPath": "D:\\NastyshaDisk\\FileAPI\\Aplication\\Aplication.csproj",
+        "projectPath": "D:\\aa\\NastyshaDisk\\FileAPI\\Aplication\\Aplication.csproj",
         "packagesPath": "C:\\Users\\Дима\\.nuget\\packages\\",
-        "outputPath": "D:\\NastyshaDisk\\FileAPI\\Aplication\\obj\\",
+        "outputPath": "D:\\aa\\NastyshaDisk\\FileAPI\\Aplication\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -22,7 +22,7 @@
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net8.0"
+          "net7.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
@@ -30,14 +30,14 @@
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net8.0": {
-            "targetAlias": "net8.0",
+          "net7.0": {
+            "targetAlias": "net7.0",
             "projectReferences": {
-              "D:\\NastyshaDisk\\FileAPI\\Core\\Core.csproj": {
-                "projectPath": "D:\\NastyshaDisk\\FileAPI\\Core\\Core.csproj"
+              "D:\\aa\\NastyshaDisk\\FileAPI\\Core\\Core.csproj": {
+                "projectPath": "D:\\aa\\NastyshaDisk\\FileAPI\\Core\\Core.csproj"
               },
-              "D:\\NastyshaDisk\\FileAPI\\Presistence\\Presistence.csproj": {
-                "projectPath": "D:\\NastyshaDisk\\FileAPI\\Presistence\\Presistence.csproj"
+              "D:\\aa\\NastyshaDisk\\FileAPI\\Presistence\\Presistence.csproj": {
+                "projectPath": "D:\\aa\\NastyshaDisk\\FileAPI\\Presistence\\Presistence.csproj"
               }
             }
           }
@@ -54,12 +54,12 @@
         }
       },
       "frameworks": {
-        "net8.0": {
-          "targetAlias": "net8.0",
+        "net7.0": {
+          "targetAlias": "net7.0",
           "dependencies": {
             "Microsoft.AspNetCore.Authentication.JwtBearer": {
               "target": "Package",
-              "version": "[8.0.13, )"
+              "version": "[7.0.20, )"
             },
             "Npgsql.EntityFrameworkCore.PostgreSQL": {
               "target": "Package",
@@ -82,18 +82,18 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\NastyshaDisk\\FileAPI\\Core\\Core.csproj": {
+    "D:\\aa\\NastyshaDisk\\FileAPI\\Core\\Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\NastyshaDisk\\FileAPI\\Core\\Core.csproj",
+        "projectUniqueName": "D:\\aa\\NastyshaDisk\\FileAPI\\Core\\Core.csproj",
         "projectName": "Core",
-        "projectPath": "D:\\NastyshaDisk\\FileAPI\\Core\\Core.csproj",
+        "projectPath": "D:\\aa\\NastyshaDisk\\FileAPI\\Core\\Core.csproj",
         "packagesPath": "C:\\Users\\Дима\\.nuget\\packages\\",
-        "outputPath": "D:\\NastyshaDisk\\FileAPI\\Core\\obj\\",
+        "outputPath": "D:\\aa\\NastyshaDisk\\FileAPI\\Core\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -104,7 +104,7 @@
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net8.0"
+          "net7.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
@@ -112,8 +112,8 @@
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net8.0": {
-            "targetAlias": "net8.0",
+          "net7.0": {
+            "targetAlias": "net7.0",
             "projectReferences": {}
           }
         },
@@ -129,12 +129,12 @@
         }
       },
       "frameworks": {
-        "net8.0": {
-          "targetAlias": "net8.0",
+        "net7.0": {
+          "targetAlias": "net7.0",
           "dependencies": {
             "Microsoft.AspNetCore.Authentication.JwtBearer": {
               "target": "Package",
-              "version": "[8.0.13, )"
+              "version": "[7.0.20, )"
             },
             "Npgsql.EntityFrameworkCore.PostgreSQL": {
               "target": "Package",
@@ -157,18 +157,18 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\NastyshaDisk\\FileAPI\\Presistence\\Presistence.csproj": {
+    "D:\\aa\\NastyshaDisk\\FileAPI\\Presistence\\Presistence.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\NastyshaDisk\\FileAPI\\Presistence\\Presistence.csproj",
+        "projectUniqueName": "D:\\aa\\NastyshaDisk\\FileAPI\\Presistence\\Presistence.csproj",
         "projectName": "Presistence",
-        "projectPath": "D:\\NastyshaDisk\\FileAPI\\Presistence\\Presistence.csproj",
+        "projectPath": "D:\\aa\\NastyshaDisk\\FileAPI\\Presistence\\Presistence.csproj",
         "packagesPath": "C:\\Users\\Дима\\.nuget\\packages\\",
-        "outputPath": "D:\\NastyshaDisk\\FileAPI\\Presistence\\obj\\",
+        "outputPath": "D:\\aa\\NastyshaDisk\\FileAPI\\Presistence\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -179,7 +179,7 @@
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net8.0"
+          "net7.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
@@ -187,11 +187,11 @@
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net8.0": {
-            "targetAlias": "net8.0",
+          "net7.0": {
+            "targetAlias": "net7.0",
             "projectReferences": {
-              "D:\\NastyshaDisk\\FileAPI\\Core\\Core.csproj": {
-                "projectPath": "D:\\NastyshaDisk\\FileAPI\\Core\\Core.csproj"
+              "D:\\aa\\NastyshaDisk\\FileAPI\\Core\\Core.csproj": {
+                "projectPath": "D:\\aa\\NastyshaDisk\\FileAPI\\Core\\Core.csproj"
               }
             }
           }
@@ -208,9 +208,13 @@
         }
       },
       "frameworks": {
-        "net8.0": {
-          "targetAlias": "net8.0",
+        "net7.0": {
+          "targetAlias": "net7.0",
           "dependencies": {
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[7.0.20, )"
+            },
             "Npgsql.EntityFrameworkCore.PostgreSQL": {
               "target": "Package",
               "version": "[7.0.18, )"
@@ -232,7 +236,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     }

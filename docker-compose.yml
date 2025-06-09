@@ -1,0 +1,61 @@
+services:
+  authentication-api:
+    build:
+      context: ./AuthenticationAPI
+      dockerfile: AuthenticationAPI/Dockerfile
+    ports:
+      - "7002:80"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Production
+      - ASPNETCORE_URLS=http://+:80
+    networks:
+      - app-network
+
+  file-api:
+    build:
+      context: ./FileAPI
+      dockerfile: FileAPI/Dockerfile
+    ports:
+      - "7003:80"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Production
+      - ASPNETCORE_URLS=http://+:80
+    volumes:
+      - file-storage:/app/UsersFiles
+    networks:
+      - app-network
+
+  user-api:
+    build:
+      context: ./UserAPI
+      dockerfile: WebAPI/Dockerfile
+    ports:
+      - "7001:80"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Production
+      - ASPNETCORE_URLS=http://+:80
+    networks:
+      - app-network
+
+  web:
+    build:
+      context: ./web
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=Production
+    depends_on:
+      - authentication-api
+      - file-api
+      - user-api
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge
+
+volumes:
+  file-storage:
+    driver: local

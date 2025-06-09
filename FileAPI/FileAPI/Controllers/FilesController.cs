@@ -45,7 +45,7 @@ namespace FileAPI.Controllers
                 var userId = _userService.GetId(Request);
 
                 if (isPublic)
-                    userId = "public\\" + userId;
+                    userId = "public/" + userId;
 
                 var userPath = _filesService.GetPath(userId, "");
                 if (!Path.Exists(userPath))
@@ -204,7 +204,7 @@ namespace FileAPI.Controllers
             try
             {
                 if (isPublic)
-                    userId = "public\\" + userId;
+                    userId = "public/" + userId;
 
                 if (!_filesService.IsImageFile(path))
                 {
@@ -237,7 +237,7 @@ namespace FileAPI.Controllers
             var fulPath = _filesService.GetPath(userId, path);
 
             if (isPublic)
-                userId = "public\\" + userId;
+                userId = "public/" + userId;
 
             var fileStream = _filesRepository.GetFileStream(fulPath);
 
@@ -262,7 +262,7 @@ namespace FileAPI.Controllers
             var fulPath = _filesService.GetPath(userId, dto.Path);
 
             if (dto.IsPublic)
-                userId = "public\\" + userId;
+                userId = "public/" + userId;
 
             var page = await _pdfRepository.AddCurrentPageAsync(fulPath, dto.CurentPage);
             if (page == null) return Results.NotFound();
@@ -338,7 +338,7 @@ namespace FileAPI.Controllers
                     return Results.BadRequest("No files uploaded.");
 
                 if (isPublic)
-                    userId = "public\\" + userId;
+                    userId = "public/" + userId;
 
                 var uploadedPaths = new List<string>();
 
@@ -371,7 +371,7 @@ namespace FileAPI.Controllers
                 var fulPath = _filesService.GetPath(userId, dto.path);
 
                 if (dto.isPublic)
-                    userId = "public\\" + userId;
+                    userId = "public/" + userId;
 
                 var fileNames = _filesRepository.MakeDir(fulPath);
 
@@ -400,7 +400,7 @@ namespace FileAPI.Controllers
                 var newPath = _filesService.GetPath(userId, dto.NewPath);
 
                 if (dto.IsPublic)
-                    userId = "public\\" + userId;
+                    userId = "public/" + userId;
 
                 var fileNames = await _filesRepository.ChangeName(oldPath, newPath);
                 if (fileNames == null)
@@ -429,7 +429,7 @@ namespace FileAPI.Controllers
                 var userId = _userService.GetId(Request);
 
                 if (dto.IsPublic)
-                    userId = "public\\" + userId;
+                    userId = "public/" + userId;
 
                 if (names == null || names.Count() == 0)
                 {
@@ -440,14 +440,14 @@ namespace FileAPI.Controllers
 
                 dirName = _filesRepository.MakeDir(dirPath);
 
-                string[] parts = dirName.Split("\\");
+                string[] parts = dirName.Split("/");
 
                 dirName = parts.Length > 0 ? parts[parts.Length-1] : path;
 
                 foreach (var name in names)
                 {
                     var oldPath = _filesService.GetPath(userId, path+name);
-                    var newPath = _filesService.GetPath(userId, path + dirName + "\\" + name);
+                    var newPath = _filesService.GetPath(userId, path + dirName + "/" + name);
                     var fileNames = await _filesRepository.ChangeName(oldPath, newPath);
                 }
                 return Results.Ok();
@@ -466,7 +466,7 @@ namespace FileAPI.Controllers
             {
                 var userId = _userService.GetId(Request);
                 if (dto.IsPublic)
-                    userId = "public\\" + userId;
+                    userId = "public/" + userId;
 
                 for (int i = 0; i<dto.Pathes.Count(); i++)
                 {

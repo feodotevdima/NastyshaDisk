@@ -3,11 +3,11 @@ const GetPathString = (Path: string[]) => {
     let path = ""
     
     if(newArr.length==0)
-        path = "\\";
+        path = "/";
     else
     {
         newArr.forEach(item => {
-            path+=item+'\\';
+            path+=item+'/';
         });
     }
     

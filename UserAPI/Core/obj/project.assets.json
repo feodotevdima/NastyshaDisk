@@ -1497,11 +1497,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\NastyshaDisk\\UserAPI\\Core\\Core.csproj",
+      "projectUniqueName": "D:\\aa\\NastyshaDisk\\UserAPI\\Core\\Core.csproj",
       "projectName": "Core",
-      "projectPath": "D:\\NastyshaDisk\\UserAPI\\Core\\Core.csproj",
+      "projectPath": "D:\\aa\\NastyshaDisk\\UserAPI\\Core\\Core.csproj",
       "packagesPath": "C:\\Users\\Дима\\.nuget\\packages\\",
-      "outputPath": "D:\\NastyshaDisk\\UserAPI\\Core\\obj\\",
+      "outputPath": "D:\\aa\\NastyshaDisk\\UserAPI\\Core\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

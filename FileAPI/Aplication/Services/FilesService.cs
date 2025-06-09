@@ -110,18 +110,18 @@ namespace Aplication.Services
 
         public string GetPath(string userId, string path)
         {
-            string folderPath = _folderPath + userId + "\\" + path;
+            string folderPath = _folderPath + userId + "/" + path;
 
             bool isSlash = false;
             string result = "";
             foreach (var s in folderPath)
             {
-                if (s == '\\' && !isSlash)
+                if (s == '/' && !isSlash)
                 {
                     isSlash = true;
-                    result += '\\';
+                    result += '/';
                 }
-                if (s != '\\')
+                if (s != '/')
                 {
                     if (isSlash)
                         isSlash = false;

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\NastyshaDisk\\UserAPI\\WebAPI\\UserAPI.csproj": {}
+    "D:\\aa\\NastyshaDisk\\UserAPI\\WebAPI\\UserAPI.csproj": {}
   },
   "projects": {
-    "D:\\NastyshaDisk\\UserAPI\\Aplication\\Aplication.csproj": {
+    "D:\\aa\\NastyshaDisk\\UserAPI\\Aplication\\Aplication.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\NastyshaDisk\\UserAPI\\Aplication\\Aplication.csproj",
+        "projectUniqueName": "D:\\aa\\NastyshaDisk\\UserAPI\\Aplication\\Aplication.csproj",
         "projectName": "Aplication",
-        "projectPath": "D:\\NastyshaDisk\\UserAPI\\Aplication\\Aplication.csproj",
+        "projectPath": "D:\\aa\\NastyshaDisk\\UserAPI\\Aplication\\Aplication.csproj",
         "packagesPath": "C:\\Users\\Дима\\.nuget\\packages\\",
-        "outputPath": "D:\\NastyshaDisk\\UserAPI\\Aplication\\obj\\",
+        "outputPath": "D:\\aa\\NastyshaDisk\\UserAPI\\Aplication\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -33,11 +33,11 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "D:\\NastyshaDisk\\UserAPI\\Core\\Core.csproj": {
-                "projectPath": "D:\\NastyshaDisk\\UserAPI\\Core\\Core.csproj"
+              "D:\\aa\\NastyshaDisk\\UserAPI\\Core\\Core.csproj": {
+                "projectPath": "D:\\aa\\NastyshaDisk\\UserAPI\\Core\\Core.csproj"
               },
-              "D:\\NastyshaDisk\\UserAPI\\Presistence\\Presistence.csproj": {
-                "projectPath": "D:\\NastyshaDisk\\UserAPI\\Presistence\\Presistence.csproj"
+              "D:\\aa\\NastyshaDisk\\UserAPI\\Presistence\\Presistence.csproj": {
+                "projectPath": "D:\\aa\\NastyshaDisk\\UserAPI\\Presistence\\Presistence.csproj"
               }
             }
           }
@@ -90,14 +90,14 @@
         }
       }
     },
-    "D:\\NastyshaDisk\\UserAPI\\Core\\Core.csproj": {
+    "D:\\aa\\NastyshaDisk\\UserAPI\\Core\\Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\NastyshaDisk\\UserAPI\\Core\\Core.csproj",
+        "projectUniqueName": "D:\\aa\\NastyshaDisk\\UserAPI\\Core\\Core.csproj",
         "projectName": "Core",
-        "projectPath": "D:\\NastyshaDisk\\UserAPI\\Core\\Core.csproj",
+        "projectPath": "D:\\aa\\NastyshaDisk\\UserAPI\\Core\\Core.csproj",
         "packagesPath": "C:\\Users\\Дима\\.nuget\\packages\\",
-        "outputPath": "D:\\NastyshaDisk\\UserAPI\\Core\\obj\\",
+        "outputPath": "D:\\aa\\NastyshaDisk\\UserAPI\\Core\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -169,14 +169,14 @@
         }
       }
     },
-    "D:\\NastyshaDisk\\UserAPI\\Presistence\\Presistence.csproj": {
+    "D:\\aa\\NastyshaDisk\\UserAPI\\Presistence\\Presistence.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\NastyshaDisk\\UserAPI\\Presistence\\Presistence.csproj",
+        "projectUniqueName": "D:\\aa\\NastyshaDisk\\UserAPI\\Presistence\\Presistence.csproj",
         "projectName": "Presistence",
-        "projectPath": "D:\\NastyshaDisk\\UserAPI\\Presistence\\Presistence.csproj",
+        "projectPath": "D:\\aa\\NastyshaDisk\\UserAPI\\Presistence\\Presistence.csproj",
         "packagesPath": "C:\\Users\\Дима\\.nuget\\packages\\",
-        "outputPath": "D:\\NastyshaDisk\\UserAPI\\Presistence\\obj\\",
+        "outputPath": "D:\\aa\\NastyshaDisk\\UserAPI\\Presistence\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -198,8 +198,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "D:\\NastyshaDisk\\UserAPI\\Core\\Core.csproj": {
-                "projectPath": "D:\\NastyshaDisk\\UserAPI\\Core\\Core.csproj"
+              "D:\\aa\\NastyshaDisk\\UserAPI\\Core\\Core.csproj": {
+                "projectPath": "D:\\aa\\NastyshaDisk\\UserAPI\\Core\\Core.csproj"
               }
             }
           }
@@ -252,14 +252,14 @@
         }
       }
     },
-    "D:\\NastyshaDisk\\UserAPI\\WebAPI\\UserAPI.csproj": {
+    "D:\\aa\\NastyshaDisk\\UserAPI\\WebAPI\\UserAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\NastyshaDisk\\UserAPI\\WebAPI\\UserAPI.csproj",
+        "projectUniqueName": "D:\\aa\\NastyshaDisk\\UserAPI\\WebAPI\\UserAPI.csproj",
         "projectName": "UserAPI",
-        "projectPath": "D:\\NastyshaDisk\\UserAPI\\WebAPI\\UserAPI.csproj",
+        "projectPath": "D:\\aa\\NastyshaDisk\\UserAPI\\WebAPI\\UserAPI.csproj",
         "packagesPath": "C:\\Users\\Дима\\.nuget\\packages\\",
-        "outputPath": "D:\\NastyshaDisk\\UserAPI\\WebAPI\\obj\\",
+        "outputPath": "D:\\aa\\NastyshaDisk\\UserAPI\\WebAPI\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -281,14 +281,14 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "D:\\NastyshaDisk\\UserAPI\\Aplication\\Aplication.csproj": {
-                "projectPath": "D:\\NastyshaDisk\\UserAPI\\Aplication\\Aplication.csproj"
+              "D:\\aa\\NastyshaDisk\\UserAPI\\Aplication\\Aplication.csproj": {
+                "projectPath": "D:\\aa\\NastyshaDisk\\UserAPI\\Aplication\\Aplication.csproj"
               },
-              "D:\\NastyshaDisk\\UserAPI\\Core\\Core.csproj": {
-                "projectPath": "D:\\NastyshaDisk\\UserAPI\\Core\\Core.csproj"
+              "D:\\aa\\NastyshaDisk\\UserAPI\\Core\\Core.csproj": {
+                "projectPath": "D:\\aa\\NastyshaDisk\\UserAPI\\Core\\Core.csproj"
               },
-              "D:\\NastyshaDisk\\UserAPI\\Presistence\\Presistence.csproj": {
-                "projectPath": "D:\\NastyshaDisk\\UserAPI\\Presistence\\Presistence.csproj"
+              "D:\\aa\\NastyshaDisk\\UserAPI\\Presistence\\Presistence.csproj": {
+                "projectPath": "D:\\aa\\NastyshaDisk\\UserAPI\\Presistence\\Presistence.csproj"
               }
             }
           }
@@ -311,6 +311,10 @@
             "Microsoft.AspNetCore.Authentication.JwtBearer": {
               "target": "Package",
               "version": "[7.0.20, )"
+            },
+            "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": {
+              "target": "Package",
+              "version": "[1.21.0, )"
             },
             "Newtonsoft.Json": {
               "target": "Package",
