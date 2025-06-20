@@ -23,7 +23,7 @@ const ImageModal: React.FC<ImageModalProps> = ({
   useEffect(() => {
     const fetchId = async () => {
       const token = await getToken();
-      const query = Ip+`:7001/User/token`;
+      const query = Ip+`user-api/User/token`;
       const response = await axios.get(query, {
         headers: {
           'Accept': '*/*',
@@ -79,7 +79,7 @@ const ImageModal: React.FC<ImageModalProps> = ({
   }
 
   const getImageUri = (imgPath: string) => {
-    return Ip+`:7003/Files/open_image/${id}?isPublic=false&path=${encodeURIComponent(imgPath)}`;
+    return Ip+`file-api/Files/open_image/${id}?isPublic=false&path=${encodeURIComponent(imgPath)}`;
   };
 
   const currentPath = images.length > 0 ? images[currentImageIndex] : null;

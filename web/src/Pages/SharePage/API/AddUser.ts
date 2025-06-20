@@ -4,7 +4,7 @@ import { FileEvents, fileEventEmitter } from "../../../Shered/UpdateFiles";
 
 const AddUser= async (path: string, connectedUserId: string) =>{
     const token= await getToken();
-    const query = Ip + ":7003/Files/add_user";
+    const query = Ip + "file-api/Files/add_user";
     const response = await axios.post(
         query,
         {

@@ -25,7 +25,7 @@ function AddFiles() {
       });
 
       const response = await axios.post(
-        Ip + ":7003/Files/upload?path=" + Path + "&isPublic=" + isPublic,
+        Ip + "file-api/Files/upload?path=" + Path + "&isPublic=" + isPublic,
         formData,
         {
           headers: {

@@ -91,7 +91,7 @@ namespace FileAPI.Controllers
 
                 var authHeader = Request.Headers["Authorization"].FirstOrDefault();
 
-                var request = new HttpRequestMessage(HttpMethod.Get, "http://localhost:7001/User/all");
+                var request = new HttpRequestMessage(HttpMethod.Get, "https://nastyshadisk.ru/user-api/User/all");
 
                 if (!string.IsNullOrEmpty(authHeader))
                 {
@@ -143,7 +143,7 @@ namespace FileAPI.Controllers
                 if (owner == null)
                     return Results.StatusCode(201);
 
-                var response = await _httpClient.GetAsync($"http://localhost:7001/User/id/{owner.OwnerId}");
+                var response = await _httpClient.GetAsync($"https://nastyshadisk.ru/user-api/User/{owner.OwnerId}");
 
                 if (response.IsSuccessStatusCode && response.Content != null)
                 {
@@ -180,7 +180,7 @@ namespace FileAPI.Controllers
                 List<UserModel> result = new List<UserModel>();
                 foreach (var user in users)
                 {
-                    var response = await _httpClient.GetAsync($"http://localhost:7001/User/id/{user.ConnectedUserId}");
+                    var response = await _httpClient.GetAsync($"https://nastyshadisk.ru/user-api/User/{user.ConnectedUserId}");
                     if (response.IsSuccessStatusCode)
                     {
                         result.Add(await response.Content.ReadFromJsonAsync<UserModel>());

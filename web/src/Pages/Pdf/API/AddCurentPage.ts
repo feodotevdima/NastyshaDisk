@@ -4,7 +4,7 @@ import { FileEvents, fileEventEmitter } from '../../../Shered/UpdateFiles';
 
 const AddCurentPage= async (path: string | null, isPublic: boolean, curentPage: number) =>{
     const token= await getToken();
-    const query = Ip + ":7003/Files/add_pdf_page";
+    const query = Ip + "file-api/Files/add_pdf_page";
     const response = await axios.post(
         query,
         {

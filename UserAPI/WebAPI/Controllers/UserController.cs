@@ -27,7 +27,6 @@ namespace WebAPI.Controllers
         }
 
         [Route("all")]
-        [Authorize]
         [HttpGet]
         public async Task<IResult> GetAllUsersAsync()
         {

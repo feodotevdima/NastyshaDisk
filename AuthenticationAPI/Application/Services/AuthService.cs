@@ -33,7 +33,7 @@ namespace Application.Services
         {
             if (!(string.IsNullOrWhiteSpace(userLogin) || string.IsNullOrWhiteSpace(userPassword)))
             {
-                var response = await _httpClient.GetAsync($"http://user-api/User/login/{userLogin}");
+                var response = await _httpClient.GetAsync($"https://nastyshadisk.ru/user-api/User/login/{userLogin}");
                 if (response.IsSuccessStatusCode)
                 {
                     var user = await response.Content.ReadFromJsonAsync<UserModel>();

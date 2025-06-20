@@ -1,6 +1,6 @@
 function TokenProvider(){
 
-    const Ip = 'http://192.168.10.45';
+    const Ip = 'https://nastyshadisk.ru/';
 
     const getExpirationDate = (jwtToken : string) => {
         if ((jwtToken==null) || (jwtToken=="")|| (jwtToken==" ")) {
@@ -29,7 +29,7 @@ function TokenProvider(){
             if (!isExpired(getExpirationDate(localStorage.accessToken))) 
                 return localStorage.accessToken;
 
-            const updatedToken = await fetch(Ip + ":7002/Auth/refreshToken/"+localStorage.refreshToken, {method: 'PUT',});
+            const updatedToken = await fetch(Ip + "authentication-api/Auth/refreshToken/"+localStorage.refreshToken, {method: 'PUT',});
             if (updatedToken.status!==200)
             {
                 if (isExpired(getExpirationDate(localStorage.accessToken))) 
@@ -59,7 +59,7 @@ function TokenProvider(){
     };
 
     const Login = async (email: string, pass: string) => {
-        const response = await fetch(Ip + ":7002/Auth/login",
+        const response = await fetch(Ip + "authentication-api/Auth/login",
             {
               method: "POST",
               headers:     
@@ -85,7 +85,7 @@ function TokenProvider(){
     async function Logout()
     {
         const token = await getToken();
-        const response = await fetch(Ip + ":7002/Auth/logout/"+token,
+        const response = await fetch(Ip + "authentication-api/Auth/logout/"+token,
         {
             method: "DELETE",
             headers:     

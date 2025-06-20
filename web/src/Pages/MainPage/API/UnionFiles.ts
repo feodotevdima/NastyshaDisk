@@ -7,7 +7,7 @@ const UnionFiles= async (path: string, names: string[], dirName: string, isPubli
   console.log(path)
   console.log(names)
     const token= await getToken();
-    const query = Ip + ":7003/Files/union_files";
+    const query = Ip + "file-api/Files/union_files";
     const response = await axios.put(
         query,
         {

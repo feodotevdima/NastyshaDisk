@@ -3,7 +3,7 @@ import { Ip, getToken } from "../../../Shered/TokenProvider";
 
 const GetFilesName= async (path: string, page: number, pageSize: number, isPublic: boolean) =>{
     const token= await getToken();
-    const query = Ip + ":7003/Files/get_files_name?path="+path+"&page="+page+"&pageSize="+pageSize+"&isPublic="+isPublic;
+    const query = Ip + "file-api/Files/get_files_name?path="+path+"&page="+page+"&pageSize="+pageSize+"&isPublic="+isPublic;
     const response = await axios.get(
         query,
         {

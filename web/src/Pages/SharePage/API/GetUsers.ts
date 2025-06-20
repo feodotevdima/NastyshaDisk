@@ -4,7 +4,7 @@ import { Ip, getToken } from "../../../Shered/TokenProvider";
 
 const GetUsers= async (path: string) =>{
     const token= await getToken();
-    const query = Ip + ":7003/Files/all_to_add?path="+path;
+    const query = Ip + "file-api/Files/all_to_add?path="+path;
     const response = await axios.get(
         query,
         {

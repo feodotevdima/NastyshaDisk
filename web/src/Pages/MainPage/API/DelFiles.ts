@@ -5,7 +5,7 @@ import { FileEvents, fileEventEmitter } from '../../../Shered/UpdateFiles';
 
 const DelFiles= async (path: string[], isPublic: boolean) =>{
     const token= await getToken();
-    const query = Ip + ":7003/Files";
+    const query = Ip + "file-api/Files";
     const response = await axios.delete(
         query,
         {

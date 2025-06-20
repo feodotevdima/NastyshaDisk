@@ -5,7 +5,7 @@ import { FileEvents, fileEventEmitter } from '../../../Shered/UpdateFiles';
 
 const NewDir= async (path: string | null, isPublic: boolean) =>{
     const token= await getToken();
-    const query = Ip + ":7003/Files/make_dir";
+    const query = Ip + "file-api/Files/make_dir";
     const response = await axios.post(
         query,
         {

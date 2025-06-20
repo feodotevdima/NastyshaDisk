@@ -7,7 +7,7 @@ interface PdfResponse {
 
 const GetPdf = async (isPublic: boolean, path: string): Promise<PdfResponse> => {
     const token = await getToken();
-    const query = `${Ip}:7003/Files/open_pdf?isPublic=${isPublic}&path=${encodeURIComponent(path)}`;
+    const query = `${Ip}file-api/Files/open_pdf?isPublic=${isPublic}&path=${encodeURIComponent(path)}`;
     
     try {
         const response = await fetch(query, {

@@ -3,7 +3,7 @@ import { Ip, getToken } from "../../../Shered/TokenProvider";
 
 const GetVolume= async () =>{
     const token= await getToken();
-    const query = Ip + ":7003/Files/volume";
+    const query = Ip + "file-api/Files/volume";
     const response = await axios.get(
         query,
         {
